@@ -28,5 +28,5 @@ This site can be deployed to GitHub Pages or hosted on any web server.
 Open to the public. You may reuse, adapt, and build upon this project with attribution.
 
 ---
-*Maintained by Elmidor Rodriguez Mario Zagalo*  
+*Maintained by En_bassarts-deur*  
 *Co-authored by AI (ChatGPT)*
