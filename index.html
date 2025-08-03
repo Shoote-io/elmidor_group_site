@@ -1,89 +1,50 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name="facebook-domain-verification" content="facebook-domain-verification=y8r2wm1ykglg9l8ek1o338uxcr9kf9
-" />
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Elmidor Group",
-  "url": "https://www.elmidorgroup.com",
-  "logo": "https://www.elmidorgroup.com/logo.png",
-  "email": "info@elmidorgroup.com",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Calle 30 de Mayo",
-    "addressLocality": "San Luis",
-    "addressRegion": "Santo Domingo Este",
-    "postalCode": "11807",
-    "addressCountry": "DO"
-  },
-  "sameAs": [
-    "https://www.facebook.com/shoote.io",
-    "https://www.instagram.com/shoote.io",
-    "https://www.linkedin.com/company/elmidorgroup"
-  ]
-}
-</script>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Elmidor Group™ - Creative Digital Solutions for Sovereignty" />
-  <title>Elmidor Group™</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <title>Elmidor Group</title>
+  <link href="css/style.css" rel="stylesheet" />
 </head>
-<body>
-<header>
-  <img src="assets/logo.png" alt="Elmidor Logo" class="logo">
-  <h1>Welcome to Elmidor Group</h1>
-</header>
+<body style="margin: 0; font-family: Arial, sans-serif; background-color: #fff;">
+  <!-- Navigation -->
+  <nav style="background-color: #000; color: white; padding: 1rem; text-align: center;">
+    <a href="index.html" style="margin: 0 1rem; color: white; text-decoration: none;">Home</a>
+    <a href="about.html" style="margin: 0 1rem; color: white; text-decoration: none;">About</a>
+    <a href="contact.html" style="margin: 0 1rem; color: white; text-decoration: none;">Contact</a>
+    <a href="terms.html" style="margin: 0 1rem; color: white; text-decoration: none;">Terms</a>
+    <a href="privacy-policy.html" style="margin: 0 1rem; color: white; text-decoration: none;">Privacy</a>
+    <a href="legal.html" style="margin: 0 1rem; color: white; text-decoration: none;">Legal</a>
+  </nav>
 
-<main>
-  <p>Elmidor Group is a visionary automation & technology company dedicated to helping ambitious entrepreneurs work smarter, scale faster, and dominate their markets. By blending intelligent tools, no-code workflows, and next-gen tech, we empower you to boost productivity, streamline operations, and create unforgettable customer experiences — effortlessly.</p>
+  <!-- Header -->
+  <header style="text-align: center; padding: 2rem; background-color: #fff3e0; color: black;">
+    <img src="assets/logo.png" alt="Elmidor Logo" class="logo" style="max-width: 150px;" />
+    <h1>Welcome to Elmidor Group</h1>
+  </header>
 
-  <div class="cta">
-    <a href="https://tally.so/r/wdVB5d" class="btn">Get Started</a>
+  <!-- Main Content -->
+  <main style="padding: 2rem; color: black;">
+    <p>Elmidor Group is a visionary automation & technology company dedicated to helping ambitious entrepreneurs work smarter, scale faster, and dominate their markets. By blending intelligent tools, no-code workflows, and next-gen tech, we empower you to boost productivity, streamline operations, and create unforgettable customer experiences — effortlessly.</p>
+    <div class="cta" style="margin-top: 2rem;">
+      <a class="btn" href="https://elmidorgroup.carrd.co/" style="padding: 0.75rem 1.5rem; background-color: #ffb300; color: black; text-decoration: none; border-radius: 5px;">Get Started</a>
+    </div>
+  </main>
+
+  <!-- Social Links -->
+  <div class="social" style="text-align: center; padding: 1rem;">
+    <a href="https://do.linkedin.com/in/mario-rodriguez-zagalo-elmidor-959536362/es?trk=profile-badge" target="_blank">LinkedIn</a> |
+    <a href="https://www.fiverr.com/s/R7vzpm2" target="_blank">Fiverr</a> |
+    <a href="https://www.youtube.com/@shoote.i" target="_blank">YouTube</a> |
+    <a href="https://www.make.com/en/register?pc=elmidorgroup" target="_blank">Make</a> |
+    <a href="https://wa.me/18498029243" target="_blank">WhatsApp</a>
   </div>
 
-  <section>
-    <h3>Our Mission</h3>
-    <p>To promote digital sovereignty through creativity, innovation, and open access to information and tools.</p>
+  <!-- Contact Section -->
+  <section id="contact" style="background-color: #fff3e0; color: black; padding: 2rem; border-top: 2px solid black;">
+    <h2>Contact Us</h2>
+    <p>Email: <a href="mailto:shoote.io@emidorgroup.com">shoote.io@emidorgroup.com</a></p>
+    <p>Follow us or get started on our <a href="https://elmidorgroup.carrd.co/">main page</a>.</p>
   </section>
-
-  <section>
-    <h3>Our Vision</h3>
-    <p>We envision a world where all people—especially marginalized communities—have the capacity and resources to define, build, and lead their digital futures.</p>
-  </section>
-</main>
-
-<div class="social">
-  <a href="https://do.linkedin.com/in/mario-rodriguez-zagalo-elmidor-959536362/es?trk=profile-badge" target="_blank">LinkedIn</a> |
-  <a href="https://www.fiverr.com/s/R7vzpm2" target="_blank">Fiverr</a> |
-  <a href="http://www.youtube.com/@shoote.i" target="_blank">YouTube</a> |
-  <a href="https://www.make.com/en/register?pc=elmidorgroup" target="_blank">Make</a> |
-  <a href="https://wa.me/18498029243" target="_blank">WhatsApp</a>
-</div>
-
-<div id="popup" class="popup">
-  <h2>Join Elmidor Updates</h2>
-  <form onsubmit="sendEmail();return false;">
-    <input type="email" id="emailField" placeholder="Your email" required/>
-    <button type="submit">Submit</button>
-  </form>
-</div>
-
-<script>
-function sendEmail(){
-  var e=document.getElementById("emailField").value;
-  window.location="mailto:shoote.io@elmidorgroup.com?subject=SiteSignup&body="+e;
-  document.getElementById("popup").style.display="none";
-}
-window.onload=function(){setTimeout(()=>{document.getElementById("popup").style.display="block";},3000);};
-</script>
-
-<footer>
-  <p>&copy; 2025 Elmidor Group™. All rights reserved.</p>
-  <p>Contact: info@elmidorgroup.com | Address: Calle 30 de Mayo, San Luis, Santo Domingo Este, 11807, Dominican Republic</p>
-</footer>
 </body>
 </html>
