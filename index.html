@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name="facebook-domain-verification" content="your-verification-code" />
+  <meta name="facebook-domain-verification" content="facebook-domain-verification=y8r2wm1ykglg9l8ek1o338uxcr9kf9
+" />
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -19,8 +20,8 @@
     "addressCountry": "DO"
   },
   "sameAs": [
-    "https://www.facebook.com/elmidorgroup",
-    "https://www.instagram.com/elmidorgroup",
+    "https://www.facebook.com/shoote.io",
+    "https://www.instagram.com/shoote.io",
     "https://www.linkedin.com/company/elmidorgroup"
   ]
 }
@@ -29,39 +30,60 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Elmidor Group™ - Creative Digital Solutions for Sovereignty" />
   <title>Elmidor Group™</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-<header><img src="logo.png" alt="Elmidor Group Logo" style="height:60px;"></header>
-  <header>
-    <h1>Elmidor Group™</h1>
-    <p>Creative Digital Solutions for Sovereignty</p>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="contact.html">Contact</a>
-      <a href="privacy.html">Privacy Policy</a>
-      <a href="terms.html">Terms</a>
-    </nav>
-  </header>
-  <main>
-    <section>
-      <h2>Welcome to Elmidor Group</h2>
-      <p>We provide digital solutions that empower entrepreneurs, communities, and social movements to build sustainable, autonomous futures. We specialize in automation, content strategy, digital identity, and educational media.</p>
-    </section>
-    <section>
-      <h3>Our Mission</h3>
-      <p>To promote digital sovereignty through creativity, innovation, and open access to information and tools.</p>
-    </section>
-    <section>
-      <h3>Our Vision</h3>
-      <p>We envision a world where all people—especially marginalized communities—have the capacity and resources to define, build, and lead their digital futures.</p>
-    </section>
-  </main>
-  <footer>
-    <p>&copy; 2025 Elmidor Group™. All rights reserved.</p>
-    <p>Contact: info@elmidorgroup.com | Address: Calle 30 de Mayo, San Luis, Santo Domingo Este, 11807, Dominican Republic</p>
-  </footer>
+<header>
+  <img src="assets/logo.png" alt="Elmidor Logo" class="logo">
+  <h1>Welcome to Elmidor Group</h1>
+</header>
+
+<main>
+  <p>Elmidor Group is a visionary automation & technology company dedicated to helping ambitious entrepreneurs work smarter, scale faster, and dominate their markets. By blending intelligent tools, no-code workflows, and next-gen tech, we empower you to boost productivity, streamline operations, and create unforgettable customer experiences — effortlessly.</p>
+
+  <div class="cta">
+    <a href="https://tally.so/r/wdVB5d" class="btn">Get Started</a>
+  </div>
+
+  <section>
+    <h3>Our Mission</h3>
+    <p>To promote digital sovereignty through creativity, innovation, and open access to information and tools.</p>
+  </section>
+
+  <section>
+    <h3>Our Vision</h3>
+    <p>We envision a world where all people—especially marginalized communities—have the capacity and resources to define, build, and lead their digital futures.</p>
+  </section>
+</main>
+
+<div class="social">
+  <a href="https://do.linkedin.com/in/mario-rodriguez-zagalo-elmidor-959536362/es?trk=profile-badge" target="_blank">LinkedIn</a> |
+  <a href="https://www.fiverr.com/s/R7vzpm2" target="_blank">Fiverr</a> |
+  <a href="http://www.youtube.com/@shoote.i" target="_blank">YouTube</a> |
+  <a href="https://www.make.com/en/register?pc=elmidorgroup" target="_blank">Make</a> |
+  <a href="https://wa.me/18498029243" target="_blank">WhatsApp</a>
+</div>
+
+<div id="popup" class="popup">
+  <h2>Join Elmidor Updates</h2>
+  <form onsubmit="sendEmail();return false;">
+    <input type="email" id="emailField" placeholder="Your email" required/>
+    <button type="submit">Submit</button>
+  </form>
+</div>
+
+<script>
+function sendEmail(){
+  var e=document.getElementById("emailField").value;
+  window.location="mailto:shoote.io@elmidorgroup.com?subject=SiteSignup&body="+e;
+  document.getElementById("popup").style.display="none";
+}
+window.onload=function(){setTimeout(()=>{document.getElementById("popup").style.display="block";},3000);};
+</script>
+
+<footer>
+  <p>&copy; 2025 Elmidor Group™. All rights reserved.</p>
+  <p>Contact: info@elmidorgroup.com | Address: Calle 30 de Mayo, San Luis, Santo Domingo Este, 11807, Dominican Republic</p>
+</footer>
 </body>
 </html>
