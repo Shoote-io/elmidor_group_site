@@ -1,60 +1,94 @@
 <!doctype html>
 <html lang="en">
 <head>
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Elmidor Group - Home</title>
-  <link id="dynamic-favicon" rel="icon" href="assets/index.ico" />
+  <meta name="description" content="Elmidor Group helps entrepreneurs work smarter, scale faster, and dominate their markets." />
+  <link rel="canonical" href="https://www.elmidorgroup.com/" />
+
+  <!-- Language & Author -->
+  <meta name="language" content="en">
+  <meta name="author" content="Elmidor Group">
+
+  <!-- Indexing -->
+  <meta name="robots" content="index, follow">
+  <meta name="googlebot" content="index, follow">
+
+  <!-- Keywords -->
+  <meta name="keywords" content="automation, technology, workflow, AI integration, business growth, Elmidor Group">
+
+  <!-- Facebook Domain Verification -->
+  <meta name="facebook-domain-verification" content="PUT-YOUR-CODE-HERE" />
+
+  <!-- Google Site Verification -->
+  <meta name="google-site-verification" content="PUT-YOUR-CODE-HERE" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Elmidor Group" />
+  <meta property="og:description" content="Automation, technology & smarter business growth." />
+  <meta property="og:image" content="https://www.elmidorgroup.com/assets/images/og-image.jpg" />
+  <meta property="og:url" content="https://www.elmidorgroup.com/" />
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="Elmidor Group">
+  <meta property="og:image:alt" content="Elmidor Group — Automation and Technology">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Elmidor Group">
+  <meta name="twitter:description" content="Automation, technology & smarter business growth.">
+  <meta name="twitter:image" content="https://www.elmidorgroup.com/assets/images/og-image.jpg">
+  <meta name="twitter:image:alt" content="Elmidor Group — Automation and Technology">
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Elmidor Group",
+    "url": "https://www.elmidorgroup.com/",
+    "logo": "https://www.elmidorgroup.com/assets/images/og-image.jpg",
+    "description": "Automation, technology & smarter business growth.",
+    "contactPoint": [{
+      "@type": "ContactPoint",
+      "telephone": "+1-809-000-0000",
+      "contactType": "Customer Support",
+      "areaServed": "DO",
+      "availableLanguage": ["English", "Spanish", "Haitian Creole"]
+    }],
+    "sameAs": [
+      "https://www.linkedin.com/company/elmidorgroup",
+      "https://twitter.com/elmidorgroup",
+      "https://www.youtube.com/@elmidorgroup"
+    ]
+  }
+  </script>
+
+  <meta name="color-scheme" content="light dark" />
+  <link rel="icon" href="/assets/images/favicon.ico" />
+  
   <style>
-    body { font-family: Arial, Helvetica, sans-serif; margin:40px; color:#111; }
-    header { text-align:center; margin-bottom:30px; }
-    nav a { margin:0 10px; color:#333; text-decoration:none; font-weight:600; }
-    .hero { text-align:center; margin-top:30px; }
-    .hero h1 { font-size:36px; margin-bottom:10px; }
-    .hero p { font-size:18px; color:#555; }
-    footer { margin-top:60px; text-align:center; color:#777; }
-    .btn { display:inline-block; margin-top:20px; padding:10px 18px; border-radius:8px; background:#FFC56E; color:#111; font-weight:700; text-decoration:none; }
+    :root {
+      --ring: rgba(255, 191, 105, .55); /* Apricot yellow click glow */
+    }
   </style>
 </head>
 <body>
-  <header>
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
-    <h2>Elmidor Group</h2>
-    <nav>
-      <a href="index.html">Home</a> | <a href="about.html">About Us</a> | <a href="services.html">Services</a> | <a href="contact.html">Contact</a> | <a href="privacy.html">Privacy</a>
-    </nav>
-  </header>
-  <main class="hero">
-    <h1>Welcome to Elmidor Group</h1>
-    <p>Automation, technology & smarter business growth.</p>
-    <div><a class="btn" href="contact.html">Contact Us</a></div>
-  </main>
-  <footer>© 2025 Elmidor Group. All rights reserved.</footer>
-
-<script>
-// Dynamic favicon switcher based on pathname
-(function(){
-  const mapping = {'index.html': 'index.ico', 'about.html': 'about.ico', 'services.html': 'services.ico', 'contact.html': 'contact.ico', 'privacy.html': 'privacy.ico'};
-  const path = window.location.pathname.split('/').pop() || 'index.html';
-  const key = mapping[path] ? mapping[path] : mapping['index.html'];
-  const link = document.getElementById('dynamic-favicon');
-  if(link) link.href = 'assets/' + key;
-  else {
-    const newLink = document.createElement('link');
-    newLink.id = 'dynamic-favicon';
-    newLink.rel = 'icon';
-    newLink.href = 'assets/' + key;
-    document.head.appendChild(newLink);
-  }
-})();
-</script>
-
+  <!-- Kontni prensipal ou rete menm jan ak orijinal -->
+  
+  <footer>
+    <div style="display:flex; gap:16px; flex-wrap:wrap">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#news">Updates</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="support.html">Support</a>
+      <a href="follow.html">Follow Us</a>
+      <a href="legacy.html">Legacy</a>
+      <a href="auth.html">Authentication</a>
+    </div>
+  </footer>
 </body>
 </html>
