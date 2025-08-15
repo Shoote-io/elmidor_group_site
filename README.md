@@ -1,13 +1,23 @@
-# Elmidor Group - Favicon Package
 
-This package contains favicon assets and sample HTML pages (index.html, about.html, services.html, contact.html, privacy.html) configured to dynamically switch the favicon per page.
+# Elmidor Group Official Site
 
-Install: place the `assets/` folder and HTML files on your hosting root or repo and push to GitHub Pages or your hosting provider.
+This ZIP includes a complete multi-page site that matches your UI/UX:
+- Shared header/footer, sticky nav with glass, responsive mobile menu
+- Page-specific hover colors via `body` class
+- Loader with rotating logo
+- IntersectionObserver scroll-reveal
+- CTA buttons to https://www.elmidorgroup.com
+- Contact info and Team page with CEO
 
-Mapping of pages to favicon colors:
-- index.html -> apricot
-- about.html -> black
-- services.html -> green
-- contact.html -> blue
-- privacy.html -> muted
+## Edit safely
+- Colors: change per-page theme by editing the `body` class (`about`, `services`, `blog`, `follow`, `support`, `contact`, `team`). Hover color is defined in CSS (`body.about { --hover:#7C5CFF }` etc.).
+- Content: edit only inside `<main> ... </main>` blocks on each page.
+- Images: replace URLs with your own images or local files in `assets/images/`.
+- Buttons: search for `https://www.elmidorgroup.com` if you want to point CTAs elsewhere.
+
+## Add a blog post
+- Duplicate `blog-post.html`, update the content, then link to it from `blog.html`.
+
+## Add team members
+- Duplicate a `.card` block in `team.html` and change name/role/image.
 
