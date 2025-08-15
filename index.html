@@ -40,6 +40,10 @@
       --radius: 16px;
       --shadow: 0 10px 30px rgba(0,0,0,.35);
       --container: 1140px;
+
+      /* New: Hover color (apricot) */
+      --hover-apricot: #FFB347;
+      --hover-apricot-2: #FFAE42;
     }
 
     /* Reset + base */
@@ -47,7 +51,8 @@
     html{scroll-behavior:smooth}
     body{margin:0; font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji"; color:var(--text); background: radial-gradient(1200px 800px at 80% -10%, rgba(124,92,255,.18), transparent 60%), var(--bg)}
     img{max-width:100%; display:block}
-    a{color:inherit; text-decoration:none}
+    a{color:inherit; text-decoration:none; transition: color .2s ease, background .2s ease}
+    a:hover{color:var(--hover-apricot)}
     a:focus-visible, button:focus-visible{outline: 3px solid var(--ring); outline-offset: 2px; border-radius: 8px}
     ::selection{background:rgba(124,92,255,.35)}
 
@@ -55,11 +60,11 @@
     .container{max-width:var(--container); margin-inline:auto; padding: 0 20px}
     .section{padding: 72px 0}
     .muted{color:var(--muted)}
-    .btn{appearance:none; border:0; cursor:pointer; display:inline-flex; align-items:center; gap:10px; padding:12px 18px; border-radius: 999px; font-weight:600; transition: transform .2s ease, box-shadow .2s ease, background .2s ease}
+    .btn{appearance:none; border:0; cursor:pointer; display:inline-flex; align-items:center; gap:10px; padding:12px 18px; border-radius: 999px; font-weight:600; transition: transform .2s ease, box-shadow .2s ease, background .2s ease, color .2s ease}
     .btn-primary{background:linear-gradient(90deg,var(--brand),var(--brand-2)); color:#0a0b0e; box-shadow: 0 8px 24px rgba(124,92,255,.35)}
-    .btn-primary:hover{transform: translateY(-1px)}
+    .btn-primary:hover{transform: translateY(-1px); background:var(--hover-apricot); color:#0a0b0e}
     .btn-outline{background:transparent; border:1px solid #2b2f37}
-    .btn-outline:hover{background:#1a1d24}
+    .btn-outline:hover{background:var(--hover-apricot); color:#0a0b0e}
     .chip{display:inline-flex; align-items:center; gap:8px; padding:6px 10px; border:1px solid #2b2f37; border-radius:999px; color:var(--muted); font-size:12px}
 
     /* Skip link for a11y */
@@ -73,7 +78,7 @@
     .brand .logo{width:28px; height:28px; display:grid; place-items:center; border-radius:8px; background:linear-gradient(135deg,var(--brand) 0%, var(--brand-2) 100%); box-shadow: var(--shadow)}
     .nav-links{display:flex; gap:18px; align-items:center}
     .nav-links a{padding:8px 10px; border-radius:10px}
-    .nav-links a:hover{background:#1a1d24}
+    .nav-links a:hover{background:var(--hover-apricot); color:#0a0b0e}
     .nav-cta{display:flex; align-items:center; gap:10px}
 
     /* Mobile nav */
@@ -120,7 +125,7 @@
     .footer-grid{display:grid; gap:18px; grid-template-columns: 1fr auto}
     .socials{display:flex; gap:12px}
     .socials a{padding:8px; border-radius:10px}
-    .socials a:hover{background:#1a1d24}
+    .socials a:hover{background:var(--hover-apricot); color:#0a0b0e}
     @media (max-width: 680px){
       .footer-grid{grid-template-columns: 1fr}
     }
@@ -128,6 +133,14 @@
     /* Reveal animations */
     [data-animate]{opacity:0; transform: translateY(14px); transition: opacity .6s ease, transform .6s ease}
     [data-animate].in{opacity:1; transform: none}
+
+    /* Extra animations */
+    @keyframes fadeUp{from{opacity:0; transform:translateY(16px)}to{opacity:1; transform:none}}
+    @keyframes slideLeft{from{opacity:0; transform:translateX(20px)}to{opacity:1; transform:none}}
+    @keyframes zoomIn{from{opacity:.0; transform:scale(.96)}to{opacity:1; transform:scale(1)}}
+    .animate-fadeUp.in{animation:fadeUp .6s both}
+    .animate-slideLeft.in{animation:slideLeft .6s both}
+    .animate-zoomIn.in{animation:zoomIn .5s both}
 
     /* Reduced motion */
     @media (prefers-reduced-motion: reduce){
@@ -150,13 +163,6 @@
     ]
   }
   </script>
-
-  <!-- (Optional) Analytics placeholders. Replace IDs and uncomment to activate.
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-XXXXXXX');
-  </script>
-  -->
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -175,7 +181,11 @@
         <a href="#about">About</a>
         <a href="#services">Services</a>
         <a href="#news">Updates</a>
-        <a href="#contact">Contact</a>
+        <a href="blog.html">Blog</a>
+        <a href="follow.html">Follow Us</a>
+        <a href="support.html">Support</a>
+        <a href="terms.html">Terms</a>
+        <a href="privacy.html">Privacy</a>
       </div>
 
       <div class="nav-cta">
@@ -192,14 +202,14 @@
         <div class="grid">
           <div>
             <span class="chip" aria-hidden="true">Automation • AI • Growth</span>
-            <h1 data-animate>Work smarter. Scale faster. Win your market.</h1>
-            <p class="muted" data-animate style="transition-delay:120ms">Elmidor Group builds automation and technology that remove friction from your operations so you can focus on impact.</p>
-            <div class="hero-cta" data-animate style="transition-delay:220ms">
+            <h1 data-animate class="animate-fadeUp">Work smarter. Scale faster. Win your market.</h1>
+            <p class="muted" data-animate class="animate-slideLeft" style="transition-delay:120ms">Elmidor Group builds automation and technology that remove friction from your operations so you can focus on impact.</p>
+            <div class="hero-cta" data-animate class="animate-zoomIn" style="transition-delay:220ms">
               <a class="btn btn-primary" href="#cta">Start a Project</a>
               <a class="btn btn-outline" href="#services" aria-label="View services">Explore Services →</a>
             </div>
           </div>
-          <div class="hero-visual" data-animate>
+          <div class="hero-visual" data-animate class="animate-zoomIn">
             <div class="stat">
               <div class="num">50%+</div>
               <div class="label">Avg. process time saved</div>
@@ -216,7 +226,7 @@
     <!-- About -->
     <section class="about section" id="about">
       <div class="container about-grid">
-        <div class="card" data-animate>
+        <div class="card" data-animate class="animate-fadeUp">
           <h2>About Elmidor Group</h2>
           <p class="muted">We help ambitious entrepreneurs and organizations automate workflows, modernize their stack, and build memorable digital experiences. Our approach blends strategy, design, and engineering with a relentless focus on outcomes.</p>
           <ul class="muted">
@@ -225,7 +235,7 @@
             <li>✔ Modular design to scale content easily</li>
           </ul>
         </div>
-        <div class="card" aria-label="Illustration" data-animate style="min-height:220px; display:grid; place-items:center">
+        <div class="card" aria-label="Illustration" data-animate class="animate-zoomIn" style="min-height:220px; display:grid; place-items:center">
           <!-- Placeholder visual block; swap with an image or Lottie later -->
           <svg width="100%" height="180" viewBox="0 0 600 180" role="img" aria-label="Automation abstract">
             <defs>
@@ -249,18 +259,18 @@
     <!-- Services (skeleton ready for future expansion) -->
     <section class="services section" id="services">
       <div class="container">
-        <h2 data-animate>Services</h2>
-        <p class="muted" data-animate style="max-width:62ch">A modular grid of cards you can add/remove without breaking the design. Duplicate a <code>.service.card</code> block to expand.</p>
+        <h2 data-animate class="animate-fadeUp">Services</h2>
+        <p class="muted" data-animate class="animate-slideLeft" style="max-width:62ch">A modular grid of cards you can add/remove without breaking the design. Duplicate a <code>.service.card</code> block to expand.</p>
         <div class="grid" style="margin-top:18px">
-          <article class="service card" data-animate aria-labelledby="svc1-title">
+          <article class="service card" data-animate class="animate-zoomIn" aria-labelledby="svc1-title">
             <h3 id="svc1-title">Automation Consulting</h3>
             <p class="muted">Audit, blueprint, and orchestrate smart automations across your stack.</p>
           </article>
-          <article class="service card" data-animate aria-labelledby="svc2-title">
+          <article class="service card" data-animate class="animate-zoomIn" aria-labelledby="svc2-title">
             <h3 id="svc2-title">Custom Integrations</h3>
             <p class="muted">APIs, webhooks, and data pipelines that move at your speed.</p>
           </article>
-          <article class="service card" data-animate aria-labelledby="svc3-title">
+          <article class="service card" data-animate class="animate-zoomIn" aria-labelledby="svc3-title">
             <h3 id="svc3-title">Experience Design</h3>
             <p class="muted">Accessible, performant interfaces that convert and delight.</p>
           </article>
@@ -271,8 +281,8 @@
     <!-- News / Updates (placeholder) -->
     <section class="section" id="news">
       <div class="container">
-        <h2 data-animate>Updates</h2>
-        <div class="card" data-animate>
+        <h2 data-animate class="animate-fadeUp">Updates</h2>
+        <div class="card" data-animate class="animate-slideLeft">
           <p class="muted">Coming soon: case studies, product releases, and thought leadership. Hook this to your CMS later.</p>
         </div>
       </div>
@@ -281,7 +291,7 @@
     <!-- CTA / Contact anchor -->
     <section class="section" id="cta">
       <div class="container">
-        <div class="card" data-animate>
+        <div class="card" data-animate class="animate-zoomIn">
           <h2>Ready to build what matters?</h2>
           <p class="muted">Tell us about your goals. We'll map a clear path and get you compounding wins fast.</p>
           <a class="btn btn-primary" href="#contact">Contact Us</a>
@@ -312,7 +322,11 @@
               <a href="#about">About</a>
               <a href="#services">Services</a>
               <a href="#news">Updates</a>
-              <a href="#" aria-label="Privacy Policy">Privacy</a>
+              <a href="blog.html">Blog</a>
+              <a href="follow.html">Follow Us</a>
+              <a href="support.html">Support</a>
+              <a href="terms.html" aria-label="Terms & Conditions">Terms</a>
+              <a href="privacy.html" aria-label="Privacy Policy">Privacy</a>
             </div>
           </nav>
         </div>
@@ -373,4 +387,3 @@
   ------------------------------------------------------- -->
 </body>
 </html>
-
