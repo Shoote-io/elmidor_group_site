@@ -4,83 +4,282 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Contact — Elmidor Group</title>
-  <meta name="description" content="Elmidor Group helps entrepreneurs work smarter, scale faster, and dominate their markets." />
-  <link rel="canonical" href="https://www.elmidorgroup.com/" />
-  <link rel="icon" href="assets/images/favicon.ico" />
-  <link rel="stylesheet" href="assets/css/style.css" />
-</head>
-<body class="contact">
-  <div id="loader"><div class="spinner"><span class="logo">◐</span></div></div>
-  <header>
-  <div class="container nav">
-    <a class="brand" href="index.html">
-      <span class="logo">◐</span>
-      <span>Elmidor Group</span>
-    </a>
-    <button class="btn btn-outline menu-btn" id="menuBtn">☰ Menu</button>
-    <div class="nav-links" id="navLinks" data-open="false">
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="blog.html">Blog</a>
-      <a href="follow-us.html">Follow Us</a>
-      <a href="support.html">Support</a>
-      <a href="terms.html">Terms</a>
-      <a href="privacy.html">Privacy</a>
-    </div>
-    <div class="nav-cta">
-      <a class="btn btn-outline" href="contact.html">Contact</a>
-      <a class="btn btn-primary" href="https://www.elmidorgroup.com">Get Started</a>
-    </div>
-  </div>
-</header>
-  <main class="section container">
-    
-<h1 data-animate>Contact</h1>
-<div class="card" data-animate="right">
-  <p><strong>Email:</strong> <a href="mailto:shoote.io@elmidorgroup.com">shoote.io@elmidorgroup.com</a></p>
-  <p><strong>Phone:</strong> <a href="tel:+18296289130">+1 (829) 628-9130</a></p>
-  <p><strong>Address:</strong> Santo Domingo, DO</p>
-  <div class="sep"></div>
-  <div style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap">
-    <a class="btn btn-primary" href="https://www.elmidorgroup.com">Book a Call</a>
-    <a class="btn btn-outline" href="support.html">Get Support</a>
-  </div>
-</div>
 
-  </main>
-  <footer id="contact" class="section">
-  <div class="container footer-grid">
-    <div>
-      <div class="brand" style="margin-bottom:8px">
-        <span class="logo">◐</span>
+  <!-- Primary SEO -->
+  <meta name="description" content="Get in touch with Elmidor Group for support, partnerships, or general inquiries." />
+  <link rel="canonical" href="https://www.elmidorgroup.com/contact.html" />
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Contact — Elmidor Group" />
+  <meta property="og:description" content="Reach out for support, collaborations, or community engagement." />
+  <meta property="og:image" content="https://www.elmidorgroup.com/assets/assets/images/elmidor.cover.jpg" />
+  <meta property="og:url" content="https://www.elmidorgroup.com/contact.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="/assets/assets/images/favicon.ico" />
+
+  <!-- Color scheme -->
+  <meta name="color-scheme" content="light dark" />
+  <meta name="theme-color" content="#13151a" />
+
+  <!-- Robots -->
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+
+  <!-- Google Analytics & Ads -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-24N197CRM9"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-67N2QVBCZV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-24N197CRM9');
+    gtag('config', 'G-67N2QVBCZV');
+  </script>
+
+  <!-- Facebook Pixel -->
+  <script>
+    !function(f,b,e,v,n,t,s){
+      if(f.fbq)return; n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n; n.push=n; n.loaded=!0; n.version='2.0';
+      n.queue=[]; t=b.createElement(e); t.async=!0;
+      t.src=v; s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '786654690436263');
+    fbq('track', 'PageView');
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+         src="https://www.facebook.com/tr?id=786654690436263&ev=PageView&noscript=1"/>
+  </noscript>
+
+  <!-- Facebook SDK -->
+  <script>
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId            : '1243975833743807',
+        autoLogAppEvents : true,
+        xfbml            : true,
+        version          : 'v23.0'
+      });
+    };
+  </script>
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+
+  <!-- JSON-LD: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"Elmidor Group",
+    "url":"https://www.elmidorgroup.com",
+    "logo":"https://www.elmidorgroup.com/assets/assets/images/og-image.jpg",
+    "sameAs":[
+      "https://www.facebook.com/shoote.io",
+      "https://www.instagram.com/shoote.io",
+      "https://www.linkedin.com/company/shoote.io"
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: ContactPage -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"ContactPage",
+    "mainEntity":{
+      "@type":"Organization",
+      "name":"Elmidor Group",
+      "contactPoint":{
+        "@type":"ContactPoint",
+        "telephone":"+1-829-628-9130",
+        "contactType":"customer support",
+        "areaServed":"Worldwide",
+        "availableLanguage":["en","ht"]
+      }
+    }
+  }
+  </script>
+
+  <!-- Inline modern UI/UX styles -->
+  <style>
+    :root{
+      --bg:#0c0d0f; --panel:#13151a; --panel-2:#191c22;
+      --text:#e6e7eb; --muted:#b4b7bf;
+      --brand:#5ad1e6; --brand-2:#7c5cff;
+      --hover-apricot:#FFB347; --hover-apricot-2:#FFAE42;
+      --radius:16px; --shadow:0 10px 30px rgba(0,0,0,.35); --container:1140px;
+    }
+    *,*::before,*::after{box-sizing:border-box}
+    body{
+      margin:0; font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Arial;
+      color:var(--text);
+      background: radial-gradient(1200px 800px at 80% -10%, rgba(124,92,255,.12), transparent 60%), var(--bg)
+    }
+    a{color:inherit; text-decoration:none; transition:.2s}
+    a:hover{color:var(--hover-apricot)}
+
+    .container{max-width:var(--container);margin-inline:auto;padding:0 20px}
+    .section{padding:72px 0}
+    .grid{display:grid;gap:16px;grid-template-columns:repeat(12,1fr)}
+    .card{background:var(--panel);border:1px solid rgba(255,255,255,.05);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow)}
+
+    header{position:sticky;top:0;z-index:50;backdrop-filter:blur(8px);background:rgba(12,13,15,.6)}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:800}
+    .brand .logo{width:28px;height:28px;display:grid;place-items:center;border-radius:8px;background:linear-gradient(135deg,var(--brand),var(--brand-2));box-shadow:var(--shadow)}
+    .nav-links{display:flex;gap:18px;align-items:center}
+    .nav-links a{padding:8px 10px;border-radius:10px}
+    .nav-links a:hover{background:var(--hover-apricot);color:#0a0b0e}
+
+    h1{font-size:clamp(28px,5vw,42px);margin:0}
+    h2{margin:0 0 18px;font-size:24px}
+    .title{font-weight:700;font-size:18px;margin-bottom:6px}
+    .desc{color:var(--muted)}
+
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 18px;border-radius:999px;font-weight:600;cursor:pointer;transition:.2s}
+    .btn-primary{background:linear-gradient(90deg,var(--brand),var(--brand-2));color:#0a0b0e}
+    .btn-primary:hover{background:var(--hover-apricot);color:#0a0b0e}
+    .btn-outline{background:transparent;border:1px solid #2b2f37}
+    .btn-outline:hover{background:var(--hover-apricot);color:#0a0b0e}
+
+    input,textarea{width:100%;margin-top:6px;margin-bottom:14px;padding:12px;border-radius:10px;border:1px solid #2b2f37;background:#0f1116;color:var(--text)}
+
+    footer{border-top:1px solid rgba(255,255,255,.05);background:#0a0b0e;padding:26px 0}
+    .footer-grid{display:grid;gap:18px;grid-template-columns:1fr auto}
+    .socials{display:flex;gap:12px}
+    .socials a{padding:6px;border-radius:8px}
+    .socials a:hover{background:var(--hover-apricot);color:#0a0b0e}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav" role="navigation" aria-label="Primary">
+      <a class="brand" href="/" aria-label="Elmidor Group – Home">
+        <span class="logo" aria-hidden="true">◐</span>
         <span>Elmidor Group</span>
+      </a>
+      <div class="nav-links">
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="blog.html">Blog</a>
+        <a href="follow.html">Follow Us</a>
+        <a href="support.html">Support</a>
+        <a href="contact.html" aria-current="page">Contact</a>
       </div>
-      <p class="muted">Automation • Technology • Smarter growth</p>
-      <p class="muted">Santo Domingo, DO</p>
     </div>
-    <div>
-      <nav>
-        <div class="socials" style="margin-bottom:10px">
-          <a href="https://www.elmidorgroup.com">🔗</a>
-          <a href="https://www.elmidorgroup.com">𝕏</a>
-          <a href="https://www.elmidorgroup.com">▶</a>
+  </header>
+
+  <main id="main">
+    <section class="hero section">
+      <div class="container">
+        <h1>Contact & Connect with Elmidor Group</h1>
+        <p>We’re here to answer questions, discuss collaborations, or help you get started. Reach out to our team using the options below.</p>
+      </div>
+    </section>
+
+    <section class="section" id="contact-options">
+      <div class="container">
+        <h2>Contact Options</h2>
+        <div class="grid">
+          <div class="support card" style="grid-column:span 6">
+            <div class="title">Email Support</div>
+            <p class="desc">For general inquiries or direct support, email us and our team will respond within 24–48 hours.</p>
+            <a class="btn btn-primary" href="mailto:shoote.io@elmidorgroup.com">shoote.io@elmidorgroup.com</a>
+          </div>
+          <div class="support card" style="grid-column:span 6">
+            <div class="title">Phone / WhatsApp</div>
+            <p class="desc">Prefer to talk? Call or message us on WhatsApp for quick assistance.</p>
+            <a class="btn btn-primary" href="tel:+18296289130">+1 (829) 628-9130</a>
+          </div>
+          <div class="support card" style="grid-column:span 6">
+            <div class="title">Community Group</div>
+            <p class="desc">Join our community group to ask quick questions, get updates, or collaborate with others.</p>
+            <a class="btn btn-primary" href="#community">Join Community</a>
+          </div>
+          <div class="support card" style="grid-column:span 6">
+            <div class="title">Social Media</div>
+            <p class="desc">Stay connected with our latest news and updates on social platforms.</p>
+            <div style="display:flex; gap:10px; flex-wrap:wrap">
+              <a class="btn btn-outline" href="#">LinkedIn</a>
+              <a class="btn btn-outline" href="#">X (Twitter)</a>
+              <a class="btn btn-outline" href="#">YouTube</a>
+            </div>
+          </div>
         </div>
-        <div style="display:flex; gap:16px; flex-wrap:wrap">
-          <a href="index.html">Home</a>
-          <a href="blog.html">Blog</a>
-          <a href="follow-us.html">Follow Us</a>
-          <a href="support.html">Support</a>
-          <a href="terms.html">Terms</a>
-          <a href="privacy.html">Privacy</a>
+      </div>
+    </section>
+
+    <section class="section" id="contact-form">
+      <div class="container">
+        <h2>Send Us a Message</h2>
+        <div class="card">
+          <form action="#" method="post" onsubmit="event.preventDefault(); alert('Message sent!');">
+            <label for="name">Full Name</label>
+            <input id="name" name="name" required placeholder="Your name">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required placeholder="you@example.com">
+            <label for="subject">Subject</label>
+            <input id="subject" name="subject" required placeholder="Subject">
+            <label for="msg">Message</label>
+            <textarea id="msg" name="message" rows="6" placeholder="Your message"></textarea>
+            <button class="btn btn-primary" type="submit">Submit</button>
+          </form>
         </div>
-      </nav>
+      </div>
+    </section>
+  </main>
+
+  <footer class="section">
+    <div class="container footer-grid">
+      <div>
+        <div class="brand">
+          <span class="logo" aria-hidden="true">◐</span>
+          <span>Elmidor Group</span>
+        </div>
+        <p class="muted">Automation • Technology • Smarter growth</p>
+      </div>
+      <div>
+        <nav>
+          <div class="socials">
+            <a href="#">🔗</a>
+            <a href="#">𝕏</a>
+            <a href="#">▶</a>
+          </div>
+          <div style="display:flex; gap:16px; flex-wrap:wrap">
+            <a class="footer-link" href="index.html">Home</a>
+            <a class="footer-link" href="blog.html">Blog</a>
+            <a class="footer-link" href="follow.html">Follow Us</a>
+            <a class="footer-link" href="support.html">Support</a>
+            <a class="footer-link" href="terms.html">Terms</a>
+            <a class="footer-link" href="privacy.html">Privacy</a>
+          </div>
+        </nav>
+      </div>
     </div>
-  </div>
-  <div class="container" style="padding-top:16px">
-    <hr style="border:0; border-top:1px solid rgba(255,255,255,.06)"/>
-    <p class="muted" style="font-size:14px; margin-top:10px">© <span id="year"></span> Elmidor Group. All rights reserved.</p>
-  </div>
-</footer>
-  <script src="assets/js/main.js"></script>
+    <div class="container">
+      <hr/>
+      <p class="muted" style="font-size:14px">© <span id="year"></span> Elmidor Group. All rights reserved.</p>
+    </div>
+
+    <!-- Facebook Like & Share -->
+    <div class="container" style="margin-top:20px; text-align:center">
+      <div class="fb-like"
+           data-href="https://www.elmidorgroup.com/contact.html"
+           data-width=""
+           data-layout="standard"
+           data-action="like"
+           data-size="large"
+           data-share="true">
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
