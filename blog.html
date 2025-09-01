@@ -67,6 +67,15 @@
 
   <!-- Inline critical CSS -->
   <style>
+        .container{max-width:var(--container); margin-inline:auto; padding: 0 20px}
+    .section{padding: 72px 0}
+    .muted{color:var(--muted)}
+    .btn{appearance:none; border:0; cursor:pointer; display:inline-flex; align-items:center; gap:10px; padding:12px 18px; border-radius: 999px; font-weight:600; transition: transform .2s ease, box-shadow .2s ease, background .2s ease, color .2s ease}
+    .btn-get-started{background:linear-gradient(90deg,var(--brand),var(--brand-2)); color:#0a0b0e; box-shadow: 0 8px 24px rgba(124,92,255,.35)}
+    .btn-get-started:hover{transform: translateY(-1px); background:var(--hover-apricot); color:#0a0b0e}
+    .btn-contact{background:#ef4444; color:#fff; border:1px solid #2b2f37}
+    .btn-contact:hover{background:var(--hover-apricot); color:#0a0b0e}
+    .chip{display:inline-flex; align-items:center; gap:8px; padding:6px 10px; border:1px solid #2b2f37; border-radius:999px; color:var(--muted); font-size:12px}
     :root{ --bg:#0c0d0f; --panel:#13151a; --text:#e6e7eb; --muted:#b4b7bf; --hover-apricot:#FFB347; --hover-apricot-2:#FFAE42; --container:1140px; --radius:16px; --shadow:0 10px 30px rgba(0,0,0,.35) }
     *,*::before,*::after{box-sizing:border-box}
     html{scroll-behavior:smooth} body{margin:0;font:16px/1.6 system-ui, -apple-system, 'Segoe UI', Roboto, Arial;color:var(--text);background:radial-gradient(1200px 800px at 80% -10%, rgba(124,92,255,.18), transparent 60%), var(--bg)}
@@ -165,8 +174,8 @@
         <a href="Team.html">Personals</a>
       </div>
       <div class="nav-cta">
-        <a class="btn btn-outline" href="contact.html">Contact</a>
-        <a class="btn btn-primary" href="#cta">Get Started</a>
+        <a class="btn btn-contact" href="contact.html">Contact</a>
+        <a class="btn btn-get-started" href="#cta">Get Started</a>
       </div>
     </div>
   </header>
