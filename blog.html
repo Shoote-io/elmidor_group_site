@@ -106,22 +106,14 @@
 
     [data-animate]{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
     [data-animate].in{opacity:1;transform:none}
-
-    /* --- Bouton yo ajoute la --- */
-    .btn{appearance:none; border:0; cursor:pointer; display:inline-flex; align-items:center; gap:10px; padding:12px 18px; border-radius: 999px; font-weight:600; transition: transform .2s ease, box-shadow .2s ease, background .2s ease, color .2s ease}
-    .btn-get-started{background:linear-gradient(90deg,var(--brand),var(--brand-2)); color:#0a0b0e; box-shadow: 0 8px 24px rgba(124,92,255,.35)}
-    .btn-get-started:hover{transform: translateY(-1px); background:var(--hover-apricot); color:#0a0b0e}
-    .btn-contact{background:#ef4444; color:#fff; border:1px solid #2b2f37}
-    .btn-contact:hover{background:var(--hover-apricot); color:#0a0b0e}
-    .chip{display:inline-flex; align-items:center; gap:8px; padding:6px 10px; border:1px solid #2b2f37; border-radius:999px; color:var(--muted); font-size:12px}
-
   </style>
 
   <meta name="theme-color" content="#13151a" />
   <meta property="og:site_name" content="Elmidor Group" />
 
   <!-- JSON-LD: Organization -->
-  <script type="application/ld+json">{
+  <script type="application/ld+json">
+  {
     "@context":"https://schema.org",
     "@type":"Organization",
     "name":"Elmidor Group",
@@ -132,10 +124,12 @@
       "https://www.instagram.com/shoote.io",
       "https://www.linkedin.com/company/elmidorgroup"
     ]
-  }</script>
+  }
+  </script>
 
-  <!-- JSON-LD: BlogPosting -->
-  <script type="application/ld+json">{
+  <!-- JSON-LD: BlogPosting (for the featured post) -->
+  <script type="application/ld+json">
+  {
     "@context":"https://schema.org",
     "@type":"BlogPosting",
     "headline":"Elmidor Group™ – A Revolution in the Way We Live and Work",
@@ -146,7 +140,8 @@
     "mainEntityOfPage":{"@type":"WebPage","@id":"https://www.elmidorgroup.com/blog/elmidor-group-manifest"},
     "datePublished":"2025-10-21",
     "dateModified":"2025-10-21"
-  }</script>
+  }
+  </script>
 
 </head>
 <body>
@@ -170,8 +165,8 @@
         <a href="Team.html">Personals</a>
       </div>
       <div class="nav-cta">
-        <a class="btn btn-contact" href="contact.html">Contact</a>
-        <a class="btn btn-get-started" href="#cta">Get Started</a>
+        <a class="btn btn-outline" href="contact.html">Contact</a>
+        <a class="btn btn-primary" href="#cta">Get Started</a>
       </div>
     </div>
   </header>
@@ -194,7 +189,7 @@
               <h3><a href="/blog/elmidor-group-manifest" class="gradient-hover">Elmidor Group™ – A Revolution in the Way We Live and Work</a></h3>
               <p class="muted">Official Manifesto: vision, mission, and how automation becomes the bridge for people and businesses. <strong>We bring automated workflows as guides, managers, and personal assistants.</strong></p>
               <div class="read-more">
-                <a class="btn btn-primary" href="blog-post.html">Read Article</a>
+                <a class="btn btn-primary" href="/blog-post/elmidor-group-manifest">Read Article</a>
                 <a class="btn btn-outline" href="/blog">View more articles</a>
               </div>
             </div>
