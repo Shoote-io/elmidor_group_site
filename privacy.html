@@ -1,20 +1,313 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Privacy Policy - Elmidor Group™</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Privacy Policy — Elmidor Group</title>
+  <meta name="description" content="Privacy Policy for Elmidor Group. Learn what data we collect, how we use it, and your rights." />
+  <link rel="canonical" href="https://www.elmidorgroup.com/privacy.html" />
+  <meta name="theme-color" content="#13151a" />
+  <meta name="color-scheme" content="light dark" />
+  <link rel="icon" href="assets/images/favicon.ico" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Privacy Policy — Elmidor Group" />
+  <meta property="og:description" content="Privacy Policy for Elmidor Group. Learn what data we collect, how we use it, and your rights." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.elmidorgroup.com/privacy.html" />
+  <meta property="og:site_name" content="Elmidor Group" />
+  <meta property="og:image" content="https://www.elmidorgroup.com/assets/images/og-image.jpg" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Privacy Policy — Elmidor Group" />
+  <meta name="twitter:description" content="Privacy Policy for Elmidor Group. Learn what data we collect, how we use it, and your rights." />
+  <meta name="twitter:image" content="https://www.elmidorgroup.com/assets/images/og-image.jpg" />
+  <meta name="twitter:site" content="@elmidor" />
+
+  <!-- Robots -->
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+
+  <!-- Theme styles (from about_final) -->
+  <style>
+    :root{
+      --bg:#0c0d0f; --panel:#13151a; --panel-2:#191c22;
+      --text:#e6e7eb; --muted:#b4b7bf;
+      --brand:#5ad1e6; --brand-2:#7c5cff;
+      --ok:#22c55e; --warn:#f59e0b; --err:#ef4444;
+      --ring:rgba(122,98,255,.55);
+      --radius:16px; --shadow:0 10px 30px rgba(0,0,0,.35);
+      --container:1140px;
+      --hover-apricot:#FFB347; --hover-apricot-2:#FFAE42;
+    }
+    *,*::before,*::after{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0; font:16px/1.7 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,"Helvetica Neue",Arial; color:var(--text); background:radial-gradient(1200px 800px at 80% -10%,rgba(124,92,255,.18),transparent 60%),var(--bg)}
+    img{max-width:100%; display:block}
+    a{color:inherit; text-decoration:none; transition:color .2s ease,background .2s ease}
+    a:hover{color:var(--hover-apricot)}
+    a:focus-visible,button:focus-visible{outline:3px solid var(--ring); outline-offset:2px; border-radius:8px}
+    ::selection{background:rgba(124,92,255,.35)}
+
+    .container{max-width:var(--container); margin-inline:auto; padding:0 20px}
+    .section{padding:72px 0}
+    .muted{color:var(--muted)}
+    .btn{appearance:none; border:0; cursor:pointer; display:inline-flex; align-items:center; gap:10px; padding:12px 18px; border-radius:999px; font-weight:600; transition:transform .2s ease,box-shadow .2s ease,background .2s ease,color .2s ease}
+    .btn-primary{background:linear-gradient(90deg,var(--brand),var(--brand-2)); color:#0a0b0e; box-shadow:0 8px 24px rgba(124,92,255,.35)}
+    .btn-primary:hover{transform:translateY(-1px); background:var(--hover-apricot); color:#0a0b0e}
+    .btn-outline{background:transparent; border:1px solid #2b2f37}
+    .btn-outline:hover{background:var(--hover-apricot); color:#0a0b0e}
+    header{position:sticky; top:0; z-index:50; backdrop-filter:saturate(140%) blur(8px); background:rgba(12,13,15,.6); border-bottom:1px solid rgba(255,255,255,.05)}
+    .nav{display:flex; align-items:center; justify-content:space-between; padding:14px 0}
+    .brand{display:flex; align-items:center; gap:10px; font-weight:800}
+    .brand .logo{width:28px; height:28px; display:grid; place-items:center; border-radius:8px; background:linear-gradient(135deg,var(--brand) 0%,var(--brand-2) 100%); box-shadow:var(--shadow)}
+    .nav-links{display:flex; gap:18px; align-items:center}
+    .nav-links a{padding:8px 10px; border-radius:10px}
+    .nav-links a:hover{background:var(--hover-apricot); color:#0a0b0e}
+    .nav-cta{display:flex; align-items:center; gap:10px}
+    .menu-btn{display:none}
+    @media(max-width:820px){
+      .menu-btn{display:inline-flex}
+      .nav-links{position:fixed; inset:60px 12px auto 12px; background:var(--panel); padding:14px; border-radius:14px; box-shadow:var(--shadow); flex-direction:column; align-items:stretch; gap:8px; max-height:0; overflow:hidden; transition:max-height .35s ease}
+      .nav-links[data-open="true"]{max-height:320px}
+      .nav-cta{display:none}
+    }
+    .card{background:var(--panel); border:1px solid #2b2f37; border-radius:var(--radius); padding:22px; box-shadow:var(--shadow)}
+    footer{border-top:1px solid rgba(255,255,255,.05); background:#0a0b0e}
+    .footer-grid{display:grid; gap:18px; grid-template-columns:1fr auto}
+    .socials{display:flex; gap:12px}
+    .socials a{padding:8px; border-radius:10px}
+    .socials a:hover{background:var(--hover-apricot); color:#0a0b0e}
+    @media(max-width:680px){.footer-grid{grid-template-columns:1fr}}
+    [data-animate]{opacity:0; transform:translateY(14px); transition:opacity .6s ease, transform .6s ease}
+    [data-animate].in{opacity:1; transform:none}
+  </style>
+
+  <!-- Analytics (from about_final) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-24N197CRM9"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-67N2QVBCZV"></script>
+  <script>
+    window.dataLayer=window.dataLayer||[];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js',new Date());
+    gtag('config','G-24N197CRM9');
+    gtag('config','G-67N2QVBCZV');
+  </script>
+
+  <!-- Facebook Pixel -->
+  <script>
+    !function(f,b,e,v,n,t,s){
+      if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n; n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];
+      t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init','786654690436263'); fbq('track','PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=786654690436263&ev=PageView&noscript=1"/></noscript>
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebPage",
+    "name":"Privacy Policy",
+    "description":"Privacy Policy for Elmidor Group. Learn what data we collect, how we use it, and your rights.",
+    "url":"https://www.elmidorgroup.com/privacy.html",
+    "isPartOf":{
+      "@type":"WebSite",
+      "name":"Elmidor Group",
+      "url":"https://www.elmidorgroup.com"
+    }
+  }
+  </script>
 </head>
-<body>
+<body class="privacy">
+  <div id="fb-root"></div>
+
+  <!-- Header -->
   <header>
-    <h1>Privacy Policy</h1>
+    <div class="container nav">
+      <a class="brand" href="index.html" aria-label="Elmidor Group — Home">
+        <span class="logo" aria-hidden="true">◐</span>
+        <span>Elmidor Group</span>
+      </a>
+      <button class="btn btn-outline menu-btn" id="menuBtn" aria-expanded="false" aria-controls="navLinks">☰ Menu</button>
+      <nav class="nav-links" id="navLinks" data-open="false" aria-label="Primary">
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="blog.html">Blog</a>
+        <a href="follow-us.html">Follow Us</a>
+        <a href="support.html">Support</a>
+        <a href="terms.html">Terms</a>
+        <a class="active" href="privacy.html" aria-current="page">Privacy</a>
+      </nav>
+      <div class="nav-cta">
+        <a class="btn btn-outline" href="contact.html">Contact</a>
+        <a class="btn btn-primary" href="https://www.elmidorgroup.com">Get Started</a>
+      </div>
+    </div>
   </header>
-  <main>
-    <p>This Privacy Policy explains how Elmidor Group™ collects, uses, and protects your personal information when you visit our website or use our services. We respect your privacy and are committed to protecting it.</p>
+
+  <main class="section container" id="main">
+    <article class="card" role="article" aria-labelledby="privacyTitle">
+      <h1 id="privacyTitle">Privacy Policy</h1>
+      <p class="muted">Effective date: <strong>2025-09-01</strong></p>
+
+      <section aria-labelledby="overview">
+        <h2 id="overview">Overview</h2>
+        <p>Elmidor Group ("we", "us", "our") respects your privacy. This Policy explains what personal data we collect, how we use it, with whom we share it, and your rights.</p>
+      </section>
+
+      <section aria-labelledby="what">
+        <h2 id="what">1. Information we collect</h2>
+        <p>We collect information you provide directly and information automatically collected when you use the Service.</p>
+        <h3>Information you provide</h3>
+        <ul>
+          <li>Contact details (name, email, phone) when you fill forms or create accounts;</li>
+          <li>Profile, messages, uploads, and content you submit;</li>
+          <li>Billing and payment info when you purchase (processed by third-party providers).</li>
+        </ul>
+        <h3>Information we collect automatically</h3>
+        <ul>
+          <li>Usage data (pages, actions, timestamps);</li>
+          <li>Device & browser data (IP address, user agent);</li>
+          <li>Cookies and similar technologies (see Cookies section).</li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="use-of-info">
+        <h2 id="use-of-info">2. How we use information</h2>
+        <p>We use personal data to:</p>
+        <ul>
+          <li>Provide, operate, and improve our Service;</li>
+          <li>Communicate about products, updates, and support (with your consent where required);</li>
+          <li>Process transactions and subscriptions;</li>
+          <li>Personalize content and recommendations;</li>
+          <li>Detect and prevent fraud or abuse; and</li>
+          <li>Comply with legal obligations.</li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="cookies">
+        <h2 id="cookies">3. Cookies & tracking</h2>
+        <p>We and third parties use cookies and similar technologies for site functionality, analytics, and marketing. You may control cookies through your browser settings or our cookie banner (if implemented).</p>
+        <p><strong>Third-party services</strong> we commonly use: Google Analytics, Facebook / Meta pixels, and third-party payment processors. List actual services you use here.</p>
+      </section>
+
+      <section aria-labelledby="sharing">
+        <h2 id="sharing">4. Sharing & disclosures</h2>
+        <p>We may share personal data with:</p>
+        <ul>
+          <li>Service providers (hosting, payments, analytics);</li>
+          <li>Legal authorities when required by law;</li>
+          <li>Business partners when you opt in to integrated services;</li>
+          <li>In the event of a business transfer (sale, merger) with notice.</li>
+        </ul>
+        <p>We do <strong>not</strong> sell personal data.</p>
+      </section>
+
+      <section aria-labelledby="security">
+        <h2 id="security">5. Data security & retention</h2>
+        <p>We implement reasonable measures to protect data. No system is perfectly secure; if you suspect unauthorized access, contact us immediately. We retain personal data as long as necessary for the purposes described and to meet legal obligations.</p>
+      </section>
+
+      <section aria-labelledby="rights">
+        <h2 id="rights">6. Your rights</h2>
+        <p>Depending on your jurisdiction, you may have the right to:</p>
+        <ul>
+          <li>Access the personal data we hold about you;</li>
+          <li>Correct inaccurate information;</li>
+          <li>Request deletion of your personal data (subject to legal exceptions);</li>
+          <li>Object to or restrict processing; and</li>
+          <li>Withdraw consent where processing is based on consent.</li>
+        </ul>
+        <p>To exercise rights, contact: <a href="mailto:privacy@elmidorgroup.com">privacy@elmidorgroup.com</a>. We will respond within the timeframe required by applicable law.</p>
+      </section>
+
+      <section aria-labelledby="international">
+        <h2 id="international">7. International transfers</h2>
+        <p>Your data may be processed in countries other than your country of residence. We use appropriate safeguards (contracts, standard contractual clauses) for cross-border transfers.</p>
+      </section>
+
+      <section aria-labelledby="children">
+        <h2 id="children">8. Children</h2>
+        <p>Our Service is not directed to children under 13 (or local age of consent). We do not knowingly collect data from children. If you believe we have, contact us to request deletion.</p>
+      </section>
+
+      <section aria-labelledby="changes">
+        <h2 id="changes">9. Changes to this policy</h2>
+        <p>We may update this Policy. We will post the revised Policy with the new effective date. Continued use after changes constitutes acceptance.</p>
+      </section>
+
+      <section aria-labelledby="contact">
+        <h2 id="contact">10. Contact</h2>
+        <p>If you have questions or wish to exercise your rights, contact: <a href="mailto:privacy@elmidorgroup.com">privacy@elmidorgroup.com</a>.</p>
+      </section>
+
+    </article>
   </main>
-  <footer>
-    <p>&copy; 2025 Elmidor Group™</p>
+
+  <!-- Footer -->
+  <footer class="section">
+    <div class="container footer-grid">
+      <div>
+        <div class="brand" style="margin-bottom:8px">
+          <span class="logo">◐</span>
+          <span>Elmidor Group</span>
+        </div>
+        <p class="muted">Automation • Technology • Smarter growth</p>
+        <p class="muted">Santo Domingo, DO</p>
+        <!-- Footer Like & Share -->
+        <div class="card" style="margin-top:10px; padding:10px">
+          <div class="fb-like" data-href="https://www.elmidorgroup.com/privacy.html" data-layout="button_count" data-action="like" data-size="small" data-share="true"></div>
+        </div>
+      </div>
+      <div>
+        <nav>
+          <div class="socials" style="margin-bottom:10px">
+            <a href="#" aria-label="Website">🔗</a>
+            <a href="#" aria-label="X">𝕏</a>
+            <a href="#" aria-label="YouTube">▶</a>
+          </div>
+          <div style="display:flex; gap:16px; flex-wrap:wrap">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="follow-us.html">Follow Us</a>
+            <a href="support.html">Support</a>
+            <a href="terms.html">Terms</a>
+            <a href="privacy.html">Privacy</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <div class="container" style="padding-top:16px; text-align:center">
+      <hr style="border:0; border-top:1px solid rgba(255,255,255,.06)"/>
+      <p class="muted" style="font-size:14px; margin-top:10px">© <span id="yearPrivacy"></span> Elmidor Group. All rights reserved.</p>
+    </div>
   </footer>
+
+  <!-- Main JS -->
+  <script src="assets/js/main.js"></script>
+  <script>
+    const menuBtn=document.getElementById('menuBtn');
+    const navLinks=document.getElementById('navLinks');
+    menuBtn?.addEventListener('click',()=>{
+      const isOpen=navLinks.getAttribute('data-open')==='true';
+      navLinks.setAttribute('data-open',String(!isOpen));
+      menuBtn.setAttribute('aria-expanded',String(!isOpen));
+    });
+    const prefersReduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if(!prefersReduced && 'IntersectionObserver' in window){
+      const els=document.querySelectorAll('[data-animate]');
+      const io=new IntersectionObserver((entries)=>{
+        entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in'); io.unobserve(e.target);}});
+      },{threshold:.14});
+      els.forEach(el=>io.observe(el));
+    } else {
+      document.querySelectorAll('[data-animate]').forEach(el=>el.classList.add('in'));
+    }
+    document.getElementById('yearPrivacy').textContent=new Date().getFullYear();
+  </script>
 </body>
 </html>

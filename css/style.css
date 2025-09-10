@@ -1,0 +1,19 @@
+body { font-family: Arial, sans-serif; background: #FAF3D2; color:#000; }
+.logo { height:80px; }
+header { background:#000; color:#FFF; padding:20px; text-align:center; }
+
+.btn {
+  background: #000;
+  color:#FFF;
+  padding:15px 30px;
+  text-decoration:none;
+  border-radius:8px;
+  display:inline-block;
+  margin-top:20px;
+}
+.cta { text-align:center; }
+
+.popup{display:none;position:fixed;top:40%;left:50%;transform:translate(-50%,-50%);background:#000;color:#fff;padding:20px;border-radius:10px;animation:blink 0.8s infinite;}
+@keyframes blink{0%{box-shadow:0 0 10px #fff;}50%{box-shadow:0 0 30px #f00;}100%{box-shadow:0 0 10px #fff;}}
+.social{text-align:center;margin-top:30px;}
+.social a{color:#000;background:#FAF3D2;padding:10px;margin:5px;border-radius:5px;text-decoration:none;font-weight:bold;}

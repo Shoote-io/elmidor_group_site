@@ -1,51 +1,132 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta name="facebook-domain-verification" content="your-verification-code" />
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Elmidor Group",
-  "url": "https://www.elmidorgroup.com",
-  "logo": "https://www.elmidorgroup.com/logo.png",
-  "email": "info@elmidorgroup.com",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Calle 30 de Mayo",
-    "addressLocality": "San Luis",
-    "addressRegion": "Santo Domingo Este",
-    "postalCode": "11807",
-    "addressCountry": "DO"
-  },
-  "sameAs": [
-    "https://www.facebook.com/elmidorgroup",
-    "https://www.instagram.com/elmidorgroup",
-    "https://www.linkedin.com/company/elmidorgroup"
-  ]
-}
-</script>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact - Elmidor Group™</title>
-  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header>
-    <h1>Contact Us</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-    </nav>
+    <div class="container nav" role="navigation" aria-label="Primary">
+      <a class="brand" href="/" aria-label="Elmidor Group – Home">
+        <span class="logo" aria-hidden="true">◐</span>
+        <span>Elmidor Group</span>
+      </a>
+      <div class="nav-links">
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="blog.html">Blog</a>
+        <a href="follow.html">Follow Us</a>
+        <a href="support.html">Support</a>
+        <a href="contact.html" aria-current="page">Contact</a>
+      </div>
+    </div>
   </header>
-  <main>
-    <p>Email: info@elmidorgroup.com</p>
-    <p>Phone: +1 849 820 9243</p>
-    <p>Address: Calle 30 de Mayo, San Luis, Santo Domingo Este, 11807, Dominican Republic</p>
+
+  <main id="main">
+    <section class="hero section">
+      <div class="container">
+        <h1>Contact & Connect with Elmidor Group</h1>
+        <p>We’re here to answer questions, discuss collaborations, or help you get started. Reach out to our team using the options below.</p>
+      </div>
+    </section>
+
+    <section class="section" id="contact-options">
+      <div class="container">
+        <h2>Contact Options</h2>
+        <div class="grid">
+          <div class="support card" style="grid-column:span 6">
+            <div class="title">Email Support</div>
+            <p class="desc">For general inquiries or direct support, email us and our team will respond within 24–48 hours.</p>
+            <a class="btn btn-primary" href="mailto:shoote.io@elmidorgroup.com">shoote.io@elmidorgroup.com</a>
+          </div>
+          <div class="support card" style="grid-column:span 6">
+            <div class="title">Phone / WhatsApp</div>
+            <p class="desc">Prefer to talk? Call or message us on WhatsApp for quick assistance.</p>
+            <a class="btn btn-primary" href="tel:+18296289130">+1 (829) 628-9130</a>
+          </div>
+          <div class="support card" style="grid-column:span 6">
+            <div class="title">Community Group</div>
+            <p class="desc">Join our community group to ask quick questions, get updates, or collaborate with others.</p>
+            <a class="btn btn-primary" href="#community">Join Community</a>
+          </div>
+          <div class="support card" style="grid-column:span 6">
+            <div class="title">Social Media</div>
+            <p class="desc">Stay connected with our latest news and updates on social platforms.</p>
+            <div style="display:flex; gap:10px; flex-wrap:wrap">
+              <a class="btn btn-outline" href="#">LinkedIn</a>
+              <a class="btn btn-outline" href="#">X (Twitter)</a>
+              <a class="btn btn-outline" href="#">YouTube</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact-form">
+      <div class="container">
+        <h2>Send Us a Message</h2>
+        <div class="card">
+          <form action="#" method="post" onsubmit="event.preventDefault(); alert('Message sent!');">
+            <label for="name">Full Name</label>
+            <input id="name" name="name" required placeholder="Your name">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required placeholder="you@example.com">
+            <label for="subject">Subject</label>
+            <input id="subject" name="subject" required placeholder="Subject">
+            <label for="msg">Message</label>
+            <textarea id="msg" name="message" rows="6" placeholder="Your message"></textarea>
+            <button class="btn btn-primary" type="submit">Submit</button>
+          </form>
+        </div>
+      </div>
+    </section>
   </main>
-  <footer>
-    <p>&copy; 2025 Elmidor Group™</p>
+
+  <footer class="section">
+    <div class="container footer-grid">
+      <div>
+        <div class="brand">
+          <span class="logo" aria-hidden="true">◐</span>
+          <span>Elmidor Group</span>
+        </div>
+        <p class="muted">Automation • Technology • Smarter growth</p>
+      </div>
+      <div>
+        <nav>
+          <div class="socials">
+            <a href="#">🔗</a>
+            <a href="#">𝕏</a>
+            <a href="#">▶</a>
+          </div>
+          <div style="display:flex; gap:16px; flex-wrap:wrap">
+            <a class="footer-link" href="index.html">Home</a>
+            <a class="footer-link" href="blog.html">Blog</a>
+            <a class="footer-link" href="follow.html">Follow Us</a>
+            <a class="footer-link" href="support.html">Support</a>
+            <a class="footer-link" href="terms.html">Terms</a>
+            <a class="footer-link" href="privacy.html">Privacy</a>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <div class="container">
+      <hr/>
+      <p class="muted" style="font-size:14px">© <span id="year"></span> Elmidor Group. All rights reserved.</p>
+    </div>
+
+    <!-- Facebook Like & Share -->
+    <div class="container" style="margin-top:20px; text-align:center">
+      <div class="fb-like"
+           data-href="https://www.elmidorgroup.com/contact.html"
+           data-width=""
+           data-layout="standard"
+           data-action="like"
+           data-size="large"
+           data-share="true">
+      </div>
+    </div>
   </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>

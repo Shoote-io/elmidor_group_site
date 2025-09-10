@@ -1,51 +1,94 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta name="facebook-domain-verification" content="your-verification-code" />
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Elmidor Group",
-  "url": "https://www.elmidorgroup.com",
-  "logo": "https://www.elmidorgroup.com/logo.png",
-  "email": "info@elmidorgroup.com",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Calle 30 de Mayo",
-    "addressLocality": "San Luis",
-    "addressRegion": "Santo Domingo Este",
-    "postalCode": "11807",
-    "addressCountry": "DO"
-  },
-  "sameAs": [
-    "https://www.facebook.com/elmidorgroup",
-    "https://www.instagram.com/elmidorgroup",
-    "https://www.linkedin.com/company/elmidorgroup"
-  ]
-}
-</script>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Us - Elmidor Group™</title>
-  <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
+<body class="about">
+  <div id="loader"><div class="spinner"><span class="logo">◐</span></div></div>
   <header>
-    <h1>About Elmidor Group™</h1>
-    <nav>
-      <a href="index.html">Home</a>
+  <div class="container nav">
+    <a class="brand" href="index.html">
+      <span class="logo">◐</span>
+      <span>Elmidor Group</span>
+    </a>
+    <button class="btn btn-outline menu-btn" id="menuBtn">☰ Menu</button>
+    <div class="nav-links" id="navLinks" data-open="false">
+      <a href="about.html">About</a>
       <a href="services.html">Services</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
-  <main>
-    <section>
-      <p>Elmidor Group™ is a creative collective focused on empowering communities through digital transformation. We aim to support movements that are building sovereignty and autonomy using technology, education, and communication tools.</p>
-    </section>
+      <a href="blog.html">Blog</a>
+      <a href="follow-us.html">Follow Us</a>
+      <a href="support.html">Support</a>
+      <a href="terms.html">Terms</a>
+      <a href="privacy.html">Privacy</a>
+    </div>
+    <div class="nav-cta">
+      <a class="btn btn-outline" href="contact.html">Contact</a>
+      <a class="btn btn-primary" href="https://www.elmidorgroup.com">Get Started</a>
+    </div>
+  </div>
+</header>
+  <main class="section container">
+    
+<section class="hero" data-animate="right">
+  <div>
+    <h1>About Elmidor Group</h1>
+    <p class="lead">We combine automation, AI and modern product design to create compounding leverage for our clients.</p>
+    <a class="btn btn-primary" href="https://www.elmidorgroup.com">Talk to us</a>
+  </div>
+  <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop" alt="Team collaboration"/>
+</section>
+<section class="section" data-animate>
+  <div class="grid grid-3">
+    <div class="card"><h3>Mission</h3><p>Enable entrepreneurs to do more with less.</p></div>
+    <div class="card"><h3>Approach</h3><p>Strategy → Prototype → Automate → Scale.</p></div>
+    <div class="card"><h3>Values</h3><p>Clarity, speed, reliability.</p></div>
+  </div>
+</section>
+
   </main>
-  <footer>
-    <p>&copy; 2025 Elmidor Group™</p>
-  </footer>
+  <footer id="contact" class="section">
+  <div class="container footer-grid">
+    <div>
+      <div class="brand" style="margin-bottom:8px">
+        <span class="logo">◐</span>
+        <span>Elmidor Group</span>
+      </div>
+      <p class="muted">Automation • Technology • Smarter growth</p>
+      <p class="muted">Santo Domingo, DO</p>
+    </div>
+    <div>
+      <nav>
+        <div class="socials" style="margin-bottom:10px">
+          <a href="https://www.elmidorgroup.com">🔗</a>
+          <a href="https://www.elmidorgroup.com">𝕏</a>
+          <a href="https://www.elmidorgroup.com">▶</a>
+        </div>
+        <div style="display:flex; gap:16px; flex-wrap:wrap">
+          <a href="index.html">Home</a>
+          <a href="blog.html">Blog</a>
+          <a href="follow-us.html">Follow Us</a>
+          <a href="support.html">Support</a>
+          <a href="terms.html">Terms</a>
+          <a href="privacy.html">Privacy</a>
+        </div>
+      </nav>
+    </div>
+  </div>
+  <div class="container" style="padding-top:16px">
+    <hr style="border:0; border-top:1px solid rgba(255,255,255,.06)"/>
+    <p class="muted" style="font-size:14px; margin-top:10px">© <span id="year"></span> Elmidor Group. All rights reserved.</p>
+  </div>
+</footer>
+  <script src="assets/js/main.js"></script>
+html
+<div class="credly-badges">
+  <!-- Elmidor Group Certification Badge 1 -->
+  <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="1b4eb87d-beb1-4d8a-82e2-26c75394c7cb" data-share-badge-host="https://www.credly.com"></div>
+
+  <!-- Elmidor Group Certification Badge 2 -->
+  <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="b43f3a90-8638-47c1-8dfd-1a0e127f04cd" data-share-badge-host="https://www.credly.com"></div>
+</div>
+
+<!-- Credly badge script -->
+<script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
 </body>
 </html>
