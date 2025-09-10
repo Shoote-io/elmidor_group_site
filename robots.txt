@@ -1,0 +1,6 @@
+User-agent: *
+Disallow:
+Allow: /assets/css/
+Allow: /assets/js/
+Allow: /assets/images/
+Sitemap: https://www.elmidorgroup.com/sitemap.xml
