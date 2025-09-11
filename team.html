@@ -3,16 +3,16 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Personals — Elmidor Group</title>
+  <title>Team — Elmidor Group</title>
 
   <!-- Primary SEO -->
-  <meta name="description" content="Personals Elmidor Group across all platforms: social media, news, and updates." />
-  <link rel="canonical" href="https://www.elmidorgroup.com/follow" />
+  <meta name="description" content="Meet the Elmidor Group team — leadership, vision, and updates across all platforms." />
+  <link rel="canonical" href="https://www.elmidorgroup.com/team" />
 
   <!-- Open Graph / Twitter -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Team — Elmidor Group" />
-  <meta property="og:description" content="Team Elmidor Group across all platforms: social media, news, and updates." />
+  <meta property="og:description" content="Meet the Elmidor Group team — leadership, vision, and updates across all platforms." />
   <meta property="og:image" content="https://www.elmidorgroup.com/assets/assets/images/elmidor-cover.jpg" />
   <meta property="og:url" content="https://www.elmidorgroup.com/team" />
   <meta name="twitter:card" content="summary_large_image" />
@@ -23,8 +23,8 @@
   <!-- Prefers color scheme -->
   <meta name="color-scheme" content="light dark" />
 
- <!-- Robots -->
-  <meta name="robots" content="index, team, max-image-preview:large" />
+  <!-- Robots -->
+  <meta name="robots" content="index, follow, max-image-preview:large" />
 
   <!-- Ads / Analytics / Pixels -->
   <!-- Google AdSense -->
@@ -111,6 +111,10 @@
 
     [data-animate]{opacity:0; transform: translateY(14px); transition: opacity .6s ease, transform .6s ease}
     [data-animate].in{opacity:1; transform: none}
+
+    /* Modal fix */
+    .modal{display:none; position:fixed; inset:0; background:rgba(0,0,0,.7); align-items:center; justify-content:center; z-index:1000}
+    .modal video{max-width:90%; max-height:80%; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,.5)}
   </style>
 </head>
 <body>
@@ -129,11 +133,11 @@
         <a href="services.html">Services</a>
         <a href="blog.html">Blog</a>
         <a href="blog-post.html">Updates</a>
-        <a href="follow.html" aria-current="page">Follow Us</a>
+        <a href="follow.html">Follow Us</a>
         <a href="support.html">Support</a>
         <a href="terms.html">Terms</a>
         <a href="privacy.html">Privacy</a>
-        <a href="Team.html">Personals</a>
+        <a href="Team.html" aria-current="page">Personals</a>
       </div>
       <div class="nav-cta">
         <a class="btn btn-contact" href="contact.html">Contact</a>
@@ -141,7 +145,8 @@
       </div>
     </div>
   </header>
-<main>
+
+<main id="main">
   <section class="hero container">
     <h1>Leadership & Vision</h1>
     <p>Meet the founder who drives Elmidor Group’s mission forward.</p>
@@ -167,7 +172,7 @@
   <div class="container">
     <h2>Contact</h2>
     <p>Send us a quick message. We'll reply as soon as possible.</p>
-    <form action="mailto:support.elmidorgroup" method="post" enctype="text/plain" style="display:flex;flex-direction:column;gap:8px;max-width:600px;margin:auto">
+    <form action="mailto:support@elmidorgroup.com" method="post" enctype="text/plain" style="display:flex;flex-direction:column;gap:8px;max-width:600px;margin:auto">
       <input type="text" name="name" placeholder="Your name" required style="padding:10px;border-radius:8px;border:1px solid #2b2f37">
       <input type="email" name="email" placeholder="Your email" required style="padding:10px;border-radius:8px;border:1px solid #2b2f37">
       <textarea name="message" placeholder="Write your message..." rows="4" required style="padding:10px;border-radius:8px;border:1px solid #2b2f37"></textarea>
@@ -232,6 +237,14 @@ function closeDemo(){
   document.getElementById('demoVideo').pause();
 }
 document.getElementById('year').textContent=new Date().getFullYear();
+
+// Menu toggle
+document.getElementById('menuBtn').addEventListener('click', function(){
+  const navLinks=document.getElementById('navLinks');
+  const isOpen=navLinks.getAttribute('data-open')==='true';
+  navLinks.setAttribute('data-open', !isOpen);
+  this.setAttribute('aria-expanded', !isOpen);
+});
 </script>
 </body>
 </html>
