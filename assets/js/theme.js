@@ -4,12 +4,16 @@ document.addEventListener("DOMContentLoaded", () => {
     for (let i = 0; i < 25; i++) {
       const p = document.createElement("div");
       p.classList.add("particle");
-      p.style.width = `${Math.random()*6+4}px`;
-      p.style.height = p.style.width;
-      p.style.left = `${Math.random()*100}%`;
-      p.style.animationDuration = `${15 + Math.random()*20}s`;
-      p.style.animationDelay = `${Math.random()*10}s`;
+      const size = Math.random() * 6 + 4;
+      p.style.width = `${size}px`;
+      p.style.height = `${size}px`;
+      p.style.left = `${Math.random() * 100}%`;
+      p.style.animationDuration = `${15 + Math.random() * 20}s`;
+      p.style.animationDelay = `${Math.random() * 10}s`;
       particles.appendChild(p);
     }
+  } else {
+    console.warn("⚠️ .particles div not found in page!");
   }
 });
+
