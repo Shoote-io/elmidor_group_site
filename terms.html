@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
+  <!-- SSI Partials (de-kòmante si w aktive SSI) -->
   <!--#include virtual="/partials/head.html" -->
 
   <title>Terms of Service — Elmidor Group</title>
@@ -86,7 +87,26 @@
   <link rel="stylesheet" href="/assets/css/theme.css">
 </head>
 <body>
+  <!-- SSI Partials (de-kòmante si w aktive SSI) -->
   <!--#include virtual="/partials/header.html" -->
+
+  <!-- Manual Header (si SSI pa aktive) -->
+  <header class="site-header">
+    <div class="container">
+      <a href="/" class="logo">
+        <img src="/assets/images/logo.png" alt="Elmidor Group Logo">
+      </a>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/blog.html">Blog</a></li>
+          <li><a href="/support.html">Support</a></li>
+          <li><a href="/terms.html" class="active">Terms</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
   <main class="content">
     <section class="page-header">
@@ -115,13 +135,17 @@
     </section>
   </main>
 
+  <!-- SSI Partials (de-kòmante si w aktive SSI) -->
   <!--#include virtual="/partials/footer.html" -->
 
-  <!-- Like & Share Buttons -->
-  <footer class="share-footer">
-    <div class="share-buttons" style="text-align:center; margin-top:20px;">
-      <button onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=https://www.elmidorgroup.com/terms.html','_blank')" class="share-btn">👍 Like & Share on Facebook</button>
-      <button onclick="window.open('https://twitter.com/intent/tweet?url=https://www.elmidorgroup.com/terms.html&text=Check%20out%20Elmidor%20Group%20Terms%20of%20Service','_blank')" class="share-btn">🐦 Share on Twitter</button>
+  <!-- Manual Footer (si SSI pa aktive) -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 Elmidor Group. All rights reserved.</p>
+      <div class="share-buttons" style="margin-top:10px;">
+        <button onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=https://www.elmidorgroup.com/terms.html','_blank')" class="share-btn">👍 Like & Share</button>
+        <button onclick="window.open('https://twitter.com/intent/tweet?url=https://www.elmidorgroup.com/terms.html&text=Check%20out%20Elmidor%20Group%20Terms%20of%20Service','_blank')" class="share-btn">🐦 Tweet</button>
+      </div>
     </div>
   </footer>
 
