@@ -1,0 +1,70 @@
+/* === Background animé ak plizyè koulè === */
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(-45deg,
+    #6c5ce7,  /* mov */
+    #a29bfe,  /* mov klè */
+    #00cec9,  /* turquoise */
+    #fd79a8,  /* woz */
+    #ffeaa7,  /* jòn pal */
+    #fab1a0,  /* zoranj pal */
+    #55efc4,  /* vèt aqua */
+    #0984e3   /* ble fonse */
+  );
+  background-size: 600% 600%;
+  animation: gradientShift 30s ease infinite;
+  overflow-x: hidden;
+  position: relative;
+}
+
+@keyframes gradientShift {
+  0%   { background-position: 0% 50%; }
+  25%  { background-position: 50% 100%; }
+  50%  { background-position: 100% 50%; }
+  75%  { background-position: 50% 0%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* === Patikil k ap flote === */
+.particles {
+  position: fixed;
+  top: 0; 
+  left: 0;
+  width: 100%; 
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.9;
+  animation: floatParticle 20s linear infinite, colorShift 15s ease-in-out infinite, glowPulse 3s ease-in-out infinite;
+}
+
+/* Flote monte ak disparèt */
+@keyframes floatParticle {
+  0% { transform: translateY(100vh) scale(0); opacity: 0; }
+  20% { opacity: 1; }
+  100% { transform: translateY(-10vh) scale(1); opacity: 0; }
+}
+
+/* Koulè patikil yo chanje chak 15 segond */
+@keyframes colorShift {
+  0%   { background-color: #ffffff; }
+  25%  { background-color: #a29bfe; }
+  50%  { background-color: #55efc4; }
+  75%  { background-color: #ffeaa7; }
+  100% { background-color: #ffffff; }
+}
+
+/* Efè briyan / glow sou patikil yo */
+@keyframes glowPulse {
+  0%   { box-shadow: 0 0 5px rgba(255,255,255,0.5), 0 0 10px rgba(255,255,255,0.3); }
+  50%  { box-shadow: 0 0 15px rgba(255,255,255,0.8), 0 0 25px rgba(255,255,255,0.5); }
+  100% { box-shadow: 0 0 5px rgba(255,255,255,0.5), 0 0 10px rgba(255,255,255,0.3); }
+}
