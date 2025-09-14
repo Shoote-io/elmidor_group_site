@@ -60,36 +60,89 @@ a:focus-visible, button:focus-visible{
   box-shadow: var(--shadow);
 }
 
-/* Hover global */
-.btn:hover{ transform: translateY(-2px) scale(1.02); }
-.btn:active{ transform: translateY(0) scale(0.98); }
+/* ===== Variants ===== */
 
-/* Get Started bouton */
-.btn-get-started{
-  background:linear-gradient(90deg,var(--brand),var(--brand-2));
+/* Primary */
+.btn-primary{
+  background:var(--brand);
   color:#0a0b0e;
+  box-shadow:0 6px 16px rgba(90,209,230,.35);
 }
-.btn-get-started:hover{
+.btn-primary:hover{
+  background:var(--brand-2);
+  transform:translateY(-1px);
+  box-shadow:0 8px 20px rgba(124,92,255,.35);
+}
+
+/* Secondary */
+.btn-secondary{
+  background:var(--panel-2);
+  color:var(--text);
+  border:1px solid rgba(255,255,255,.08);
+}
+.btn-secondary:hover{
   background:var(--hover-apricot);
   color:#0a0b0e;
 }
 
-/* Contact bouton */
-.btn-contact{
-  background:#ef4444; color:#fff; border:1px solid #2b2f37;
+/* Outline */
+.btn-outline{
+  background:transparent;
+  color:var(--text);
+  border:2px solid var(--brand-2);
 }
-.btn-contact:hover{
-  background:var(--hover-apricot); color:#0a0b0e;
+.btn-outline:hover{
+  background:var(--brand-2);
+  color:#fff;
 }
 
-/* Violet bouton (alt) */
+/* Ghost */
+.btn-ghost{
+  background:transparent;
+  color:var(--muted);
+  border:0;
+}
+.btn-ghost:hover{
+  color:var(--hover-apricot);
+  background:rgba(255,255,255,.05);
+}
+
+/* Already existing variants: */
+.btn-get-started{
+  background:linear-gradient(90deg,var(--brand),var(--brand-2));
+  color:#0a0b0e;
+  box-shadow:0 8px 24px rgba(124,92,255,.35);
+}
+.btn-get-started:hover{
+  transform:translateY(-1px);
+  background:var(--hover-apricot);
+  color:#0a0b0e;
+}
+
+.btn-contact{
+  background:#ef4444;
+  color:#fff;
+  border:1px solid #2b2f37;
+}
+.btn-contact:hover{
+  background:var(--hover-apricot);
+  color:#0a0b0e;
+}
+
 .btn-violet{
-  padding:10px 16px; border-radius:12px;
-  background:linear-gradient(135deg, #7c5cff, #5ad1e6);
-  color:#0a0b0e; font-weight:700;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:10px 16px;
+  border-radius:12px;
+  background:linear-gradient(135deg,#7c5cff,#5ad1e6);
+  color:#0a0b0e;
+  font-weight:700;
+  box-shadow:var(--shadow);
 }
 .btn-violet:hover{
-  background:var(--hover-apricot); color:#0a0b0e;
+  background:var(--hover-apricot);
+  color:#0a0b0e;
 }
 
 /* Chips / badges */
