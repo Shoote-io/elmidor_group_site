@@ -268,15 +268,7 @@
           <span style="font-weight:700">Elmidor Group</span>
         </div>
         <p class="muted">Automation • Technology • Smarter growth</p>
-        <p class="muted">Santo Domingo, DO</p>
-
-        <!-- Facebook Like & Share -->
-        <div class="fb-like"
-             data-href="https://www.elmidorgroup.com/blog/elmidor-group-manifest"
-             data-layout="button_count"
-             data-action="like"
-             data-size="large"
-             data-share="true"></div>
+        <p class="muted">Santo Domingo
 
         <p class="muted">© <span id="year"></span> Elmidor Group. All rights reserved.</p>
       </div>
@@ -306,67 +298,13 @@
   <script src="assets/js/theme.js"></script>
   <script src="assets/js/main.js"></script>
 
-  <!-- Like & Share --> <div style="text-align:center; margin:20px 0"> <button onclick="likePage()" class="btn-get-started">👍 Like</button> <button onclick="sharePage()" class="btn-contact">🔗 Share</button> </div>
+<div style="text-align:center; margin:20px 0">
+  <button onclick="share('facebook')" class="btn-get-started">👍 Like</button>
+  <button onclick="share('whatsapp')" class="btn-contact">🔗 Share</button>
+</div>
 
-    // Mobile nav toggle
-    const menuBtn = document.getElementById('menuBtn');
-    const navLinks = document.getElementById('navLinks');
-    menuBtn?.addEventListener('click', ()=>{
-      const isOpen = navLinks.getAttribute('data-open') === 'true';
-      navLinks.setAttribute('data-open', String(!isOpen));
-      menuBtn.setAttribute('aria-expanded', String(!isOpen));
-    });
-
-    // Scroll reveal
-    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (!prefersReduced && 'IntersectionObserver' in window){
-      const els = document.querySelectorAll('[data-animate]');
-      const io = new IntersectionObserver((entries)=>{
-        entries.forEach(e => { if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
-      }, {threshold: .14});
-      els.forEach(el => io.observe(el));
-    } else {
-      document.querySelectorAll('[data-animate]').forEach(el=>el.classList.add('in'));
-    }
-
-    // Newsletter faux endpoint
-    function subscribe(e){
-      e && e.preventDefault();
-      const email = document.getElementById('newsletterEmail').value.trim();
-      if(!email){ alert('Please enter your email.'); return false; }
-      alert('Thank you! Email '+ email +' received. We will send updates soon.');
-      document.getElementById('newsletterForm').reset();
-      return false;
-    }
-
-    // Share helper
-    function share(which){
-      const url = encodeURIComponent(window.location.href);
-      const title = encodeURIComponent(document.title);
-      let shareUrl = '';
-      if(which==='x') shareUrl = 'https://x.com/intent/tweet?text='+title+'%20'+url;
-      if(which==='facebook') shareUrl = 'https://www.facebook.com/sharer/sharer.php?u='+url;
-      if(which==='whatsapp') shareUrl = 'https://wa.me/?text='+title+'%20'+url;
-      if(which==='linkedin') shareUrl = 'https://www.linkedin.com/sharing/share-offsite/?url='+url;
-      if(shareUrl) window.open(shareUrl,'_blank','noopener');
-    }
-
-    // Dynamic year
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Scroll reveal effect
-    const observer = new IntersectionObserver((entries)=>{
-      entries.forEach(entry=>{
-        if(entry.isIntersecting){
-          entry.target.classList.add('in');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, {threshold:0.15});
-
-    document.querySelectorAll('[data-animate]').forEach(el=>observer.observe(el));
-  </script>
 </body>
 </html>
+
 
 
