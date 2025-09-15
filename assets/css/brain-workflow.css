@@ -1,0 +1,49 @@
+﻿/* Kontenè pou sèvo workflow la */
+#brain-workflow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* mete li dèyè kontni paj ou */
+  background: #0c0d0f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* SVG la adapte ak ekran */
+#brain-workflow svg {
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Kontou sèvo */
+.brain-outline {
+  fill: none;
+  stroke: #444;
+  stroke-width: 2;
+}
+
+/* Chemen workflow */
+.neuron {
+  fill: none;
+  stroke: cyan;
+  stroke-width: 2;
+  stroke-dasharray: 300;
+  stroke-dashoffset: 300;
+  animation: nerveImpulse 3s linear infinite;
+  filter: drop-shadow(0 0 6px cyan) drop-shadow(0 0 12px blue);
+}
+
+/* Etensèl yo */
+.spark {
+  fill: #5ad1e6;
+  filter: drop-shadow(0 0 6px #5ad1e6) drop-shadow(0 0 15px #7c5cff);
+  opacity: 0.9;
+}
+
+@keyframes nerveImpulse {
+  to { stroke-dashoffset: 0; }
+}
