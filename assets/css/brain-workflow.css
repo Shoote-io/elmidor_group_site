@@ -1,49 +1,82 @@
-﻿/* Kontenè pou sèvo workflow la */
+/* brain-workflow.css
+   Background SVG "brain" kòm yon layer dèyè paj la.
+   Mete z-index negative pou li pa entèfere ak UI.
+*/
 #brain-workflow {
   position: fixed;
-  top: 0;
-  left: 0;
+  inset: 0;
   width: 100%;
   height: 100%;
-  z-index: -1; /* mete li dèyè kontni paj ou */
-  background: #0c0d0f;
+  z-index: -1;          /* dèyè tout kontni */
+  pointer-events: none; /* pa entèfere ak klik */
   display: flex;
   justify-content: center;
   align-items: center;
+  background: radial-gradient(circle at 20% 20%, rgba(60,80,120,0.12), transparent 10%),
+              radial-gradient(circle at 80% 80%, rgba(30,20,60,0.12), transparent 10%),
+              #06070a; /* baz nwa ble */
   overflow: hidden;
 }
 
-/* SVG la adapte ak ekran */
+/* SVG responsif */
 #brain-workflow svg {
-  width: 80%;
-  max-width: 700px;
+  width: min(1100px, 95%);
+  height: auto;
+  max-height: 95vh;
+  display: block;
+  mix-blend-mode: screen; /* pi bon melanj glow sou background */
 }
 
-/* Kontou sèvo */
+/* Kontou sèvo (lèg, men prezan) */
 .brain-outline {
-  fill: none;
-  stroke: #444;
-  stroke-width: 2;
+  fill: url(#brainFillGradient);
+  stroke: rgba(255,255,255,0.06);
+  stroke-width: 1.2;
+  filter: url(#softInnerShadow);
 }
 
-/* Chemen workflow */
+/* Chemen nèwon (liy workflow) */
 .neuron {
   fill: none;
-  stroke: cyan;
-  stroke-width: 2;
-  stroke-dasharray: 300;
-  stroke-dashoffset: 300;
-  animation: nerveImpulse 3s linear infinite;
-  filter: drop-shadow(0 0 6px cyan) drop-shadow(0 0 12px blue);
+  stroke: rgba(90,209,230,0.18);
+  stroke-width: 1.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  /* subtle animated dash to give life */
+  stroke-dasharray: 8 14;
+  animation: dashMove 6s linear infinite;
+  filter: url(#glowFilter);
 }
 
-/* Etensèl yo */
+/* Glow + spark color overrides for stronger paths */
+.neuron.strong {
+  stroke: rgba(90,209,230,0.28);
+  stroke-width: 1.8;
+  stroke-dasharray: 12 10;
+}
+
+/* Spark / patikil (ti boul ki deplase) */
 .spark {
-  fill: #5ad1e6;
-  filter: drop-shadow(0 0 6px #5ad1e6) drop-shadow(0 0 15px #7c5cff);
-  opacity: 0.9;
+  transition: opacity 150ms linear, transform 150ms linear;
+  filter: url(#glowFilter);
+  transform-origin: center;
 }
 
-@keyframes nerveImpulse {
-  to { stroke-dashoffset: 0; }
+/* Twinkle animation via CSS (applike sou svg circle pa JS) */
+@keyframes twinkle {
+  0%   { opacity: 0.1; transform: scale(0.6); }
+  30%  { opacity: 1; transform: scale(1.1); }
+  60%  { opacity: 0.7; transform: scale(0.9); }
+  100% { opacity: 0.15; transform: scale(0.7); }
+}
+
+/* subtle dash movement on neuron strokes */
+@keyframes dashMove {
+  to { stroke-dashoffset: 9999; }
+}
+
+/* Responsiveness: pi piti svg sou telefòn */
+@media (max-width: 520px) {
+  #brain-workflow svg { width: 95vw; }
+  .neuron { stroke-width: 1; }
 }
