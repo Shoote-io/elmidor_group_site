@@ -1,4 +1,4 @@
-﻿/* Patikil (ti boul blan k ap flote) */
+/* Patikil (ti boul blan k ap flote) */
 .particles {
   position: fixed;
   top: 0; 
@@ -12,9 +12,16 @@
 
 .particle {
   position: absolute;
-  background: rgba(255,255,255,0.8);
+  background: rgba(255,255,255,0.9);
   border-radius: 50%;
   animation: floatParticle 20s linear infinite;
+
+  /* Efè glow / lumineux */
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.9),
+              0 0 12px rgba(255, 255, 255, 0.7),
+              0 0 20px rgba(124, 92, 255, 0.6),
+              0 0 35px rgba(90, 209, 230, 0.5);
+  filter: blur(0.5px);
 }
 
 @keyframes floatParticle {
