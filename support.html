@@ -138,8 +138,9 @@
     @media (max-width: 680px){.footer-grid{grid-template-columns:1fr}}
   </style>
 
-  <!-- Theme CSS -->
+ <!-- Theme CSS -->
   <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/particles.css">
 </head>
 <body>
   <!-- Patikil background -->
@@ -398,6 +399,16 @@
 </section>
 </main>
 
+  <!-- Join Free -->
+  <section id="joinfree" class="joinfree-section">
+    <div class="container" style="text-align:center">
+      <h2>Get Started — Join Free</h2>
+      <p>Join our platform for free and explore our workflows.</p>
+      <a class="btn-get-started" href="https://tally.so/r/wdVB5d" target="_blank">Join with Tally</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
   <footer class="section">
     <div class="container footer-grid">
       <div>
@@ -407,88 +418,65 @@
         </div>
         <p class="muted">Automation • Technology • Smarter growth</p>
         <p class="muted">Santo Domingo, DO</p>
-
-        <!-- Facebook Like & Share -->
-        <div class="fb-like"
-             data-href="https://www.elmidorgroup.com/blog/elmidor-group-manifest"
-             data-layout="button_count"
-             data-action="like"
-             data-size="large"
-             data-share="true"></div>
-
         <p class="muted">© <span id="year"></span> Elmidor Group. All rights reserved.</p>
       </div>
       <nav aria-label="Footer">
         <div class="socials" style="margin-bottom:10px">
           <a href="https://www.elmidorgroup.com" aria-label="Website">🔗</a>
-          <a href="https://www.elmidorgroup.com" aria-label="X">𝕏</a>
-          <a href="https://www.elmidorgroup.com" aria-label="YouTube">▶</a>
+          <a href="https://x.com/ElmidorGroup" aria-label="X">𝕏</a>
+          <a href="https://www.youtube.com/@ElmidorGroup" aria-label="YouTube">▶</a>
         </div>
         <div style="display:flex; gap:16px; flex-wrap:wrap">
-        <a href="about.html">About</a>
-        <a href="services.html">Services</a>
-        <a href="blog.html" class="active">Blog</a>
-        <a href="blog-post.html">Updates</a>
-        <a href="follow.html">Follow Us</a>
-        <a href="support.html">Support</a>
-        <a href="terms.html">Terms</a>
-        <a href="team.html">Team</a>
-        <a href="privacy.html">Privacy</a>
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="blog.html">Blog</a>
+          <a href="blog-post.html">Updates</a>
+          <a href="follow.html">Follow Us</a>
+          <a href="support.html">Support</a>
+          <a href="terms.html">Terms</a>
+          <a href="team.html">Team</a>
+          <a href="privacy.html">Privacy</a>
         </div>
       </nav>
     </div>
   </footer>
 
-  <!-- Minimal JS: mobile menu, scroll-reveal, share + newsletter, dynamic year -->
+  <!-- Like & Share -->
+  <div style="text-align:center; margin:20px 0">
+    <button onclick="likePage()" class="btn-get-started">👍 Like</button>
+    <button onclick="sharePage()" class="btn-contact">🔗 Share</button>
+  </div>
+
+  <!-- Scripts -->
   <script>
-    // Mobile nav toggle
-    const menuBtn = document.getElementById('menuBtn');
-    const navLinks = document.getElementById('navLinks');
-    menuBtn?.addEventListener('click', ()=>{
-      const isOpen = navLinks.getAttribute('data-open') === 'true';
-      navLinks.setAttribute('data-open', String(!isOpen));
-      menuBtn.setAttribute('aria-expanded', String(!isOpen));
+    document.getElementById('year').textContent=new Date().getFullYear();
+
+    function likePage(){
+      alert("Thanks for liking Elmidor Group!");
+    }
+    function sharePage(){
+      if(navigator.share){
+        navigator.share({
+          title:"Elmidor Group — Terms of Service",
+          url:window.location.href
+        }).catch(console.error);
+      }else{
+        navigator.clipboard.writeText(window.location.href);
+        alert("Page URL copied to clipboard!");
+      }
+    }
+
+    // Menu toggle
+    document.getElementById("menuBtn").addEventListener("click",function(){
+      const nav=document.getElementById("navLinks");
+      const open=nav.getAttribute("data-open")==="true";
+      nav.setAttribute("data-open",!open);
+      this.setAttribute("aria-expanded",!open);
     });
+  </script
 
-    // Scroll reveal
-    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (!prefersReduced && 'IntersectionObserver' in window){
-      const els = document.querySelectorAll('[data-animate]');
-      const io = new IntersectionObserver((entries)=>{
-        entries.forEach(e => { if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
-      }, {threshold: .14});
-      els.forEach(el => io.observe(el));
-    } else {
-      document.querySelectorAll('[data-animate]').forEach(el=>el.classList.add('in'));
-    }
-
-    // Newsletter faux endpoint
-    function subscribe(e){
-      e && e.preventDefault();
-      const email = document.getElementById('newsletterEmail').value.trim();
-      if(!email){ alert('Please enter your email.'); return false; }
-      alert('Thank you! Email '+ email +' received. We will send updates soon.');
-      document.getElementById('newsletterForm').reset();
-      return false;
-    }
-
-    // Share helper
-    function share(which){
-      const url = encodeURIComponent(window.location.href);
-      const title = encodeURIComponent(document.title);
-      let shareUrl = '';
-      if(which==='x') shareUrl = 'https://x.com/intent/tweet?text='+title+'%20'+url;
-      if(which==='facebook') shareUrl = 'https://www.facebook.com/sharer/sharer.php?u='+url;
-      if(which==='whatsapp') shareUrl = 'https://wa.me/?text='+title+'%20'+url;
-      if(which==='linkedin') shareUrl = 'https://www.linkedin.com/sharing/share-offsite/?url='+url;
-      if(shareUrl) window.open(shareUrl,'_blank','noopener');
-    }
-
-    // Dynamic year
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+  <!-- Theme JS -->
+  <script src="assets/js/particles.js"></script>
   <script src="assets/js/main.js"></script>
-
 </body>
 </html>
-
