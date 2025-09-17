@@ -31,6 +31,7 @@
 
   <!-- Favicon -->
   <link rel="icon" href="https://www.elmidorgroup.com/assets/favicon.ico" type="image/x-icon" />
+  
     <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-24N197CRM9"></script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-67N2QVBCZV"></script>
@@ -140,6 +141,7 @@
   <link rel="stylesheet" href="assets/css/particles.css">
 </head>
 <body>
+  
   <!-- Patikil background -->
   <div class="particles"></div>
 
@@ -250,6 +252,7 @@
           <h2>Ready to build what matters?</h2>
           <p class="muted">Tell us about your goals. We'll map a clear path and get you compounding wins fast.</p>
           <a class="btn btn-primary" href="#contact">Contact Us</a>
+          <a class="btn-get-started" href="#" onclick="openDemo()">View Demo</a>
         </div>
       </div>
     </section>
@@ -294,6 +297,11 @@
         </nav>
       </div>
     </footer>
+
+     <div class="modal" id="demoModal" onclick="closeDemo()">
+    <video id="demoVideo" src="assets/videos/demo.mp4" controls></video>
+  </div>
+
     <!-- Like & Share -->
     <div style="text-align:center; margin:20px 0"> 
       <button onclick="likePage()" class="btn-get-started">👍 Like</button> 
@@ -354,3 +362,4 @@
   <script src="assets/js/main.js"></script>
 </body>
 </html>
+
