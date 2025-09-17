@@ -252,75 +252,78 @@
     </section>
 
           <!-- Client Forms Slider -->
-  <div class="card" aria-label="Special Client Forms" data-animate class="animate-zoomIn" style="min-height:220px; display:grid; place-items:center">
-    <div class="swiper myForms">
-      <div class="swiper-wrapper">
-        
-        <!-- Client Form 1 -->
-        <div class="swiper-slide">
-          <div class="card form-card" data-link="https://tally.so/r/wdVB5d">
-            <h3>Client A – Service Form</h3>
-            <iframe loading="lazy"
-              src="https://tally.so/embed/wdVB5d?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1">
-            </iframe>
-          </div>
+<div class="card" aria-label="Special Client Forms" data-animate class="animate-zoomIn" style="min-height:220px; display:grid; place-items:center">
+  <div class="swiper myForms" style="width:100%;">
+    <div class="swiper-wrapper">
+      
+      <!-- Client Form 1 -->
+      <div class="swiper-slide">
+        <div class="card form-card" data-link="https://tally.so/r/wdVB5d">
+          <h3>Client A – Service Form</h3>
+          <iframe loading="lazy"
+            src="https://tally.so/embed/wdVB5d?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" 
+            width="100%" height="420" frameborder="0">
+          </iframe>
         </div>
-
-        <!-- Client Form 2 -->
-        <div class="swiper-slide">
-          <div class="card form-card" data-link="https://tally.so/r/3ERNZA">
-            <h3>Client B – Service Form</h3>
-            <iframe loading="lazy"
-              src="https://tally.so/embed/3ERNZA?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1&formEventsForwarding=1">
-            </iframe>
-          </div>
-        </div>
-
-        <!-- Client C Placeholder (CTA) -->
-        <div class="swiper-slide">
-          <div class="card cta-card" data-link="https://www.elmidorgroup.com/reservation">
-            <h3>Client C – Reservation</h3>
-            <!-- Ou ka chanje ant imaj, videyo, oswa tèks -->
-            <img src="https://via.placeholder.com/700x400/7c5cff/ffffff?text=Reserve+Now" alt="Reserve Now">
-            <p style="margin-top:10px; font-size:1.1rem;">Click here to book your session today!</p>
-          </div>
-        </div>
-
       </div>
 
-      <!-- Navigation -->
-      <div class="swiper-pagination"></div>
-      <div class="swiper-button-prev" aria-label="Previous Slide"></div>
-      <div class="swiper-button-next" aria-label="Next Slide"></div>
-    </div>
-  </div>
+      <!-- Client Form 2 -->
+      <div class="swiper-slide">
+        <div class="card form-card" data-link="https://tally.so/r/3ERNZA">
+          <h3>Client B – Service Form</h3>
+          <iframe loading="lazy"
+            src="https://tally.so/embed/3ERNZA?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1&formEventsForwarding=1" 
+            width="100%" height="420" frameborder="0">
+          </iframe>
+        </div>
+      </div>
 
-  <!-- SwiperJS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script>
-    const swiper = new Swiper('.myForms', {
-      loop: true,
-      speed: 1800, // tranzisyon dous
-      pagination: { el: '.swiper-pagination', clickable: true },
-      navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
-      autoplay: { 
-        delay: 8000,              // tan nòmal
-        disableOnInteraction: false,
-        pauseOnMouseEnter: true
+      <!-- Client C Placeholder (CTA) -->
+      <div class="swiper-slide">
+        <div class="card cta-card" data-link="https://www.elmidorgroup.com/reservation">
+          <h3>Client C – Reservation</h3>
+          <!-- Ou ka chanje imaj sa ak videyo oswa tèks -->
+          <img src="https://via.placeholder.com/700x400/7c5cff/ffffff?text=Reserve+Now" alt="Reserve Now" style="width:100%; border-radius:12px;">
+          <p style="margin-top:10px;">Click here to book your session today!</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Navigation -->
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+</div>
+</section>
+
+<!-- SwiperJS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+  const swiper = new Swiper('.myForms', {
+    loop: true,
+    speed: 1800, // tranzisyon dous, an ralanti
+    pagination: { el: '.swiper-pagination', clickable: true },
+    navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+    autoplay: { 
+      delay: 8000,              // tan nòmal
+      disableOnInteraction: false, 
+      pauseOnMouseEnter: true   // sispann sou hover
+    }
+  });
+
+  // Klike sou slide pou ouvè lyen li
+  document.querySelectorAll('.swiper-slide .card').forEach(card => {
+    card.addEventListener('click', (e) => {
+      if (e.target.tagName.toLowerCase() !== 'iframe') {
+        const link = card.getAttribute('data-link');
+        if(link) window.open(link, '_blank');
       }
     });
-
-    // Ouvè fòm oswa CTA nan nouvo tab sou klik
-    document.querySelectorAll('.swiper-slide .card').forEach(card => {
-      card.addEventListener('click', (e) => {
-        // evite double click sou iframe (pèmèt moun tape ladan si yo vle)
-        if (e.target.tagName.toLowerCase() !== 'iframe') {
-          const link = card.getAttribute('data-link');
-          if(link) window.open(link, '_blank');
-        }
-      });
-    });
-  </script>
+  });
+</script>
 
     <!-- News / Updates (placeholder) -->
     <section class="section" id="news">
