@@ -140,6 +140,41 @@ a:focus-visible, button:focus-visible{
   color:var(--muted); font-size:12px;
 }
 
+/* Pulse Glow Effect */
+.pulse-glow {
+  position: relative;
+  z-index: 1;
+}
+
+.pulse-glow::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  border-radius: inherit;
+  background: rgba(90, 209, 230, 0.4); /* koulè glow */
+  z-index: -1;
+  animation: pulse-glow 2s infinite;
+}
+
+@keyframes pulse-glow {
+  0% {
+    transform: scale(0.9);
+    opacity: 0.7;
+  }
+  70% {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(0.9);
+    opacity: 0.7;
+  }
+}
+
+
 /* =========================================================
    Accessibility
    ========================================================= */
