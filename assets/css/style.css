@@ -103,16 +103,50 @@ a:focus-visible, button:focus-visible{
   color:var(--hover-apricot);
   background:rgba(255,255,255,.05);
 }
-/* Get Started bouton */
+/* Get Started bouton ak Glow */
 .btn-get-started{
+  position:relative; /* obligatwa pou pseudo-element la */
   background:linear-gradient(90deg,var(--brand),var(--brand-2));
-  color:#0a0b0e; box-shadow:0 8px 24px rgba(124,92,255,.35);
+  color:#0a0b0e; 
+  box-shadow:0 8px 24px rgba(124,92,255,.35);
+  z-index:1;
 }
+
+.btn-get-started::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  border-radius: inherit;
+  background: rgba(90, 209, 230, 0.4); /* koulè glow */
+  z-index: -1;
+  animation: pulse-glow 2s infinite;
+}
+
 .btn-get-started:hover{
   transform:translateY(-1px);
   background:var(--hover-apricot);
   color:#0a0b0e;
 }
+
+/* Animasyon glow */
+@keyframes pulse-glow {
+  0% {
+    transform: scale(0.9);
+    opacity: 0.7;
+  }
+  70% {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(0.9);
+    opacity: 0.7;
+  }
+}
+
 
 /* Contact bouton */
 .btn-contact{
