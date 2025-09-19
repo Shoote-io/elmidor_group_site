@@ -167,6 +167,21 @@
   
 </head>
 <body>
+  
+  <!-- Facebook SDK -->
+  <div id="fb-root"></div>
+  <script>
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId            : '1243975833743807',
+        autoLogAppEvents : true,
+        xfbml            : true,
+        version          : 'v23.0'
+      });
+    };
+  </script>
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+
   <!-- Patikil background -->
   <div class="particles"></div>
 
@@ -439,6 +454,24 @@
   </div>
 
   <script>
+        // Custom Like Button
+    function likePage() {
+      FB.api(
+        '/elmidorgroup?fields=id',
+        function(response) {
+          if (response && !response.error) {
+            window.open("https://www.facebook.com/elmidorgroup", "_blank");
+          }
+        }
+      );
+    }
+    // Custom Share Button
+    function sharePage() {
+      FB.ui({
+        method: 'share',
+        href: 'https://www.elmidorgroup.com/team.html',
+      }, function(response){});
+    }
     function openDemo(){
       document.getElementById('demoModal').style.display='flex';
       document.getElementById('demoVideo').play();
@@ -451,7 +484,7 @@
     document.getElementById('year').textContent=new Date().getFullYear();
   </script>
   
- <!-- Like & Share -->
+  <!-- Like & Share Custom Buttons -->
   <div style="text-align:center; margin:20px 0">
     <button onclick="likePage()" class="btn-get-started">👍 Like</button>
     <button onclick="sharePage()" class="btn-contact">🔗 Share</button>
@@ -460,5 +493,6 @@
   <!-- Theme JS -->
   <script src="assets/js/main.js"></script>
   <script src="assets/js/theme.js"></script>
+
 </body>
 </html>
