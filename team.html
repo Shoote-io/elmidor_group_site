@@ -465,7 +465,7 @@
     <video id="demoVideo" src="assets/videos/demo.mp4" controls></video>
   </div>
 
-  <script>
+<script>
   // Inisyalizasyon SDK
   window.fbAsyncInit = function() {
     FB.init({
@@ -488,6 +488,8 @@
       href: 'https://www.elmidorgroup.com/team.html' // URL paj ou vle moun pataje
     }, function(response){});
   }
+
+  // Menu bouton toggle
   const btn = document.getElementById('menuBtn');
   const links = document.getElementById('navLinks');
 
@@ -496,28 +498,31 @@
     links.setAttribute('data-open', String(!isOpen));
     btn.setAttribute('aria-expanded', String(!isOpen));
   });
-   } 
-    function openDemo(){
-      document.getElementById('demoModal').style.display='flex';
-      document.getElementById('demoVideo').play();
-    }
-    function closeDemo(){
-      const modal=document.getElementById('demoModal');
-      modal.style.display='none';
-      document.getElementById('demoVideo').pause();
-    }
-    document.getElementById('year').textContent=new Date().getFullYear();
-  </script>
-  
-  <!-- Like & Share Custom Buttons -->
-  <div style="text-align:center; margin:20px 0">
-    <button onclick="likePage()" class="btn-get-started">👍 Like</button>
-    <button onclick="sharePage()" class="btn-contact">🔗 Share</button>
-  </div>
-  
-  <!-- Theme JS -->
-  <script src="assets/js/main.js"></script>
-  <script src="assets/js/theme.js"></script>
+
+  // Demo modal
+  function openDemo(){
+    document.getElementById('demoModal').style.display='flex';
+    document.getElementById('demoVideo').play();
+  }
+  function closeDemo(){
+    const modal=document.getElementById('demoModal');
+    modal.style.display='none';
+    document.getElementById('demoVideo').pause();
+  }
+
+  // Mete ane aktyèl nan footer
+  document.getElementById('year').textContent=new Date().getFullYear();
+</script>
+
+<!-- Like & Share Custom Buttons -->
+<div style="text-align:center; margin:20px 0">
+  <button onclick="likePage()" class="btn-get-started">👍 Like</button>
+  <button onclick="sharePage()" class="btn-contact">🔗 Share</button>
+</div>
+
+<!-- Theme JS -->
+<script src="assets/js/main.js"></script>
+<script src="assets/js/theme.js"></script>
 
 </body>
 </html>
