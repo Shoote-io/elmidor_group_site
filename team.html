@@ -466,6 +466,28 @@
   </div>
 
   <script>
+  // Inisyalizasyon SDK
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '1243975833743807', // ou ka kite oubyen mete App ID FB app ou
+      autoLogAppEvents: true,
+      xfbml      : true,
+      version    : 'v23.0'
+    });
+  };
+
+  // Bouton Like — ouvri paj ofisyèl Facebook
+  function likePage() {
+    window.open("https://www.facebook.com/elmidorgroup", "_blank");
+  }
+
+  // Bouton Share — louvri popup Share
+  function sharePage() {
+    FB.ui({
+      method: 'share',
+      href: 'https://www.elmidorgroup.com/team.html' // URL paj ou vle moun pataje
+    }, function(response){});
+  }
   const btn = document.getElementById('menuBtn');
   const links = document.getElementById('navLinks');
 
@@ -474,26 +496,7 @@
     links.setAttribute('data-open', String(!isOpen));
     btn.setAttribute('aria-expanded', String(!isOpen));
   });
-</script>
-
-        // Custom Like Button
-    function likePage() {
-      FB.api(
-        '/elmidorgroup?fields=id',
-        function(response) {
-          if (response && !response.error) {
-            window.open("https://www.facebook.com/elmidorgroup", "_blank");
-          }
-        }
-      );
-    }
-    // Custom Share Button
-    function sharePage() {
-      FB.ui({
-        method: 'share',
-        href: 'https://www.elmidorgroup.com/team.html',
-      }, function(response){});
-    }
+   } 
     function openDemo(){
       document.getElementById('demoModal').style.display='flex';
       document.getElementById('demoVideo').play();
