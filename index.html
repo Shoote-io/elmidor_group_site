@@ -7,9 +7,12 @@
 
   <!-- Primary SEO -->
   <meta name="description" content="Elmidor Group™ helps businesses and people scale smarter with automation, AI, and modern technology." />
-  <meta name="keywords" content="Elmidor Group, automation, AI, workflows, business growth, technology, digital transformation" />
+  <meta name="keywords" content="Elmidor Group, Elmidor official website, Elmidor automation, business automation, digital transformation, enterprise solutions, technology for businesses, Elmidor services, grow with Elmidor" />
   <link rel="canonical" href="https://www.elmidorgroup.com/" />
+
+  <!-- Robots -->
   <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta name="googlebot" content="index, follow" />
   <meta name="theme-color" content="#13151a" />
   <meta name="color-scheme" content="light dark" />
 
@@ -20,26 +23,38 @@
   <meta property="og:description" content="Elmidor Group™ helps businesses and people scale smarter with automation, AI, and modern technology." />
   <meta property="og:url" content="https://www.elmidorgroup.com/" />
   <meta property="og:image" content="https://www.elmidorgroup.com/assets/images/og-image.jpg" />
+  <meta property="og:locale" content="en_US" />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:site" content="@elmidor" />
+  <meta name="twitter:site" content="@ElmidorGroup" />
+  <meta name="twitter:creator" content="@ElmidorGroup" />
   <meta name="twitter:title" content="Elmidor Group™ — Automation & Growth" />
   <meta name="twitter:description" content="Elmidor Group™ helps businesses and people scale smarter with automation, AI, and modern technology." />
   <meta name="twitter:image" content="https://www.elmidorgroup.com/assets/images/elmidorgroup-cover.jpg" />
 
   <!-- Favicon -->
-  <link rel="icon" href="assets/images/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png" />
+  <link rel="icon" href="/assets/images/favicon.ico" />
+  <link rel="manifest" href="/assets/site.webmanifest" />
 
-  <!-- Google Analytics -->
+  <!-- Prefetch for Performance -->
+  <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
+  <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin />
+  <link rel="preconnect" href="https://connect.facebook.net" crossorigin />
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-G-67N2QVBCZV" crossorigin="anonymous"></script>
+
+  <!-- Google Analytics (GA4) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-24N197CRM9"></script>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-67N2QVBCZV"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-24N197CRM9');
-    gtag('config', 'G-67N2QVBCZV');
   </script>
 
   <!-- Facebook Pixel -->
@@ -49,8 +64,9 @@
       n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};
       if(!f._fbq)f._fbq=n;
       n.push=n;n.loaded=!0;n.version='2.0';
-      n.queue=[];t=b.createElement(e);t.async=!0;
-      t.src=v;s=b.getElementsByTagName(e)[0];
+      n.queue=[];
+      t=b.createElement(e);t.async=!0;t.src=v;
+      s=b.getElementsByTagName(e)[0];
       s.parentNode.insertBefore(t,s)}
     (window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
     fbq('init', '786654690436263');
@@ -61,18 +77,23 @@
       src="https://www.facebook.com/tr?id=786654690436263&ev=PageView&noscript=1"/>
   </noscript>
 
-  <!-- Facebook SDK -->
-  <script>
-    window.fbAsyncInit = function() {
-      FB.init({
-        appId            : '1243975833743807',
-        autoLogAppEvents : true,
-        xfbml            : true,
-        version          : 'v23.0'
-      });
-    };
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Elmidor Group",
+    "url": "https://www.elmidorgroup.com",
+    "logo": "https://www.elmidorgroup.com/assets/images/elmidor-logo.png",
+    "sameAs": [
+      "https://www.facebook.com/Elmidorgroup",
+      "https://twitter.com/ElmidorGroup",
+      "https://www.linkedin.com/company/Elmidorgroup",
+      "https://www.instagram.com/Elmidorgroup"
+    ]
+  }
   </script>
-  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+</head>
 
   <!-- Styles -->
   <style>
@@ -140,20 +161,47 @@
   <link rel="stylesheet" href="assets/css/particles.css">
 </head>
 <body>
-  <!-- Patikil background -->
-  <div class="particles"></div>
+  <!-- Facebook SDK -->
+  <div id="fb-root"></div>
+  <script>
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId : '1243975833743807',
+        autoLogAppEvents : true,
+        xfbml : true,
+        version : 'v23.0'
+      });
+    };
+  </script>
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
 
+  <!-- Patikil background -->
+  <div class="particles" aria-hidden="true"></div>
+
+  <!-- Skip link for accessibility -->
   <a class="skip-link" href="#main">Skip to content</a>
 
   <!-- Header -->
-  <header>
-    <div class="container nav-cta" role="navigation" aria-label="Primary">
+  <header role="banner">
+    <div class="container nav">
+      <!-- Logo -->
       <a class="brand" href="/" aria-label="Elmidor Group – Home">
         <span class="logo" aria-hidden="true">◐</span>
         <span>Elmidor Group</span>
       </a>
-      <button class="btn btn-outline menu-btn" id="menuBtn" aria-expanded="false" aria-controls="navLinks" aria-label="Toggle menu">☰ Menu</button>
-      <div class="nav-links" id="navLinks" data-open="false">
+
+      <!-- Bouton ☰ pou mobil -->
+      <button 
+        class="btn btn-get-started menu-btn" 
+        id="menuBtn" 
+        aria-expanded="false" 
+        aria-controls="navLinks" 
+        aria-label="Toggle menu">
+        ☰ Menu
+      </button>
+
+      <!-- Navigation principale -->
+      <nav class="nav-links" id="navLinks" data-open="false" aria-hidden="true">
         <a href="about.html">About</a>
         <a href="services.html">Services</a>
         <a href="blog.html">Blog</a>
@@ -163,15 +211,20 @@
         <a href="terms.html" aria-current="page">Terms</a>
         <a href="team.html">Team</a>
         <a href="privacy.html">Privacy</a>
-      </div>
-      <div class="nav-cta">
+      </nav>
+
+      <!-- CTA yo pou mobil -->
+      <div class="nav-cta-mobile">
         <a class="btn btn-contact" href="contact.html">Contact</a>
         <a class="btn btn-get-started" href="#joinfree">Get Started</a>
       </div>
     </div>
   </header>
 
+  <!-- Main -->
   <main id="main">
+    <section class="hero container">
+      
     <!-- Hero -->
     <section class="hero section" id="home">
       <div class="container">
@@ -185,46 +238,60 @@
   <div class="swiper myForms" style="width:100%;">
     <div class="swiper-wrapper">
       
-      <!-- Client Form 1 -->
-      <div class="swiper-slide">
-        <div class="card form-card">
-          <h3>
-            <a href="https://tally.so/r/3Ep4qB" target="_blank" class="form-link">
-              Solaĩ Beyond - Form requesting - localited USA.
-            </a>
-          </h3>
-          <iframe loading="lazy"
-            src="https://tally.so/embed/3Ep4qB?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" 
-            width="100%" height="420" frameborder="0" marginheight="0" marginwidth="0">
-          </iframe>
-        </div>
-      </div>
+     
+<!-- Client Form 1 -->
+<div class="swiper-slide">
+  <div class="card form-card">
+    <h3>
+      <a href="https://tally.so/r/3Ep4qB" target="_blank" rel="noopener noreferrer" class="form-link">
+        Solaĩ Beyond — Join Beyond (USA)
+      </a>
+    </h3>
+    <iframe
+      loading="lazy"
+      src="https://tally.so/embed/3Ep4qB?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+      width="100%"
+      height="420"
+      frameborder="0"
+      style="border-radius: 8px;"
+      title="Solaĩ Beyond Form"
+    ></iframe>
+  </div>
+</div>
 
-      <!-- Client Form 2 -->
-      <div class="swiper-slide">
-        <div class="card form-card">
-          <h3>
-            <a href="https://tally.so/r/3ERNZA" target="_blank" class="form-link">
-              Fritay Lakay – Reservation Form - Localited Turcs & Caicos Island.
-            </a>
-          </h3>
-          <iframe loading="lazy"
-            src="https://tally.so/embed/3ERNZA?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1&formEventsForwarding=1" 
-            width="100%" height="420" frameborder="0" marginheight="0" marginwidth="0">
-          </iframe>
-        </div>
-      </div>
+<!-- Client Form 2 -->
+<div class="swiper-slide">
+  <div class="card form-card">
+    <h3>
+      <a href="https://tally.so/r/3ERNZA" target="_blank" rel="noopener noreferrer" class="form-link">
+        Lakay Fritay — Reservation Form (Turks & Caicos Islands)
+      </a>
+    </h3>
+    <iframe
+      loading="lazy"
+      src="https://tally.so/embed/3ERNZA?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1&formEventsForwarding=1"
+      width="100%"
+      height="420"
+      frameborder="0"
+      style="border-radius: 8px;"
+      title="Lakay Fritay Form"
+    ></iframe>
+  </div>
+</div>
 
-      <!-- Client C Placeholder (CTA) -->
-      <div class="swiper-slide">
-        <div class="card cta-card" data-link="https://www.elmidorgroup.com/reservation" style="cursor:pointer; text-align:center;">
-          <h3 class="form-link-c">Place Free – Make Reservation</h3>
-          <img src="assets/images/demo-preview.png" alt="Reserve Now" style="width:100%; border-radius:12px;">
-          <p style="margin-top:10px;">Click here to book your session today!</p>
-        </div>
-      </div>
-
-    </div>
+<!-- Client C Placeholder (CTA) -->
+<div class="swiper-slide">
+  <div class="card cta-card" data-link="https://www.elmidorgroup.com/reservation" style="cursor:pointer; text-align:center;">
+    <h3 class="form-link-c">Place Free – Make Reservation</h3>
+    <img
+      src="assets/images/demo-preview.png"
+      alt="Reserve your session now"
+      style="width:100%; border-radius:12px;"
+      loading="lazy"
+    >
+    <p style="margin-top:10px;">Click here to book your session today!</p>
+  </div>
+</div>
 
     <!-- Navigation -->
     <div class="swiper-pagination"></div>
@@ -401,52 +468,66 @@
         </div>
       </div>
     </section>
-
-       <!-- Client Forms Slider -->
+        
+      <!-- Client Forms Slider -->
 <div class="card" aria-label="Special Client Forms" data-animate class="animate-zoomIn" style="min-height:220px; display:grid; place-items:center">
   <div class="swiper myForms" style="width:100%;">
     <div class="swiper-wrapper">
       
-      <!-- Client Form 1 -->
-      <div class="swiper-slide">
-        <div class="card form-card">
-          <h3>
-            <a href="https://tally.so/r/3Ep4qB" target="_blank" class="form-link">
-              Solaĩ Beyond - Form requesting - localited USA.
-            </a>
-          </h3>
-          <iframe loading="lazy"
-            src="https://tally.so/embed/3Ep4qB?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" 
-            width="100%" height="420" frameborder="0" marginheight="0" marginwidth="0">
-          </iframe>
-        </div>
-      </div>
+     
+<!-- Client Form 1 -->
+<div class="swiper-slide">
+  <div class="card form-card">
+    <h3>
+      <a href="https://tally.so/r/3Ep4qB" target="_blank" rel="noopener noreferrer" class="form-link">
+        Solaĩ Beyond — Join Beyond (USA)
+      </a>
+    </h3>
+    <iframe
+      loading="lazy"
+      src="https://tally.so/embed/3Ep4qB?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+      width="100%"
+      height="420"
+      frameborder="0"
+      style="border-radius: 8px;"
+      title="Solaĩ Beyond Form"
+    ></iframe>
+  </div>
+</div>
 
-      <!-- Client Form 2 -->
-      <div class="swiper-slide">
-        <div class="card form-card">
-          <h3>
-            <a href="https://tally.so/r/3ERNZA" target="_blank" class="form-link">
-              Fritay Lakay – Reservation Form - Localited Turcs & Caicos Island.
-            </a>
-          </h3>
-          <iframe loading="lazy"
-            src="https://tally.so/embed/3ERNZA?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1&formEventsForwarding=1" 
-            width="100%" height="420" frameborder="0" marginheight="0" marginwidth="0">
-          </iframe>
-        </div>
-      </div>
+<!-- Client Form 2 -->
+<div class="swiper-slide">
+  <div class="card form-card">
+    <h3>
+      <a href="https://tally.so/r/3ERNZA" target="_blank" rel="noopener noreferrer" class="form-link">
+        Lakay Fritay — Reservation Form (Turks & Caicos Islands)
+      </a>
+    </h3>
+    <iframe
+      loading="lazy"
+      src="https://tally.so/embed/3ERNZA?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1&formEventsForwarding=1"
+      width="100%"
+      height="420"
+      frameborder="0"
+      style="border-radius: 8px;"
+      title="Lakay Fritay Form"
+    ></iframe>
+  </div>
+</div>
 
-      <!-- Client C Placeholder (CTA) -->
-      <div class="swiper-slide">
-        <div class="card cta-card" data-link="https://www.elmidorgroup.com/reservation" style="cursor:pointer; text-align:center;">
-          <h3 class="form-link-c">Place Free – Make Reservation</h3>
-          <img src="assets/images/demo-preview.png" alt="Reserve Now" style="width:100%; border-radius:12px;">
-          <p style="margin-top:10px;">Click here to book your session today!</p>
-        </div>
-      </div>
-
-    </div>
+<!-- Client C Placeholder (CTA) -->
+<div class="swiper-slide">
+  <div class="card cta-card" data-link="https://www.elmidorgroup.com/reservation" style="cursor:pointer; text-align:center;">
+    <h3 class="form-link-c">Place Free – Make Reservation</h3>
+    <img
+      src="assets/images/demo-preview.png"
+      alt="Reserve your session now"
+      style="width:100%; border-radius:12px;"
+      loading="lazy"
+    >
+    <p style="margin-top:10px;">Click here to book your session today!</p>
+  </div>
+</div>
 
     <!-- Navigation -->
     <div class="swiper-pagination"></div>
@@ -577,103 +658,104 @@
       </div>
     </section>
 
- <!-- Join Free -->
-    <section id="joinfree" class="joinfree-section">
-      <div class="container" style="text-align:center">
-        <h2>Get Started — Join Free</h2>
-        <p>Join our platform for free and explore our workflows.</p>
-        <a class="btn-get-started" href="https://tally.so/r/wdVB5d" target="_blank">Join with Tally</a>
+      <!-- Join Free Section -->
+<section id="joinfree" class="joinfree-section">
+  <div class="container text-center">
+    <h2>Get Started — Join Free</h2>
+    <p>Join our platform for free and explore our workflows.</p>
+    <a class="btn-get-started" href="https://tally.so/r/wdVB5d" target="_blank" rel="noopener noreferrer">
+      Join with Tally
+    </a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="section">
+  <div class="container footer-grid">
+    <div>
+      <div class="brand mb-2">
+        <span class="logo" aria-hidden="true">◐</span>
+        <span style="font-weight:700">Elmidor Group</span>
       </div>
-    </section>
-    <!-- Footer -->
-    <footer class="section">
-      <div class="container footer-grid">
-        <div>
-          <div class="brand" style="margin-bottom:8px">
-            <span class="logo" aria-hidden="true">◐</span>
-            <span style="font-weight:700">Elmidor Group</span>
-          </div>
-          <p class="muted">Automation • Technology • Smarter growth</p>
-          <p class="muted">Santo Domingo, DO</p> <p class="muted">© <span id="year"></span> Elmidor Group. All rights reserved.</p>
-        </div>
-        <nav aria-label="Footer">
-          <div class="socials" style="margin-bottom:10px">
-            <a href="https://www.elmidorgroup.com" aria-label="Website">🔗</a>
-            <a href="https://x.com/ElmidorGroup" aria-label="X">𝕏</a>
-            <a href="https://www.youtube.com/@ElmidorGroup" aria-label="YouTube">▶</a>
-          </div>
-          <div style="display:flex; gap:16px; flex-wrap:wrap">
-            <a href="about.html">About</a>
-            <a href="services.html">Services</a>
-            <a href="blog.html">Blog</a>
-            <a href="blog-post.html">Updates</a>
-            <a href="follow.html">Follow Us</a>
-            <a href="support.html">Support</a>
-            <a href="terms.html">Terms</a>
-            <a href="team.html">Team</a>
-            <a href="privacy.html">Privacy</a>
-          </div>
-        </nav>
-      </div>
-    </footer>
-    <!-- Like & Share -->
-    <div style="text-align:center; margin:20px 0"> 
-      <button onclick="likePage()" class="btn-get-started">👍 Like</button> 
-      <button onclick="sharePage()" class="btn-contact">🔗 Share</button>
+      <p class="muted">Automation • Technology • Smarter growth</p>
+      <p class="muted">Santo Domingo, DO</p>
+      <p class="muted">© <span id="year"></span> Elmidor Group. All rights reserved.</p>
     </div>
 
-  <!-- Minimal JS: mobile menu, scroll-reveal, share + newsletter, dynamic year -->
-  <script>
-    // Mobile nav toggle
-    const menuBtn = document.getElementById('menuBtn');
-    const navLinks = document.getElementById('navLinks');
-    menuBtn?.addEventListener('click', ()=>{
-      const isOpen = navLinks.getAttribute('data-open') === 'true';
-      navLinks.setAttribute('data-open', String(!isOpen));
-      menuBtn.setAttribute('aria-expanded', String(!isOpen));
-    });
+    <nav aria-label="Footer">
+      <div class="socials mb-2">
+        <a href="https://www.elmidorgroup.com" aria-label="Website" rel="noopener noreferrer">🔗</a>
+        <a href="https://x.com/ElmidorGroup" aria-label="X (Twitter)" rel="noopener noreferrer">𝕏</a>
+        <a href="https://www.youtube.com/@ElmidorGroup" aria-label="YouTube" rel="noopener noreferrer">▶</a>
+      </div>
 
-    // Scroll reveal
-    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (!prefersReduced && 'IntersectionObserver' in window){
-      const els = document.querySelectorAll('[data-animate]');
-      const io = new IntersectionObserver((entries)=>{
-        entries.forEach(e => { if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
-      }, {threshold: .14});
-      els.forEach(el => io.observe(el));
-    } else {
-      document.querySelectorAll('[data-animate]').forEach(el=>el.classList.add('in'));
-    }
+      <div class="footer-links">
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="blog.html">Blog</a>
+        <a href="blog-post.html">Updates</a>
+        <a href="follow.html">Follow Us</a>
+        <a href="support.html">Support</a>
+        <a href="terms.html">Terms</a>
+        <a href="team.html">Team</a>
+        <a href="privacy.html">Privacy</a>
+      </div>
+    </nav>
+  </div>
+</footer>
 
-    // Newsletter faux endpoint
-    function subscribe(e){
-      e && e.preventDefault();
-      const email = document.getElementById('newsletterEmail').value.trim();
-      if(!email){ alert('Please enter your email.'); return false; }
-      alert('Thank you! Email '+ email +' received. We will send updates soon.');
-      document.getElementById('newsletterForm').reset();
-      return false;
-    }
+<!-- Demo Modal -->
+<div class="modal" id="demoModal" onclick="closeDemo()">
+  <video id="demoVideo" src="assets/videos/demo.mp4" controls title="Platform Demo Video"></video>
+</div>
 
-    // Share helper
-    function share(which){
-      const url = encodeURIComponent(window.location.href);
-      const title = encodeURIComponent(document.title);
-      let shareUrl = '';
-      if(which==='x') shareUrl = 'https://x.com/intent/tweet?text='+title+'%20'+url;
-      if(which==='facebook') shareUrl = 'https://www.facebook.com/sharer/sharer.php?u='+url;
-      if(which==='whatsapp') shareUrl = 'https://wa.me/?text='+title+'%20'+url;
-      if(which==='linkedin') shareUrl = 'https://www.linkedin.com/sharing/share-offsite/?url='+url;
-      if(shareUrl) window.open(shareUrl,'_blank','noopener');
-    }
-    
-    // Dynamic year
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script
+<!-- Scripts -->
+<script>
+  // Menu toggle
+  const btn = document.getElementById('menuBtn');
+  const links = document.getElementById('navLinks');
+  btn.addEventListener('click', () => {
+    const isOpen = links.getAttribute('data-open') === 'true';
+    links.setAttribute('data-open', String(!isOpen));
+    btn.setAttribute('aria-expanded', String(!isOpen));
+  });
+
+  // Like button → ouvri paj FB
+  function likePage() {
+    window.open("https://www.facebook.com/elmidorgroup", "_blank");
+  }
+
+  // Share button → louvri popup FB
+  function sharePage() {
+    FB.ui({
+      method: 'share',
+      href: 'https://www.elmidorgroup.com/team.html',
+    }, function(response){});
+  }
+
+  // Demo modal open/close
+  function openDemo(){
+    document.getElementById('demoModal').style.display='flex';
+    document.getElementById('demoVideo').play();
+  }
+  function closeDemo(){
+    const modal=document.getElementById('demoModal');
+    modal.style.display='none';
+    document.getElementById('demoVideo').pause();
+  }
+
+  // Dynamic year in footer
+  document.getElementById('year').textContent=new Date().getFullYear();
+</script>
+
+<!-- Like & Share Buttons -->
+<div class="text-center my-3">
+  <button onclick="likePage()" class="btn-get-started">👍 Like</button>
+  <button onclick="sharePage()" class="btn-contact">🔗 Share</button>
+</div>
 
 <!-- Theme JS -->
-  <script src="assets/js/particles.js"></script>
-  <script src="assets/js/main.js"></script>
-</body>
-</html>
-
+<script src="assets/js/main.js"></script>
+<script src="assets/js/particles.js"></script>
+  </body>
+ </html>
