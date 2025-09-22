@@ -44,7 +44,7 @@ a:focus-visible, button:focus-visible{
 ::selection{ background:rgba(124,92,255,.35); }
 
 /* Layout utils */
-.container{ max-width:var(--container); margin-inline:auto; padding:0 18px; }
+.container{ max-width:var(--container); margin-inline:auto; padding:0 16px; }
 .section{ padding:70px 0; }
 .muted{ color:var(--muted); }
 
@@ -54,7 +54,7 @@ a:focus-visible, button:focus-visible{
 .btn{
   appearance:none; border:0; cursor:pointer;
   display:inline-flex; align-items:center; gap:10px;
-  padding:12px 18px; border-radius:999px; font-weight:600;
+  padding:14px 18px; border-radius:999px; font-weight:600;
   transition: transform .2s ease, box-shadow .2s ease, background .2s ease, color .2s ease;
 }
 
@@ -64,7 +64,7 @@ a:focus-visible, button:focus-visible{
 .btn-primary{
   background:var(--brand);
   color:#0a0b0e;
-  box-shadow:0 6px 16px rgba(90,209,230,.35);
+  box-shadow:0 6px 14px rgba(90,209,230,.35);
 }
 .btn-primary:hover{
   background:var(--brand-2);
@@ -151,7 +151,7 @@ a:focus-visible, button:focus-visible{
 /* Violet bouton (alt) */
 .btn-violet{
   display:inline-flex; align-items:center; justify-content:center;
-  padding:10px 16px; border-radius:12px;
+  padding:12px 14px; border-radius:12px;
   background:linear-gradient(135deg, #7c5cff, #5ad1e6);
   color:#0a0b0e; font-weight:700; box-shadow:var(--shadow);
 }
@@ -169,8 +169,8 @@ a:focus-visible, button:focus-visible{
 /* CTA wrapper */
 .cta-btns {
   display: flex;
-  gap: 12px;
-  margin-top: 18px;
+  gap: 14px;
+  margin-top: 16px;
   flex-wrap: wrap;
 }
 
@@ -227,7 +227,7 @@ header{
   .cta-desktop { display: none; }
   .cta-mobile {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 10px;
     margin-top: 16px;
   }
@@ -236,8 +236,8 @@ header{
 /* =========================================================
    Hero / Team / Contact / Join / Footer
    ========================================================= */
-.hero{ padding:56px 0 24px; }
-.hero h1{ font-size:38px; line-height:1.15; margin:0 0 8px; }
+.hero{ padding:50px 0 26px; }
+.hero h1{ font-size:38px; line-height:1.15; margin:0 0 6px; }
 .hero p{ color:var(--muted); margin:0; }
 
 .team-card{
