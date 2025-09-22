@@ -167,7 +167,23 @@
   <link rel="stylesheet" href="assets/css/theme.css">
 </head>
 <body>
+  
+ <!-- Facebook SDK -->
+  <div id="fb-root"></div>
+  <script>
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId            : '1243975833743807',
+        autoLogAppEvents : true,
+        xfbml            : true,
+        version          : 'v23.0'
+      });
+    };
+  </script>
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
 
+  <!-- Patikil background -->
+  <div class="particles"></div>
 
 <!-- Main -->
 
