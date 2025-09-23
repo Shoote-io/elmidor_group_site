@@ -145,7 +145,7 @@
   .brand { display: flex; align-items: center; gap: 10px; font-weight: 800 }
   .brand .logo { width: 28px; height: 28px; display: grid; place-items: center; border-radius: 8px; background: linear-gradient(135deg,var(--brand) 0%, var(--brand-2) 100%); box-shadow: var(--shadow) }
 
-  nav.nav-links { display: flex; gap: 18px; align-items: center }
+  nav.nav-links { display: right; gap: 18px; align-items: center }
   .nav-links a { padding: 8px 10px; border-radius: 10px }
   .nav-links a:hover { background: var(--hover-apricot); color: #0a0b0e }
 
@@ -155,8 +155,8 @@
   @media (max-width: 400px) {
     .menu-btn { display: right }
     nav.nav-links { 
-      position: fixed; top: 60px; right: 0; inset: 60px 12px auto 12px; background: var(--panel); 
-      padding: 14px; border-radius: 14px 0 0 14px; box-shadow: var(--shadow);
+      position: fixed; inset: 60px 12px auto 12px; background: var(--panel); 
+      padding: 14px; border-radius: 14px; box-shadow: var(--shadow);
       flex-direction: column; align-items: rigth; gap: 8px; 
       max-height: 0; overflow: hidden; transition: max-height .35s ease 
     }
