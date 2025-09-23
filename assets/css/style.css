@@ -147,6 +147,12 @@ a:focus-visible, button:focus-visible{
 .btn-contact:hover{
   background:var(--hover-apricot); color:#0a0b0e;
 }
+/* Logo ak bouton Contact yo */
+.brand,
+.btn-contact {
+  position: relative; /* pou z-index mache */
+  z-index: 1100;      /* pi wo pase .nav-links */
+}
 
 /* Violet bouton (alt) */
 .btn-violet{
@@ -189,7 +195,7 @@ a:focus-visible, button:focus-visible{
    Header / Nav
    ========================================================= */
 header{
-  position:sticky; top:0; z-index:50;
+  position:sticky; top:0; z-index:1000;
   backdrop-filter:saturate(140%) blur(8px);
   background: rgba(12,13,15,.6);
   border-bottom:1px solid rgba(255,255,255,.05);
@@ -202,7 +208,8 @@ header{
   background:linear-gradient(135deg,var(--brand) 0%, var(--brand-2) 100%);
   box-shadow:var(--shadow);
 }
-.nav-links{ display:flex; gap:18px; align-items:center; }
+.nav-links{ display:flex; gap:18px; align-items:center; position: fixed; inset: 60px 12px auto 12px; background: var(--panel);
+  z-index: 900; /* pi ba pase header, logo, CTA */ }
 .nav-links a{ padding:8px 10px; border-radius:10px; }
 .nav-links a:hover{ background:var(--hover-apricot); color:#0a0b0e; }
 .nav-cta{ display:flex; align-items:center; gap:10px; }
