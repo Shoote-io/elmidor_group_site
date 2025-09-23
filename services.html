@@ -149,15 +149,15 @@
   .nav-links a { padding: 8px 10px; border-radius: 10px }
   .nav-links a:hover { background: var(--hover-apricot); color: #0a0b0e }
 
-  .cta-desktop { display: right; align-items: center; gap: 10px }
+  .cta-desktop { display: right; align-items: right; gap: 10px }
   .menu-btn { display: none }
 
   @media (max-width: 400px) {
-    .menu-btn { display: center }
+    .menu-btn { display: right }
     nav.nav-links { 
       position: fixed; top: 60px; right: 0; inset: 60px 12px auto 12px; background: var(--panel); 
       padding: 14px; border-radius: 14px 0 0 14px; box-shadow: var(--shadow);
-      flex-direction: column; align-items: stretch; gap: 8px; 
+      flex-direction: column; align-items: rigth; gap: 8px; 
       max-height: 0; overflow: hidden; transition: max-height .35s ease 
     }
     nav.nav-links[data-open="true"] { max-height: 1000px }
@@ -208,14 +208,13 @@
     </a>
 
     <!-- Menu Button CENTER -->
-    <button class="btn get-started-btn" id="menuBtn" aria-expanded="false" aria-controls="navLinks" aria-label="Toggle menu">
+    <button class="btn btn-get-started" id="menuBtn" aria-expanded="false" aria-controls="navLinks" aria-label="Toggle menu">
       ☰ Menu
     </button>
 
     <!-- CTA Mobile RIGHT -->
     <div class="cta-mobile">
       <a class="btn btn-contact" href="contact.html">Contact</a>
-      <a class="btn btn-get-started" href="#joinfree">Get Started</a>
     </div>
 
     <!-- Navigation Links -->
