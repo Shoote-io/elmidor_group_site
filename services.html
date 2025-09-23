@@ -101,7 +101,6 @@
   }
   </script>
   
-<!-- Styles -->
 <style>
   :root {
     --bg: #0c0d0f;
@@ -134,13 +133,38 @@
   .container { max-width: var(--container); margin-inline: auto; padding: 0 20px }
   .section { padding: 72px 0 }
   .muted { color: var(--muted) }
-  .btn { appearance: none; border: 0; cursor: pointer; display: inline-flex; align-items: center; gap: 10px; padding: 12px 18px; border-radius: 999px; font-weight: 600; transition: transform .2s ease, box-shadow .2s ease, background .2s ease, color .2s ease }
-  .btn-get-started { background: linear-gradient(90deg,var(--brand),var(--brand-2)); color: #0a0b0e; box-shadow: 0 8px 24px rgba(124,92,255,.35) }
+
+  .btn { 
+    appearance: none; 
+    border: 0; 
+    cursor: pointer; 
+    display: inline-flex; 
+    align-items: center; 
+    gap: 10px; 
+    padding: 12px 18px; 
+    border-radius: 999px; 
+    font-weight: 600; 
+    transition: transform .2s ease, box-shadow .2s ease, background .2s ease, color .2s ease 
+  }
+
+  .btn-get-started { 
+    background: linear-gradient(90deg,var(--brand),var(--brand-2)); 
+    color: #0a0b0e; 
+    box-shadow: 0 8px 24px rgba(124,92,255,.35) 
+  }
   .btn-get-started:hover { transform: translateY(-1px); background: var(--hover-apricot); color: #0a0b0e }
   .btn-contact { background: #ef4444; color: #fff; border: 1px solid #2b2f37 }
   .btn-contact:hover { background: var(--hover-apricot); color: #0a0b0e }
 
-  header { position: sticky; top: 0; z-index: 50; backdrop-filter: saturate(140%) blur(8px); background: rgba(12,13,15,.6); border-bottom: 1px solid rgba(255,255,255,.05) }
+  header { 
+    position: sticky; 
+    top: 0; 
+    z-index: 50; 
+    backdrop-filter: saturate(140%) blur(8px); 
+    background: rgba(12,13,15,.6); 
+    border-bottom: 1px solid rgba(255,255,255,.05) 
+  }
+
   .nav { display: flex; align-items: center; justify-content: space-between; padding: 14px 0 }
   .brand { display: flex; align-items: center; gap: 10px; font-weight: 800 }
   .brand .logo { width: 28px; height: 28px; display: grid; place-items: center; border-radius: 8px; background: linear-gradient(135deg,var(--brand) 0%, var(--brand-2) 100%); box-shadow: var(--shadow) }
@@ -150,12 +174,25 @@
   .nav-links a:hover { background: var(--hover-apricot); color: #0a0b0e }
 
   /* CTA Desktop */
-  .cta-desktop { display: flex; align-items: center; gap: 10px }
+  .cta-desktop { 
+    display: flex !important; 
+    align-items: center; 
+    gap: 10px; 
+  }
+
+  /* CTA Mobile (default hidden) */
+  .cta-mobile { 
+    display: none !important; 
+    flex-direction: column; 
+    gap: 8px; 
+    margin-top: 14px; 
+    width: 100%; 
+  }
+
+  /* Menu button hidden by default (desktop) */
   .menu-btn { display: none }
 
-  /* CTA mobil default kache */
-  .cta-mobile { display: none; flex-direction: column; gap: 8px; margin-top: 14px; }
-
+  /* Responsive rules for mobile */
   @media (max-width: 400px) {
     .menu-btn { display: block }
     nav.nav-links { 
@@ -168,8 +205,10 @@
       max-height: 100vh; 
       overflow-y: auto; 
     }
-    .cta-desktop { display: none } 
-    .cta-mobile { display: flex } 
+
+    /* Hide desktop CTA, show mobile CTA */
+    .cta-desktop { display: none !important }
+    .cta-mobile { display: flex !important }
   }
 
   footer { border-top: 1px solid rgba(255,255,255,.05); background: #0a0b0e }
