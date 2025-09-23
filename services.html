@@ -145,23 +145,31 @@
   .brand { display: flex; align-items: center; gap: 10px; font-weight: 800 }
   .brand .logo { width: 28px; height: 28px; display: grid; place-items: center; border-radius: 8px; background: linear-gradient(135deg,var(--brand) 0%, var(--brand-2) 100%); box-shadow: var(--shadow) }
 
-  nav.nav-links { display: right; gap: 18px; align-items: center }
+  nav.nav-links { display: flex; gap: 18px; align-items: center }
   .nav-links a { padding: 8px 10px; border-radius: 10px }
   .nav-links a:hover { background: var(--hover-apricot); color: #0a0b0e }
 
-  .cta-desktop { display: right; align-items: right; gap: 10px }
+  /* CTA Desktop */
+  .cta-desktop { display: flex; align-items: center; gap: 10px }
   .menu-btn { display: none }
 
+  /* CTA mobil default kache */
+  .cta-mobile { display: none; flex-direction: column; gap: 8px; margin-top: 14px; }
+
   @media (max-width: 400px) {
-    .menu-btn { display: right }
+    .menu-btn { display: block }
     nav.nav-links { 
       position: fixed; inset: 60px 12px auto 12px; background: var(--panel); 
       padding: 14px; border-radius: 14px; box-shadow: var(--shadow);
-      flex-direction: column; align-items: rigth; gap: 8px; 
+      flex-direction: column; align-items: flex-start; gap: 8px; 
       max-height: 0; overflow: hidden; transition: max-height .35s ease 
     }
-    nav.nav-links[data-open="true"] { max-height: 1000px }
-    .cta-desktop { display: none } /* CTA Desktop pa parèt sou mobil */
+    nav.nav-links[data-open="true"] { 
+      max-height: 100vh; 
+      overflow-y: auto; 
+    }
+    .cta-desktop { display: none } 
+    .cta-mobile { display: flex } 
   }
 
   footer { border-top: 1px solid rgba(255,255,255,.05); background: #0a0b0e }
@@ -207,8 +215,8 @@
       <span>Elmidor Group</span>
     </a>
 
-    <!-- Menu Button CENTER -->
-    <button class="btn btn-get-started" id="menuBtn" aria-expanded="false" aria-controls="navLinks" aria-label="Toggle menu">
+    <!-- Menu Button (mobil sèlman) -->
+    <button class="btn btn-get-started menu-btn" id="menuBtn" aria-expanded="false" aria-controls="navLinks" aria-label="Toggle menu">
       ☰ Menu
     </button>
 
@@ -223,6 +231,12 @@
       <a href="terms.html" aria-current="page">Terms</a>
       <a href="team.html">Team</a>
       <a href="privacy.html">Privacy</a>
+
+      <!-- CTA Mobile -->
+      <div class="cta-mobile">
+        <a class="btn btn-contact" href="contact.html">Contact</a>
+        <a class="btn btn-get-started" href="#joinfree">Get Started</a>
+      </div>
     </nav>
 
     <!-- CTA Desktop (RIGHT) -->
