@@ -169,7 +169,7 @@
 
   .nav { display: flex; align-items: center; justify-content: space-between; padding: 14px 0 }
   .brand { display: flex; align-items: center; gap: 10px; font-weight: 800 }
-  .brand .logo { width: 28px; height: 28px; display: grid; place-items: center; border-radius: 8px; background: linear-gradient(135deg,var(--brand) 0%, var(--brand-2) 100%); box-shadow: var(--shadow) }
+  .brand .logo { position: relative; z-index: 5; width: 28px; height: 28px; display: grid; place-items: center; border-radius: 8px; background: linear-gradient(135deg,var(--brand) 0%, var(--brand-2) 100%); box-shadow: var(--shadow) }
 
   nav.nav-links { display: flex; gap: 18px; align-items: center }
   .nav-links a { padding: 8px 10px; border-radius: 10px }
@@ -187,7 +187,7 @@
     display: none !important; 
     flex-direction: row; 
     gap: 6px; 
-    margin-top: 14px; 
+    margin-top: 8px; 
     width: 50%; 
   }
 
@@ -199,8 +199,8 @@
     .menu-btn { display: block }
     nav.nav-links { 
       position: fixed; inset: 30px 6px auto 6px; background: rgba(12,13,15,.6); 
-      padding: 14px; border-radius: 14px; box-shadow: var(--shadow);
-      flex-direction: column; align-items: flex; gap: 8px; 
+      padding: 8px; border-radius: 8px; box-shadow: var(--shadow);
+      flex-direction: column; align-items: flex; gap: 6px; 
       max-height: 0; overflow: hidden; transition: max-height .35s ease 
     }
     nav.nav-links[data-open="true"] { 
