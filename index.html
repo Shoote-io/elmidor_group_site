@@ -148,12 +148,48 @@
       .nav-cta{display:none}
     }
 
-    footer{border-top:1px solid rgba(255,255,255,.05); background:#0a0b0e}
-    .footer-grid{display:grid; gap:18px; grid-template-columns:1fr auto}
-    .socials{display:flex; gap:12px}
-    .socials a{padding:8px; border-radius:10px}
-    .socials a:hover{background:var(--hover-apricot); color:#0a0b0e}
-    @media (max-width: 680px){.footer-grid{grid-template-columns:1fr}}
+footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  background: #0a0b0e;
+  padding: 32px 20px; /* Espas anndan footer la */
+}
+
+.footer-grid {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+}
+
+.socials {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.socials a {
+  padding: 8px 12px;
+  border-radius: 10px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.socials a:hover {
+  background: var(--hover-apricot);
+  color: #0a0b0e;
+}
+
+/* Mobil responsiv */
+@media (max-width: 680px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .socials {
+    justify-content: center;
+  }
+}
   </style>
 
   <!-- Theme CSS -->
