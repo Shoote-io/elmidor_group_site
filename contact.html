@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <title>Contact — Elmidor Group</title>
 
   <!-- Primary SEO -->
@@ -23,23 +24,43 @@
   <!-- Prefers color scheme -->
   <meta name="color-scheme" content="light dark" />
 
-  
   <!-- Robots -->
-  <meta name="robots" content="index, fallow, max-image-preview:large" />
-  
-  <!-- Ads / Analytics / Pixels -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-G-67N2QVBCZV" crossorigin="anonymous"></script>
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1234567890123456" crossorigin="anonymous"></script>
+
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-24N197CRM9"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-67N2QVBCZV"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-24N197CRM9');
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-24N197CRM9');
+    gtag('config', 'G-67N2QVBCZV');
   </script>
+
+  <!-- Facebook Pixel -->
   <script>
-    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod? n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    !function(f,b,e,v,n,t,s){
+      if(f.fbq)return;
+      n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;
+      n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];
+      t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)
+    }(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
     fbq('init', '786654690436263');
     fbq('track', 'PageView');
   </script>
-  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=786654690436263&ev=PageView&noscript=1"/></noscript>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=786654690436263&ev=PageView&noscript=1"/>
+  </noscript>
+  
 
 <!-- Styles -->
   <style>
@@ -59,7 +80,7 @@
       --hover-apricot: #FFB347;
       --hover-apricot-2: #FFAE42;
     }
-    *,*::before,*::after{box-sizing:border-box}
+    ,::before,*::after{box-sizing:border-box}
     html{scroll-behavior:smooth}
     body{margin:0; font:16px/1.7 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, "Helvetica Neue", Arial; color:var(--text); background:var(--bg);}
     img{max-width:100%; display:block}
@@ -71,7 +92,7 @@
     .container{max-width:var(--container); margin-inline:auto; padding:0 20px}
     .section{padding:72px 0}
     .muted{color:var(--muted)}
-    .btn{appearance:none; border:0; cursor:pointer; display:inline-flex; align-items:center; gap:10px; padding:12px 18px; border-radius:999px; font-weight:600; transition:transform .2s ease, box-shadow .2s ease, background .2s ease, color .2s ease}
+    .btn{position: relative; z-index: 5; appearance:none; border:0; cursor:pointer; display:inline-flex; align-items:center; gap:10px; padding:12px 18px; border-radius:999px; font-weight:600; transition:transform .2s ease, box-shadow .2s ease, background .2s ease, color .2s ease}
     .btn-get-started{background:linear-gradient(90deg,var(--brand),var(--brand-2)); color:#0a0b0e; box-shadow:0 8px 24px rgba(124,92,255,.35)}
     .btn-get-started:hover{transform:translateY(-1px); background:var(--hover-apricot); color:#0a0b0e}
     .btn-contact{background:#ef4444; color:#fff; border:1px solid #2b2f37}
@@ -89,12 +110,12 @@
 
     @media (max-width: 820px){
       .menu-btn{display:inline-flex}
-      .nav-links{position:fixed; inset:60px 12px auto 12px; background:var(--panel); padding:14px; border-radius:14px; box-shadow:var(--shadow); flex-direction:column; align-items:stretch; gap:8px; max-height:0; overflow:hidden; transition:max-height .35s ease}
+      .nav-links{position:fixed; width: 50; inset:60px 12px auto 12px; background:var(--panel); padding:14px; border-radius:14px; box-shadow:var(--shadow); flex-direction:column; align-items:stretch; gap:8px; max-height:0; overflow:hidden; transition:max-height .35s ease}
       .nav-links[data-open="true"]{max-height:320px}
       .nav-cta{display:none}
     }
 
-    footer{border-top:1px solid rgba(255,255,255,.05); background:#0a0b0e}
+footer{border-top:1px solid rgba(255,255,255,.05); background:#0a0b0e}
     .footer-grid{display:grid; gap:18px; grid-template-columns:1fr auto}
     .socials{display:flex; gap:12px}
     .socials a{padding:8px; border-radius:10px}
@@ -103,24 +124,51 @@
   </style>
 
   <!-- Theme CSS -->
-  <link rel="stylesheet" href="assets/css/style.css">
+   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/particles.css">
 </head>
 <body>
-  <!-- Patikil background -->
-  <div class="particles"></div>
+  <!-- Facebook SDK -->
+  <div id="fb-root"></div>
+  <script>
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId : '1243975833743807',
+        autoLogAppEvents : true,
+        xfbml : true,
+        version : 'v23.0'
+      });
+    };
+  </script>
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
 
+  <!-- Patikil background -->
+  <div class="particles" aria-hidden="true"></div>
+
+  <!-- Skip link for accessibility -->
   <a class="skip-link" href="#main">Skip to content</a>
 
   <!-- Header -->
-  <header>
-    <div class="container nav-cta" role="navigation" aria-label="Primary">
+  <header role="banner">
+    <div class="container nav">
+      <!-- Logo -->
       <a class="brand" href="/" aria-label="Elmidor Group – Home">
         <span class="logo" aria-hidden="true">◐</span>
         <span>Elmidor Group</span>
       </a>
-      <button class="btn btn-outline menu-btn" id="menuBtn" aria-expanded="false" aria-controls="navLinks" aria-label="Toggle menu">☰ Menu</button>
-      <div class="nav-links" id="navLinks" data-open="false">
+
+      <!-- Bouton ☰ pou mobil -->
+      <button 
+        class="btn btn-get-started menu-btn" 
+        id="menuBtn" 
+        aria-expanded="false" 
+        aria-controls="navLinks" 
+        aria-label="Toggle menu">
+        ☰ Menu
+      </button>
+
+      <!-- Navigation principale -->
+      <nav class="nav-links" id="navLinks" data-open="false" aria-hidden="true">
         <a href="about.html">About</a>
         <a href="services.html">Services</a>
         <a href="blog.html">Blog</a>
@@ -130,13 +178,21 @@
         <a href="terms.html" aria-current="page">Terms</a>
         <a href="team.html">Team</a>
         <a href="privacy.html">Privacy</a>
-      </div>
-      <div class="nav-cta">
+      </nav>
+
+      <!-- CTA yo pou mobil -->
+      <div class="cta-mobile">
         <a class="btn btn-contact" href="contact.html">Contact</a>
         <a class="btn btn-get-started" href="#joinfree">Get Started</a>
       </div>
+
+    <!-- CTA DESKTOP: sèlman parèt sou gwo ekran -->
+    <div class="cta-desktop">
+      <a href="contact.html" class="btn btn-contact">Contact</a>
+      <a href="#joinfree" class="btn btn-get-started">Get Started</a>
     </div>
-  </header>
+  </div>
+</header>
   
   <!-- Main -->
   
@@ -199,17 +255,96 @@
       </div>
     </section>
   </main>
-<!-- Footer -->
-  <footer class="section"> <div class="container footer-grid"> <div> <div class="brand" style="margin-bottom:8px"> <span class="logo" aria-hidden="true">◐</span> <span style="font-weight:700">Elmidor Group</span> </div> <p class="muted">Automation • Technology • Smarter growth</p> <p class="muted">Santo Domingo, DO</p> <p class="muted">© <span id="year"></span> Elmidor Group. All rights reserved.</p> </div> <nav aria-label="Footer"> <div class="socials" style="margin-bottom:10px"> <a href="https://www.elmidorgroup.com" aria-label="Website">🔗</a> <a href="https://x.com/ElmidorGroup" aria-label="X">𝕏</a> <a href="https://www.youtube.com/@ElmidorGroup" aria-label="YouTube">▶</a> </div> <div style="display:flex; gap:16px; flex-wrap:wrap"> <a href="about.html">About</a> <a href="services.html">Services</a> <a href="blog.html">Blog</a> <a href="blog-post.html">Updates</a> <a href="follow.html">Follow Us</a> <a href="support.html">Support</a> <a href="terms.html">Terms</a> <a href="team.html">Team</a> <a href="privacy.html">Privacy</a> </div> </nav> </div> </footer> <div class="modal" id="demoModal" onclick="closeDemo()"> <video id="demoVideo" src="assets/videos/demo.mp4" controls></video> </div> <script> function openDemo(){ document.getElementById('demoModal').style.display='flex'; document.getElementById('demoVideo').play(); } function closeDemo(){ const modal=document.getElementById('demoModal'); modal.style.display='none'; document.getElementById('demoVideo').pause(); } document.getElementById('year').textContent=new Date().getFullYear(); </script> <!-- Like & Share --> <div style="text-align:center; margin:20px 0"> <button onclick="likePage()" class="btn-get-started">👍 Like</button> <button onclick="sharePage()" class="btn-contact">🔗 Share</button> </div>
- 
-  <!-- Theme JS -->
-  <script src="assets/js/particles.js"></script>
-  <script src="assets/js/main.js"></script>
- 
+
+ <section id="joinfree" class="joinfree-section">
+    <div class="container" style="text-align:center">
+      <h2>Join Free</h2>
+      <p>Join our platform for free and explore our workflows.</p>
+      <a class="btn-get-started" href="https://tally.so/r/wdVB5d" target="_blank">Join with Tally</a>
+      <a class="btn-contact" href="blog-post.html" target="_blank">View Demo</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="section">
+    <div class="container footer-grid">
+      <div>
+        <div class="brand" style="margin-bottom:8px">
+          <span class="logo" aria-hidden="true">◐</span>
+          <span style="font-weight:700">Elmidor Group</span>
+        </div>
+        <p class="muted">Automation • Technology • Smarter growth</p>
+        <p class="muted">Santo Domingo, DO</p>
+        <p class="muted">© <span id="year"></span> Elmidor Group. All rights reserved.</p>
+      </div>
+      <nav aria-label="Footer">
+        <div class="socials" style="margin-bottom:10px">
+          <a href="https://www.elmidorgroup.com" aria-label="Website">🔗</a>
+          <a href="https://x.com/ElmidorGroup" aria-label="X">𝕏</a>
+          <a href="https://www.youtube.com/@ElmidorGroup" aria-label="YouTube">▶</a>
+        </div>
+        <div style="display:flex; gap:16px; flex-wrap:wrap">
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="blog.html">Blog</a>
+          <a href="blog-post.html">Updates</a>
+          <a href="follow.html">Follow Us</a>
+          <a href="support.html">Support</a>
+          <a href="terms.html">Terms</a>
+          <a href="team.html">Team</a>
+          <a href="privacy.html">Privacy</a>
+        </div>
+      </nav>
+    </div>
+  </footer>
+
+<script>
+  // Inisyalizasyon SDK
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '1243975833743807', // ou ka kite oubyen mete App ID FB app ou
+      autoLogAppEvents: true,
+      xfbml      : true,
+      version    : 'v23.0'
+    });
+  };
+
+  // Bouton Like — ouvri paj ofisyèl Facebook
+  function likePage() {
+    window.open("https://www.facebook.com/elmidorgroup", "_blank");
+  }
+
+  // Bouton Share — louvri popup Share
+  function sharePage() {
+    FB.ui({
+      method: 'share',
+      href: 'https://www.elmidorgroup.com/contact.html' // URL paj ou vle moun pataje
+    }, function(response){});
+  }
+
+  // Menu bouton toggle
+  const btn = document.getElementById('menuBtn');
+  const links = document.getElementById('navLinks');
+
+  btn.addEventListener('click', () => {
+    const isOpen = links.getAttribute('data-open') === 'true';
+    links.setAttribute('data-open', String(!isOpen));
+    btn.setAttribute('aria-expanded', String(!isOpen));
+  });
+
+  // Mete ane aktyèl nan footer
+  document.getElementById('year').textContent=new Date().getFullYear();
+</script>
+
+<!-- Like & Share Custom Buttons -->
+<div style="text-align:center; margin:20px 0">
+  <button onclick="likePage()" class="btn-get-started">👍 Like</button>
+  <button onclick="sharePage()" class="btn-contact">🔗 Share</button>
+</div>
+
+<!-- Theme JS -->
+<script src="assets/js/main.js"></script>
+<script src="assets/js/theme.js"></script>
+
 </body>
-</html>
-
-
-
-
-
+</html> 
