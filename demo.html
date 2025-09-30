@@ -309,7 +309,7 @@ footer{border-top:1px solid rgba(255,255,255,.05); background:#0a0b0e}
       <h2>Join Free</h2>
       <p>Join our platform for free and explore our workflows.</p>
       <a class="btn-get-started" href="https://tally.so/r/wdVB5d" target="_blank">Join with Tally</a>
-      <a class="btn-contact" href="demo.html" target="_blank">View Demo</a>
+      <a class="btn-get-started" href="#" onclick="openDemo()">View Demo</a>
     </div>
   </section>
 
@@ -345,7 +345,9 @@ footer{border-top:1px solid rgba(255,255,255,.05); background:#0a0b0e}
       </nav>
     </div>
   </footer>
-
+<div class="modal" id="demoModal" onclick="closeDemo()">
+    <video id="demoVideo" src="assets/videos/demo.mp4" controls></video>
+  </div>
 <script>
   
   // Inisyalizasyon SDK
@@ -397,3 +399,4 @@ footer{border-top:1px solid rgba(255,255,255,.05); background:#0a0b0e}
 
 </body>
 </html>
+
