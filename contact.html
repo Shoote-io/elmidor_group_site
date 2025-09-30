@@ -10,25 +10,56 @@
   <meta name="description" content="Contact Elmidor Group™: support, partnerships, collaborations, and inquiries." />
   <link rel="canonical" href="https://www.elmidorgroup.com/contact" />
 
-  <!-- Open Graph / Twitter -->
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Contact — Elmidor Group" />
-  <meta property="og:description" content="Contact Elmidor Group™: support, partnerships, collaborations, and inquiries." />
-  <meta property="og:image" content="https://www.elmidorgroup.com/assets/images/og-image.jpg" />
-  <meta property="og:url" content="https://www.elmidorgroup.com/contact" />
-  <meta name="twitter:card" content="summary_large_image" />
+  <!-- Robots -->
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
 
-  <!-- Favicon -->
-  <link rel="icon" href="assets/images/favicon.ico" />
-
-  <!-- Prefers color scheme -->
+  <!-- Theme -->
+  <meta name="theme-color" content="#13151a" />
   <meta name="color-scheme" content="light dark" />
 
-  <!-- Robots -->
-  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <!-- Prefetch for Performance -->
+  <link rel="dns-prefetch" href="//www.googletagmanager.com" />
+  <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
+  <link rel="dns-prefetch" href="//connect.facebook.net" />
+  <link rel="preconnect" href="https://connect.facebook.net" crossorigin />
 
-  <!-- Google AdSense -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1234567890123456" crossorigin="anonymous"></script>
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Elmidor Group" />
+  <meta property="og:title" content="Contact — Elmidor Group" />
+  <meta property="og:description" content="Contact Elmidor Group™: support, partnerships, collaborations, and inquiries." />
+  <meta property="og:url" content="https://www.elmidorgroup.com/contact" />
+  <meta property="og:image" content="https://www.elmidorgroup.com/assets/images/og-image.jpg" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Contact — Elmidor Group" />
+  <meta name="twitter:description" content="Contact Elmidor Group™: support, partnerships, collaborations, and inquiries." />
+  <meta name="twitter:image" content="https://www.elmidorgroup.com/assets/images/elmidorgroup-cover.jpg" />
+  <meta name="twitter:site" content="@ElmidorGroup" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon" />
+
+  <!-- Structured Data JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Contact — Elmidor Group",
+    "url": "https://www.elmidorgroup.com/contact",
+    "description": "Contact Elmidor Group™: support, partnerships, collaborations, and inquiries.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Elmidor Group",
+      "url": "https://www.elmidorgroup.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.elmidorgroup.com/assets/images/logo.png"
+      }
+    }
+  }
+  </script>
 
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-24N197CRM9"></script>
@@ -48,11 +79,10 @@
       n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};
       if(!f._fbq)f._fbq=n;
       n.push=n;n.loaded=!0;n.version='2.0';
-      n.queue=[];
-      t=b.createElement(e);t.async=!0;
+      n.queue=[];t=b.createElement(e);t.async=!0;
       t.src=v;s=b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t,s)
-    }(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+      s.parentNode.insertBefore(t,s)}
+    (window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
     fbq('init', '786654690436263');
     fbq('track', 'PageView');
   </script>
@@ -60,8 +90,20 @@
     <img height="1" width="1" style="display:none"
       src="https://www.facebook.com/tr?id=786654690436263&ev=PageView&noscript=1"/>
   </noscript>
-  
 
+  <!-- Facebook SDK -->
+  <script>
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId            : '1243975833743807',
+        autoLogAppEvents : true,
+        xfbml            : true,
+        version          : 'v23.0'
+      });
+    };
+  </script>
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+  
 <!-- Styles -->
   <style>
     :root{
@@ -128,6 +170,7 @@ footer{border-top:1px solid rgba(255,255,255,.05); background:#0a0b0e}
   <link rel="stylesheet" href="assets/css/particles.css">
 </head>
 <body>
+  
   <!-- Facebook SDK -->
   <div id="fb-root"></div>
   <script>
@@ -195,7 +238,6 @@ footer{border-top:1px solid rgba(255,255,255,.05); background:#0a0b0e}
 </header>
   
   <!-- Main -->
-  
   <main id="main">
     <section class="hero section">
       <div class="container">
@@ -255,13 +297,14 @@ footer{border-top:1px solid rgba(255,255,255,.05); background:#0a0b0e}
       </div>
     </section>
   </main>
-
+  
+<!-- Join Free -->
  <section id="joinfree" class="joinfree-section">
     <div class="container" style="text-align:center">
       <h2>Join Free</h2>
       <p>Join our platform for free and explore our workflows.</p>
       <a class="btn-get-started" href="https://tally.so/r/wdVB5d" target="_blank">Join with Tally</a>
-      <a class="btn-contact" href="blog-post.html" target="_blank">View Demo</a>
+      <a class="btn-contact" href="demo.html" target="_blank">View Demo</a>
     </div>
   </section>
 
@@ -348,3 +391,4 @@ footer{border-top:1px solid rgba(255,255,255,.05); background:#0a0b0e}
 
 </body>
 </html> 
+
