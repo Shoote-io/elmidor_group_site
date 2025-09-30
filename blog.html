@@ -9,7 +9,7 @@
   <meta name="description" content="Elmidor Group™ Manifest: our vision, mission, and how automation becomes a bridge for people, workflows, and businesses." />
   <meta name="keywords" content="Elmidor Group Manifest, Elmidor vision, Elmidor mission, automation for businesses, Elmidor workflows, digital transformation, AI automation, business growth, enterprise solutions" />
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-  <link rel="canonical" href="https://www.elmidorgroup.com/blog/elmidor-group-manifest" />
+  <link rel="canonical" href="https://www.elmidorgroup.com/blog.html" />
 
   <!-- Performance Prefetch -->
   <link rel="dns-prefetch" href="//www.googletagmanager.com" />
@@ -22,7 +22,7 @@
   <meta property="og:title" content="Elmidor Group™ – Manifest" />
   <meta property="og:description" content="Elmidor Group™ Manifest: our vision, mission, and how automation becomes a bridge for people, workflows, and businesses." />
   <meta property="og:image" content="https://www.elmidorgroup.com/assets/images/og-image.jpg" />
-  <meta property="og:url" content="https://www.elmidorgroup.com/blog/elmidor-group-manifest" />
+  <meta property="og:url" content="https://www.elmidorgroup.com/blog.html" />
   <meta property="og:site_name" content="Elmidor Group™" />
   <meta property="og:image:alt" content="Elmidor Group cover image" />
 
@@ -60,7 +60,7 @@
     },
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://www.elmidorgroup.com/blog/elmidor-group-manifest"
+      "@id": "https://www.elmidorgroup.com/blog.html"
     }
   }
   </script>
@@ -167,6 +167,7 @@ footer{border-top:1px solid rgba(255,255,255,.05); background:#0a0b0e}
   <link rel="stylesheet" href="assets/css/particles.css">
 </head>
 <body>
+  
   <!-- Facebook SDK -->
   <div id="fb-root"></div>
   <script>
@@ -190,6 +191,7 @@ footer{border-top:1px solid rgba(255,255,255,.05); background:#0a0b0e}
   <!-- Header -->
   <header role="banner">
     <div class="container nav">
+      
       <!-- Logo -->
       <a class="brand" href="/" aria-label="Elmidor Group – Home">
         <span class="logo" aria-hidden="true">◐</span>
@@ -234,7 +236,6 @@ footer{border-top:1px solid rgba(255,255,255,.05); background:#0a0b0e}
 </header>
 
   <!-- main -->
-
    <main id="main">
     <section class="section" id="blog">
       <div class="container">
@@ -282,7 +283,6 @@ footer{border-top:1px solid rgba(255,255,255,.05); background:#0a0b0e}
         </div>
       </div>
     </section>
-
   </main>
 
   <!-- Join Free -->
@@ -291,7 +291,7 @@ footer{border-top:1px solid rgba(255,255,255,.05); background:#0a0b0e}
       <h2>Join Free</h2>
       <p>Join our platform for free and explore our workflows.</p>
       <a class="btn-get-started" href="https://tally.so/r/wdVB5d" target="_blank">Join with Tally</a>
-      <a class="btn-contact" href="#" onclick="openDemo()" target="_blank">View Demo</a>
+      <a class="btn-contact" href="demo,html" target="_blank">View Demo</a>
     </div>
   </section>
 
@@ -327,11 +327,7 @@ footer{border-top:1px solid rgba(255,255,255,.05); background:#0a0b0e}
       </nav>
     </div>
   </footer>
-
-  <div class="modal" id="demoModal" onclick="closeDemo()">
-    <video id="demoVideo" src="assets/videos/demo.mp4" controls></video>
-  </div>
-
+          
 <script>
   // Inisyalizasyon SDK
   window.fbAsyncInit = function() {
@@ -365,17 +361,6 @@ footer{border-top:1px solid rgba(255,255,255,.05); background:#0a0b0e}
     links.setAttribute('data-open', String(!isOpen));
     btn.setAttribute('aria-expanded', String(!isOpen));
   });
-
-  // Demo modal
-  function openDemo(){
-    document.getElementById('demoModal').style.display='flex';
-    document.getElementById('demoVideo').play();
-  }
-  function closeDemo(){
-    const modal=document.getElementById('demoModal');
-    modal.style.display='none';
-    document.getElementById('demoVideo').pause();
-  }
 
   // Mete ane aktyèl nan footer
   document.getElementById('year').textContent=new Date().getFullYear();
