@@ -164,9 +164,10 @@ footer{border-top:1px solid rgba(255,255,255,.05); background:#0a0b0e}
 
   <!-- Theme CSS -->
    <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="stylesheet" href="assets/css/particles.css">
+  <link rel="stylesheet" href="assets/css/theme.css">
 </head>
 <body>
+  
   <!-- Facebook SDK -->
   <div id="fb-root"></div>
   <script>
@@ -190,6 +191,7 @@ footer{border-top:1px solid rgba(255,255,255,.05); background:#0a0b0e}
   <!-- Header -->
   <header role="banner">
     <div class="container nav">
+      
       <!-- Logo -->
       <a class="brand" href="/" aria-label="Elmidor Group – Home">
         <span class="logo" aria-hidden="true">◐</span>
@@ -234,7 +236,7 @@ footer{border-top:1px solid rgba(255,255,255,.05); background:#0a0b0e}
 </header>
 
 <!-- Main -->
-
+<main id="main">
 <main class="container">
   <h1>Our Services</h1>
   <p>We design automation workflows and tools that simplify life and empower businesses.</p>
@@ -280,7 +282,7 @@ footer{border-top:1px solid rgba(255,255,255,.05); background:#0a0b0e}
       <h2>Join Free</h2>
       <p>Join our platform for free and explore our workflows.</p>
       <a class="btn-get-started" href="https://tally.so/r/wdVB5d" target="_blank">Join with Tally</a>
-      <a class="btn-contact" href="#" onclick="openDemo()" target="_blank">View Demo</a>
+      <a class="btn-contact" href="demo.html" target="_blank">View Demo</a>
     </div>
   </section>
 
@@ -317,10 +319,6 @@ footer{border-top:1px solid rgba(255,255,255,.05); background:#0a0b0e}
     </div>
   </footer>
 
-  <div class="modal" id="demoModal" onclick="closeDemo()">
-    <video id="demoVideo" src="assets/videos/demo.mp4" controls></video>
-  </div>
-
 <script>
   // Inisyalizasyon SDK
   window.fbAsyncInit = function() {
@@ -354,17 +352,6 @@ footer{border-top:1px solid rgba(255,255,255,.05); background:#0a0b0e}
     links.setAttribute('data-open', String(!isOpen));
     btn.setAttribute('aria-expanded', String(!isOpen));
   });
-
-  // Demo modal
-  function openDemo(){
-    document.getElementById('demoModal').style.display='flex';
-    document.getElementById('demoVideo').play();
-  }
-  function closeDemo(){
-    const modal=document.getElementById('demoModal');
-    modal.style.display='none';
-    document.getElementById('demoVideo').pause();
-  }
 
   // Mete ane aktyèl nan footer
   document.getElementById('year').textContent=new Date().getFullYear();
