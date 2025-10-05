@@ -1,6 +1,40 @@
+# Default rules for all crawlers
 User-agent: *
 Disallow:
 Allow: /assets/css/
 Allow: /assets/js/
 Allow: /assets/images/
+
+# Googlebot (web crawler)
+User-agent: Googlebot
+Disallow:
+Allow: /
+
+# Googlebot-Image (images SEO)
+User-agent: Googlebot-Image
+Disallow:
+Allow: /assets/images/
+
+# AdsBot (Google Ads crawler - quality score)
+User-agent: AdsBot-Google
+Disallow:
+Allow: /
+
+# Bingbot
+User-agent: Bingbot
+Disallow:
+Allow: /
+
+# Yandex
+User-agent: Yandex
+Disallow:
+Allow: /
+
+# Sitemap for all crawlers
 Sitemap: https://www.elmidorgroup.com/sitemap.xml
+
+# Preferred host
+Host: www.elmidorgroup.com
+
+# Crawl-delay (for non-Google bots)
+Crawl-delay: 5
