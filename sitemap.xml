@@ -1,65 +1,94 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Homepage -->
   <url>
     <loc>https://www.elmidorgroup.com/index.html</loc>
     <lastmod>2025-10-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+
+  <!-- About -->
   <url>
     <loc>https://www.elmidorgroup.com/about.html</loc>
     <lastmod>2025-09-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
+  <!-- Services -->
   <url>
     <loc>https://www.elmidorgroup.com/services.html</loc>
     <lastmod>2025-09-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
+  <!-- Blog list -->
   <url>
     <loc>https://www.elmidorgroup.com/blog.html</loc>
     <lastmod>2025-09-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+
+  <!-- Blog post sample -->
   <url>
     <loc>https://www.elmidorgroup.com/blog-post.html</loc>
     <lastmod>2025-09-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
+
+  <!-- Contact -->
   <url>
     <loc>https://www.elmidorgroup.com/contact.html</loc>
     <lastmod>2025-09-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+
+  <!-- Follow -->
+  <url>
+    <loc>https://www.elmidorgroup.com/follow.html</loc>
+    <lastmod>2025-09-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Support -->
   <url>
     <loc>https://www.elmidorgroup.com/support.html</loc>
     <lastmod>2025-09-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
+  <!-- Terms -->
   <url>
     <loc>https://www.elmidorgroup.com/terms.html</loc>
     <lastmod>2025-09-01</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
+
+  <!-- Privacy -->
   <url>
     <loc>https://www.elmidorgroup.com/privacy.html</loc>
     <lastmod>2025-09-01</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
+
+  <!-- Team -->
   <url>
     <loc>https://www.elmidorgroup.com/team.html</loc>
     <lastmod>2025-09-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+
+  <!-- License -->
   <url>
     <loc>https://www.elmidorgroup.com/license.html</loc>
     <lastmod>2025-09-01</lastmod>
