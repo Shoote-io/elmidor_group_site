@@ -1,23 +1,110 @@
+Elmidor Group – Official Multi-Page Website
 
-# Elmidor Group Official Site
+This repository contains the official multi-page website for Elmidor Group, built with a consistent UI/UX, responsive design, and automation-ready structure.
 
-This ZIP includes a complete multi-page site that matches your UI/UX:
-- Shared header/footer, sticky nav with glass, responsive mobile menu
-- Page-specific hover colors via `body` class
-- Loader with rotating logo
-- IntersectionObserver scroll-reveal
-- CTA buttons to https://www.elmidorgroup.com
-- Contact info and Team page with CEO
+Features
 
-## Edit safely
-- Colors: change per-page theme by editing the `body` class (`about`, `services`, `blog`, `follow`, `support`, `contact`, `team`). Hover color is defined in CSS (`body.about { --hover:#7C5CFF }` etc.).
-- Content: edit only inside `<main> ... </main>` blocks on each page.
-- Images: replace URLs with your own images or local files in `assets/images/`.
-- Buttons: search for `https://www.elmidorgroup.com` if you want to point CTAs elsewhere.
+✅ Shared header/footer with sticky glass navigation
 
-## Add a blog post
-- Duplicate `blog-post.html`, update the content, then link to it from `blog.html`.
+✅ Responsive mobile menu with smooth toggle
 
-## Add team members
-- Duplicate a `.card` block in `team.html` and change name/role/image.
+✅ Loader with rotating Elmidor Group logo
 
+✅ Scroll-reveal animations powered by IntersectionObserver
+
+✅ Page-specific hover colors via body classes
+
+✅ SEO-friendly <meta> structure and accessibility tags
+
+✅ Easy content editing: only update inside <main> ... </main> blocks
+
+Structure
+
+index.html – Homepage
+
+about.html – About Elmidor Group
+
+services.html – Services overview
+
+blog.html – Blog listing
+
+blog-post.html – Single blog post (duplicate to add new ones)
+
+support.html – Docs, Tickets, SLA, FAQ
+
+contact.html – Contact & CTA
+
+team.html – Team showcase (duplicate .card to add members)
+
+license.html – MIT License
+
+assets/css/style.css – Main stylesheet
+
+assets/images/ – Replace with your own images and logos
+
+Customization
+Colors
+
+Each page has its own hover color defined in CSS:
+
+body.about   { --hover:#7C5CFF; }
+body.services{ --hover:#FF6B6B; }
+body.blog    { --hover:#00C897; }
+body.support { --hover:#FFB020; }
+
+
+Update the values to fit your brand palette.
+
+Content
+
+Edit text and media only inside <main> ... </main>.
+
+Replace image URLs with your own assets in assets/images/.
+
+Search for https://www.elmidorgroup.com to update CTA links.
+
+Adding Blog Posts
+
+Duplicate blog-post.html.
+
+Update the title, content, and date.
+
+Link it from blog.html.
+
+Adding Team Members
+
+Open team.html.
+
+Duplicate a .card block.
+
+Replace name, role, and image.
+
+Requirements
+
+Static hosting (GitHub Pages, Netlify, Vercel, or your own server).
+
+Modern browser support (Chrome, Firefox, Edge, Safari).
+
+Security & SEO Notes
+
+All forms should point to trusted endpoints (avoid exposing raw APIs).
+
+Use HTTPS on hosting for secure data transfer.
+
+Maintain <title> and <meta description> unique per page for SEO.
+
+Use descriptive alt text for all images.
+
+License
+
+Distributed under the MIT License. See license.html for details.
+
+Credits
+
+Elmidor Group UI/UX design.
+
+Icons and fonts (if applicable) credited per vendor license.
+
+Built with pure HTML, CSS, and vanilla JS (no heavy frameworks).
+
+🌍 Official Website: https://www.elmidorgroup.com
