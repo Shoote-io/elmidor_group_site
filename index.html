@@ -229,478 +229,208 @@ footer{border-top:1px solid rgba(255,255,255,.05); background:#0a0b0e}
   </div>
 </header>
 
-  <!-- Main -->
-  <main id="main">
-    <section class="hero container">
-      
-    <!-- Hero -->
-    <section class="hero section" id="home">
-      <div class="container">
-        <div class="grid">
-          <div>
-            <span class="chip" aria-hidden="true">Automation • AI • Growth</span>
-            <h1 data-animate class="animate-fadeUp">Work smarter. Scale faster. Win your market.</h1>
-
-             <!-- Client Forms Slider -->
-<div class="card" aria-label="Special Client Forms" data-animate class="animate-zoomIn" style="min-height:220px; display:grid; place-items:center">
-  <div class="swiper myForms" style="width:100%;">
-    <div class="swiper-wrapper">
-      
-     
-<!-- Client Form 1 -->
-<div class="swiper-slide">
-  <div class="card form-card">
-    <h3>
-      <a href="https://tally.so/r/3Ep4qB" target="_blank" rel="noopener noreferrer" class="form-link">
-        Solaĩ Beyond — Join Beyond (USA)
-      </a>
-    </h3>
-    <iframe
-      loading="lazy"
-      src="https://tally.so/embed/3Ep4qB?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
-      width="100%"
-      height="420"
-      frameborder="0"
-      style="border-radius: 8px;"
-      title="Solaĩ Beyond Form"
-    ></iframe>
-  </div>
-</div>
-
-      <!-- Client Form 1 -->
-<div class="swiper-slide">
-  <div class="card form-card">
-    <h3>
-      <a href="https://tally.so/r/nr7zeN" target="_blank" rel="noopener noreferrer" class="form-link">
-        Join Elmidor Group — Evolve Together
-     </a>
-    </h3>
-    <iframe
-      loading="lazy"
-      src="https://tally.so/embed/nr7zeN?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
-      width="100%"
-      height="420"
-      frameborder="0"
-      style="border-radius: 8px;"
-      title="join Elmidor Group Form"
-    ></iframe>
-  </div>
-</div>
-
-<!-- Client Form 2 -->
-<div class="swiper-slide">
-  <div class="card form-card">
-    <h3>
-      <a href="https://tally.so/r/3ERNZA" target="_blank" rel="noopener noreferrer" class="form-link">
-        Lakay Fritay — Reservation Form (Turks & Caicos Islands)
-      </a>
-    </h3>
-    <iframe
-      loading="lazy"
-      src="https://tally.so/embed/3ERNZA?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1&formEventsForwarding=1"
-      width="100%"
-      height="420"
-      frameborder="0"
-      style="border-radius: 8px;"
-      title="Lakay Fritay Form"
-    ></iframe>
-  </div>
-</div>
-
-<!-- Client C Placeholder (CTA) -->
-<div class="swiper-slide">
-  <div class="card cta-card" data-link="https://www.elmidorgroup.com/reservation" style="cursor:pointer; text-align:center;">
-    <h3 class="form-link-c">Place Free – Make Reservation</h3>
-    <img
-      src="assets/images/demo-preview.png"
-      alt="Reserve your session now"
-      style="width:100%; border-radius:12px;"
-      loading="lazy"
-    >
-    <p style="margin-top:10px;">Click here to book your session today!</p>
-  </div>
-</div>
-
-    <!-- Navigation -->
-    <div class="swiper-pagination"></div>
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
-  </div>
-</div>
-</section>
-
-<!-- SwiperJS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-<!-- Custom CTA Styles -->
-<style>
-  /* CTA pou A & B */
-  .form-link {
-    position: relative;
-    color: #5ad1e6;
-    text-decoration: none;
-    font-weight: 600;
-    transition: color 0.3s ease;
-  }
-
-  .form-link::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -3px;
-    width: 0;
-    height: 2px;
-    background: #7c5cff;
-    transition: width 0.4s ease;
-  }
-
-  .form-link:hover {
-    color: #7c5cff;
-  }
-
-  .form-link:hover::after {
-    width: 100%;
-  }
-
-  /* CTA pou C (Reservation ak pulse glow) */
-  .form-link-c {
-    position: relative;
-    color: #16a34a; /* vèt */
-    font-weight: 700;
-    text-decoration: none;
-    display: inline-block;
-    padding: 6px 12px;
-    border-radius: 8px;
-    background: rgba(22,163,74,0.1);
-    box-shadow: 0 0 0 rgba(22,163,74,0.7);
-    animation: pulseGlow 2s infinite;
-    transition: all 0.3s ease;
-  }
-
-  .form-link-c::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -5px;
-    width: 0;
-    height: 3px;
-    background: #f97316; /* oranj */
-    transition: width 0.4s ease;
-  }
-
-  .form-link-c:hover {
-    color: #f97316;
-    background: rgba(249,115,22,0.1);
-  }
-
-  .form-link-c:hover::after {
-    width: 100%;
-  }
-
-  /* Animasyon pulse glow */
-  @keyframes pulseGlow {
-    0% { box-shadow: 0 0 0 0 rgba(22,163,74,0.7); }
-    70% { box-shadow: 0 0 0 12px rgba(22,163,74,0); }
-    100% { box-shadow: 0 0 0 0 rgba(22,163,74,0); }
-  }
-</style>
-
-<!-- Swiper Init -->
-<script>
-  const swiper = new Swiper('.myForms', {
-    loop: true,
-    speed: 1200,
-    pagination: { el: '.swiper-pagination', clickable: true },
-    navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
-    autoplay: { 
-      delay: 6000,
-      disableOnInteraction: false
-      // retire "pauseOnMouseEnter" pou li kontinye menm si souri pase sou li
-    }
-  });
-
-  // Fè slide CTA C a klike dirèk
-  document.querySelectorAll('.cta-card').forEach(card => {
-    card.addEventListener('click', () => {
-      const link = card.getAttribute('data-link');
-      if(link) window.open(link, '_blank');
-    });
-  });
-</script>
-            <p class="muted" data-animate class="animate-slideLeft" style="transition-delay:120ms">Elmidor Group builds automation and technology that remove friction from your operations so you can focus on impact.</p>
-            <div class="hero-cta" data-animate class="animate-zoomIn" style="transition-delay:220ms">
-              <a class="btn btn-primary" href="#cta">Start a Project</a>
-              <a class="btn btn-outline" href="#services" aria-label="View services">Explore Services →</a>
-            </div>
+<!-- Main -->
+<main id="main">
+  <!-- Hero -->
+  <section class="hero section" id="home">
+    <div class="container">
+      <div class="grid">
+        <div>
+          <span class="chip" aria-hidden="true">Automation • AI • Business Growth</span>
+          <h1 data-animate class="animate-fadeUp">
+            Work Smarter. Scale Faster. Lead Your Market.
+          </h1>
+          <p class="muted" data-animate class="animate-slideLeft" style="transition-delay:120ms">
+            Elmidor Group builds <strong>automation tools</strong> and digital solutions that remove friction from your operations so you can focus on impact and <em>business growth</em>.
+          </p>
+          <div class="hero-cta" data-animate class="animate-zoomIn" style="transition-delay:220ms">
+            <a class="btn btn-primary" href="#cta">Start a Project</a>
+            <a class="btn btn-outline" href="#services" aria-label="View services">Explore Services →</a>
           </div>
-          <div class="hero-visual" data-animate class="animate-zoomIn">
-            <div class="stat">
-              <div class="num">50%+</div>
-              <div class="label">Avg. process time saved</div>
-              <div class="num">24/7</div>
-              <div class="label">Automations on duty</div>
-              <div class="num">90d</div>
-              <div class="label">Typical ROI window</div>
-            </div>
+        </div>
+
+        <!-- Hero Stats -->
+        <div class="hero-visual" data-animate class="animate-zoomIn">
+          <div class="stat">
+            <div class="num">50%+</div>
+            <div class="label">Average process time saved</div>
+            <div class="num">24/7</div>
+            <div class="label">Automations on duty</div>
+            <div class="num">90d</div>
+            <div class="label">Typical ROI window</div>
           </div>
         </div>
       </div>
-    </section>
-
-    <!-- About -->
-    <section class="about section" id="about">
-      <div class="container about-grid">
-        <div class="card" data-animate class="animate-fadeUp">
-          <h2>About Elmidor Group</h2>
-          <p class="muted">We help ambitious entrepreneurs and organizations automate workflows, modernize their stack, and build memorable digital experiences. Our approach blends strategy, design, and engineering with a relentless focus on outcomes.</p>
-          <ul class="muted">
-            <li>✔ Discovery & strategy first</li>
-            <li>✔ Accessibility & performance by default</li>
-            <li>✔ Modular design to scale content easily</li>
-          </ul>
-        </div>
-
-    <!-- Services (skeleton ready for future expansion) -->
-    <section class="services section" id="services">
-      <div class="container">
-        <h2 data-animate class="animate-fadeUp">Services</h2>
-        <p class="muted" data-animate class="animate-slideLeft" style="max-width:62ch">A modular grid of cards you can add/remove without breaking the design. Duplicate a <code>.service.card</code> block to expand.</p>
-        <div class="grid" style="margin-top:18px">
-          <article class="service card" data-animate class="animate-zoomIn" aria-labelledby="svc1-title">
-            <h3 id="svc1-title">Automation Consulting</h3>
-            <p class="muted">Audit, blueprint, and orchestrate smart automations across your stack.</p>
-          </article>
-          <article class="service card" data-animate class="animate-zoomIn" aria-labelledby="svc2-title">
-            <h3 id="svc2-title">Custom Integrations</h3>
-            <p class="muted">APIs, webhooks, and data pipelines that move at your speed.</p>
-          </article>
-          <article class="service card" data-animate class="animate-zoomIn" aria-labelledby="svc3-title">
-            <h3 id="svc3-title">Experience Design</h3>
-            <p class="muted">Accessible, performant interfaces that convert and delight.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-        
-      <!-- Client Forms Slider -->
-<div class="card" aria-label="Special Client Forms" data-animate class="animate-zoomIn" style="min-height:220px; display:grid; place-items:center">
-  <div class="swiper myForms" style="width:100%;">
-    <div class="swiper-wrapper">
-      
-     
-<!-- Client Form 1 -->
-<div class="swiper-slide">
-  <div class="card form-card">
-    <h3>
-      <a href="https://tally.so/r/3Ep4qB" target="_blank" rel="noopener noreferrer" class="form-link">
-        Solaĩ Beyond — Join Beyond (USA)
-      </a>
-    </h3>
-    <iframe
-      loading="lazy"
-      src="https://tally.so/embed/3Ep4qB?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
-      width="100%"
-      height="420"
-      frameborder="0"
-      style="border-radius: 8px;"
-      title="Solaĩ Beyond Form"
-    ></iframe>
-  </div>
-</div>
-
-            <!-- Client Form 1 -->
-<div class="swiper-slide">
-  <div class="card form-card">
-    <h3>
-      <a href="https://tally.so/r/nr7zeN" target="_blank" rel="noopener noreferrer" class="form-link">
-        Join Elmidor Group — Evolve Together
-     </a>
-    </h3>
-    <iframe
-      loading="lazy"
-      src="https://tally.so/embed/nr7zeN?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
-      width="100%"
-      height="420"
-      frameborder="0"
-      style="border-radius: 8px;"
-      title="join Elmidor Group Form"
-    ></iframe>
-  </div>
-</div>
-
-<!-- Client Form 2 -->
-<div class="swiper-slide">
-  <div class="card form-card">
-    <h3>
-      <a href="https://tally.so/r/3ERNZA" target="_blank" rel="noopener noreferrer" class="form-link">
-        Lakay Fritay — Reservation Form (Turks & Caicos Islands)
-      </a>
-    </h3>
-    <iframe
-      loading="lazy"
-      src="https://tally.so/embed/3ERNZA?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1&formEventsForwarding=1"
-      width="100%"
-      height="420"
-      frameborder="0"
-      style="border-radius: 8px;"
-      title="Lakay Fritay Form"
-    ></iframe>
-  </div>
-</div>
-
-<!-- Client C Placeholder (CTA) -->
-<div class="swiper-slide">
-  <div class="card cta-card" data-link="https://www.elmidorgroup.com/reservation" style="cursor:pointer; text-align:center;">
-    <h3 class="form-link-c">Place Free – Make Reservation</h3>
-    <img
-      src="assets/images/demo-preview.png"
-      alt="Reserve your session now"
-      style="width:100%; border-radius:12px;"
-      loading="lazy"
-    >
-    <p style="margin-top:10px;">Click here to book your session today!</p>
-  </div>
-</div>
-
-    <!-- Navigation -->
-    <div class="swiper-pagination"></div>
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
-  </div>
-</div>
-</section>
-
-<!-- SwiperJS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-<!-- Custom CTA Styles -->
-<style>
-  /* CTA pou A & B */
-  .form-link {
-    position: relative;
-    color: #5ad1e6;
-    text-decoration: none;
-    font-weight: 600;
-    transition: color 0.3s ease;
-  }
-
-  .form-link::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -3px;
-    width: 0;
-    height: 2px;
-    background: #7c5cff;
-    transition: width 0.4s ease;
-  }
-
-  .form-link:hover {
-    color: #7c5cff;
-  }
-
-  .form-link:hover::after {
-    width: 100%;
-  }
-
-  /* CTA pou C (Reservation ak pulse glow) */
-  .form-link-c {
-    position: relative;
-    color: #16a34a; /* vèt */
-    font-weight: 700;
-    text-decoration: none;
-    display: inline-block;
-    padding: 6px 12px;
-    border-radius: 8px;
-    background: rgba(22,163,74,0.1);
-    box-shadow: 0 0 0 rgba(22,163,74,0.7);
-    animation: pulseGlow 2s infinite;
-    transition: all 0.3s ease;
-  }
-
-  .form-link-c::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -5px;
-    width: 0;
-    height: 3px;
-    background: #f97316; /* oranj */
-    transition: width 0.4s ease;
-  }
-
-  .form-link-c:hover {
-    color: #f97316;
-    background: rgba(249,115,22,0.1);
-  }
-
-  .form-link-c:hover::after {
-    width: 100%;
-  }
-
-  /* Animasyon pulse glow */
-  @keyframes pulseGlow {
-    0% { box-shadow: 0 0 0 0 rgba(22,163,74,0.7); }
-    70% { box-shadow: 0 0 0 12px rgba(22,163,74,0); }
-    100% { box-shadow: 0 0 0 0 rgba(22,163,74,0); }
-  }
-</style>
-
-<!-- Swiper Init -->
-<script>
-  const swiper = new Swiper('.myForms', {
-    loop: true,
-    speed: 1200,
-    pagination: { el: '.swiper-pagination', clickable: true },
-    navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
-    autoplay: { 
-      delay: 6000,
-      disableOnInteraction: false
-      // retire "pauseOnMouseEnter" pou li kontinye menm si souri pase sou li
-    }
-  });
-
-  // Fè slide CTA C a klike dirèk
-  document.querySelectorAll('.cta-card').forEach(card => {
-    card.addEventListener('click', () => {
-      const link = card.getAttribute('data-link');
-      if(link) window.open(link, '_blank');
-    });
-  });
-</script>
-
-    <!-- News / Updates (placeholder) -->
-    <section class="section" id="news">
-      <div class="container">
-        <h2 data-animate class="animate-fadeUp">Updates</h2>
-        <div class="card" data-animate class="animate-slideLeft">
-          <p class="muted">Coming soon: case studies, product releases, and thought leadership. Hook this to your CMS later.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA / Contact anchor -->
-    <section class="section" id="cta">
-      <div class="container">
-        <div class="card" data-animate class="animate-zoomIn">
-          <h2>Ready to build what matters?</h2>
-          <p class="muted">Tell us about your goals. We'll map a clear path and get you compounding wins fast.</p>
-          <a class="btn btn-primary" href="#contact">Contact Us</a>
-        </div>
-      </div>
-    </section>
-
-      <!-- Join Free Section -->
-<section id="joinfree" class="joinfree-section">
-    <div class="container" style="text-align:center">
-      <h2>Join Free</h2>
-      <p>Join our platform for free and explore our workflows.</p>
-      <a class="btn-get-started" href="https://tally.so/r/nr7zeN" target="_blank">Join with Tally</a>
-      <a class="btn-contact" href="demo.html" target="_blank">View Demo</a>
     </div>
   </section>
+
+  <!-- Client Forms Slider -->
+  <section class="hero section">
+    <div class="container">
+      <div class="card" aria-label="Special Client Forms" data-animate class="animate-zoomIn" style="min-height:220px; display:grid; place-items:center">
+        <div class="swiper myForms" style="width:100%;">
+          <div class="swiper-wrapper">
+
+            <!-- Client Form 1 -->
+            <div class="swiper-slide">
+              <div class="card form-card">
+                <h3>
+                  <a href="https://tally.so/r/3Ep4qB" target="_blank" rel="noopener noreferrer" class="form-link">
+                    Solaĩ Beyond — Join Beyond (USA)
+                  </a>
+                </h3>
+                <iframe
+                  loading="lazy"
+                  src="https://tally.so/embed/3Ep4qB?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+                  width="100%"
+                  height="420"
+                  frameborder="0"
+                  style="border-radius: 8px;"
+                  title="Solaĩ Beyond Onboarding Form"
+                ></iframe>
+              </div>
+            </div>
+
+            <!-- Client Form 2 -->
+            <div class="swiper-slide">
+              <div class="card form-card">
+                <h3>
+                  <a href="https://tally.so/r/nr7zeN" target="_blank" rel="noopener noreferrer" class="form-link">
+                    Join Elmidor Group — Evolve Together
+                  </a>
+                </h3>
+                <iframe
+                  loading="lazy"
+                  src="https://tally.so/embed/nr7zeN?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+                  width="100%"
+                  height="420"
+                  frameborder="0"
+                  style="border-radius: 8px;"
+                  title="Elmidor Group Registration Form"
+                ></iframe>
+              </div>
+            </div>
+
+            <!-- Client Form 3 -->
+            <div class="swiper-slide">
+              <div class="card form-card">
+                <h3>
+                  <a href="https://tally.so/r/3ERNZA" target="_blank" rel="noopener noreferrer" class="form-link">
+                    Lakay Fritay — Reservation Form (Turks & Caicos)
+                  </a>
+                </h3>
+                <iframe
+                  loading="lazy"
+                  src="https://tally.so/embed/3ERNZA?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1&formEventsForwarding=1"
+                  width="100%"
+                  height="420"
+                  frameborder="0"
+                  style="border-radius: 8px;"
+                  title="Lakay Fritay Reservation Form"
+                ></iframe>
+              </div>
+            </div>
+
+            <!-- CTA Placeholder -->
+            <div class="swiper-slide">
+              <div class="card cta-card" data-link="https://www.elmidorgroup.com/reservation" style="cursor:pointer; text-align:center;">
+                <h3 class="form-link-c">Reserve Your Spot — Free</h3>
+                <img
+                  src="assets/images/demo-preview.png"
+                  alt="Preview of Elmidor Group reservation workflow"
+                  style="width:100%; border-radius:12px;"
+                  loading="lazy"
+                >
+                <p style="margin-top:10px;">Click to book your session today!</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Navigation -->
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="about section" id="about">
+    <div class="container about-grid">
+      <div class="card" data-animate class="animate-fadeUp">
+        <h2>About Elmidor Group</h2>
+        <p class="muted">
+          We help ambitious entrepreneurs and organizations <strong>automate workflows</strong>, modernize their tech stack, and deliver memorable digital experiences.
+          Our approach blends strategy, design, and engineering—with a relentless focus on measurable outcomes.
+        </p>
+        <ul class="muted">
+          <li>✔ Discovery & strategy first</li>
+          <li>✔ Accessibility & performance by default</li>
+          <li>✔ Modular design for scalable content</li>
+        </ul>
+        <p>Learn more on our <a href="about.html">About Us page</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="services section" id="services">
+    <div class="container">
+      <h2 data-animate class="animate-fadeUp">Services</h2>
+      <p class="muted" data-animate class="animate-slideLeft" style="max-width:62ch">
+        Discover our core solutions in <a href="services.html">automation consulting</a>, integrations, and experience design—crafted to accelerate <em>digital transformation</em>.
+      </p>
+      <div class="grid" style="margin-top:18px">
+        <article class="service card" data-animate class="animate-zoomIn" aria-labelledby="svc1-title">
+          <h3 id="svc1-title">Automation Consulting</h3>
+          <p class="muted">Audit, blueprint, and orchestrate smart <strong>automation workflows</strong> across your stack.</p>
+        </article>
+        <article class="service card" data-animate class="animate-zoomIn" aria-labelledby="svc2-title">
+          <h3 id="svc2-title">Custom Integrations</h3>
+          <p class="muted">APIs, webhooks, and <a href="https://airtable.com" target="_blank" rel="noopener noreferrer">Airtable</a> pipelines built to scale at your speed.</p>
+        </article>
+        <article class="service card" data-animate class="animate-zoomIn" aria-labelledby="svc3-title">
+          <h3 id="svc3-title">Experience Design</h3>
+          <p class="muted">Accessible, high-performance interfaces that convert, retain, and delight.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Updates -->
+  <section class="section" id="news">
+    <div class="container">
+      <h2 data-animate class="animate-fadeUp">Updates</h2>
+      <div class="card" data-animate class="animate-slideLeft">
+        <p class="muted">
+          Coming soon: case studies, product launches, and expert insights on <a href="blog.html">our blog</a>.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA / Contact -->
+  <section class="section" id="cta">
+    <div class="container">
+      <div class="card" data-animate class="animate-zoomIn">
+        <h2>Ready to Build What Matters?</h2>
+        <p class="muted">Tell us about your goals. We'll design a clear roadmap and deliver compounding wins fast.</p>
+        <a class="btn btn-primary" href="contact.html">Contact Us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Join Free -->
+  <section id="joinfree" class="joinfree-section">
+    <div class="container" style="text-align:center"><!-- Suggestion: move inline style to style.css -->
+      <h2>Join Free</h2>
+      <p>Sign up for free and explore our <strong>workflow automation</strong> platform.</p>
+      <a class="btn-get-started" href="https://tally.so/r/nr7zeN" target="_blank" rel="noopener noreferrer">Join with Tally</a>
+      <a class="btn-contact" href="demo.html" target="_blank" rel="noopener noreferrer">View Demo</a>
+    </div>
+  </section>
+</main>
 
   <!-- Footer -->
   <footer class="section">
