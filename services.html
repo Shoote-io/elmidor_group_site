@@ -236,55 +236,133 @@ footer{border-top:1px solid rgba(255,255,255,.05); background:#0a0b0e}
 </header>
 
 <!-- Main -->
-<main id="main">
-<main class="container">
-  <h1>Our Services</h1>
-  <p>We design automation workflows and tools that simplify life and empower businesses.</p>
+<main id="main" class="container">
+
+  <!-- Page Intro -->
+  <header class="page-intro">
+    <h1>Our Services</h1>
+    <p>Elmidor Group designs <strong>automation workflows</strong> and <strong>digital tools</strong> that simplify everyday operations and empower businesses to scale. Explore our solutions below.</p>
+  </header>
+
+  <!-- Services Grid -->
   <div class="service-grid">
+
     <div class="service-card">
       <h2>Light CRM</h2>
-      <p>Organize leads, clients, and communication with a simple CRM connected to WhatsApp.</p>
+      <p>Keep track of leads, clients, and conversations in a simple, lightweight CRM connected to WhatsApp. 
+      <strong>Perfect for small teams</strong> who need client management without the complexity of enterprise tools.</p>
+      <ul>
+        <li>Centralize client communication</li>
+        <li>Automated reminders & follow-ups</li>
+        <li>Track deals from lead to close</li>
+      </ul>
     </div>
+
     <div class="service-card">
       <h2>Booking & Reminders</h2>
-      <p>Smart scheduling tools with automated reminders to keep clients engaged.</p>
+      <p>Smart scheduling tools with automated reminders help you reduce no-shows and keep clients engaged. 
+      <strong>Ideal for coaches, clinics, and consultants</strong>.</p>
+      <ul>
+        <li>Self-service booking links</li>
+        <li>SMS / WhatsApp reminders</li>
+        <li>Calendar sync with Google & Outlook</li>
+      </ul>
     </div>
+
     <div class="service-card">
       <h2>WhatsApp Automation</h2>
-      <p>Send personalized messages, answer clients, and manage workflows directly in WhatsApp.</p>
+      <p>Automate conversations, send personalized messages, and manage workflows directly inside WhatsApp. 
+      <strong>Turn WhatsApp into your business command center</strong>.</p>
+      <ul>
+        <li>Auto-replies to FAQs</li>
+        <li>Lead qualification flows</li>
+        <li>Broadcasts with personalization</li>
+      </ul>
+      <p><a href="https://www.whatsapp.com/business/" target="_blank" rel="noopener noreferrer">Learn more about WhatsApp Business</a>.</p>
     </div>
+
     <div class="service-card">
       <h2>Student Onboarding</h2>
-      <p>Automation for scholarship and education programs, making onboarding seamless.</p>
+      <p>Designed for scholarship and education programs, our onboarding automation makes admissions seamless. 
+      <strong>Reduce manual paperwork and guide students step by step</strong>.</p>
+      <ul>
+        <li>Application form automation</li>
+        <li>Email & WhatsApp notifications</li>
+        <li>Progress dashboards for administrators</li>
+      </ul>
     </div>
+
     <div class="service-card">
       <h2>Creative Broadcasts</h2>
-      <p>Share files and updates with communities through automated broadcast lists.</p>
+      <p>Share files, updates, and resources with communities through automated broadcast lists. 
+      <strong>Perfect for non-profits, schools, and creative teams</strong>.</p>
+      <ul>
+        <li>Bulk file sharing</li>
+        <li>Scheduled announcements</li>
+        <li>Segmentation by audience type</li>
+      </ul>
     </div>
+
   </div>
 </main>
 
+<!-- FAQ Section (SEO boost & content expansion) -->
+<section class="faq-section container">
+  <h2>Frequently Asked Questions</h2>
+
+  <details>
+    <summary>Who are Elmidor Group’s automation services for?</summary>
+    <p>Our workflows are designed for <strong>small businesses, startups, and organizations</strong> that need scalable digital solutions without the heavy cost of enterprise software.</p>
+  </details>
+
+  <details>
+    <summary>How long does it take to set up?</summary>
+    <p>Most workflows can be launched within <strong>2–4 weeks</strong>, depending on the complexity of your business processes.</p>
+  </details>
+
+  <details>
+    <summary>Do I need coding skills?</summary>
+    <p>No. Our solutions are <strong>no-code / low-code</strong>, meaning you can manage them without technical expertise.</p>
+  </details>
+
+  <details>
+    <summary>What tools do you integrate with?</summary>
+    <p>We integrate with <a href="https://airtable.com" target="_blank" rel="noopener noreferrer">Airtable</a>, 
+       <a href="https://tally.so" target="_blank" rel="noopener noreferrer">Tally</a>, 
+       Google Workspace, WhatsApp Business, and many others.</p>
+  </details>
+</section>
+
+<!-- Contact Section -->
 <section id="contact" class="contact-section">
   <div class="container">
-    <h2>Contact</h2>
-    <form action="mailto:support.elmidorgroup" method="post" enctype="text/plain" style="display:flex;flex-direction:column;gap:8px;max-width:600px;margin:auto">
-      <input type="text" name="name" placeholder="Your name" required style="padding:10px;border-radius:8px;border:1px solid #2b2f37">
-      <input type="email" name="email" placeholder="Your email" required style="padding:10px;border-radius:8px;border:1px solid #2b2f37">
-      <textarea name="message" placeholder="Write your message..." rows="4" required style="padding:10px;border-radius:8px;border:1px solid #2b2f37"></textarea>
+    <h2>Contact Us</h2>
+    <p>Have questions or need a custom solution? Reach out below.</p>
+
+    <!-- ⚠️ NOTE: Mailto forms are not secure nor user-friendly. 
+         Replace with Formspree, Netlify Forms, or backend API for production. -->
+    <form action="mailto:support@elmidorgroup.com" method="post" enctype="text/plain" 
+          style="display:flex;flex-direction:column;gap:8px;max-width:600px;margin:auto">
+      <input type="text" name="name" placeholder="Your name" required 
+             style="padding:10px;border-radius:8px;border:1px solid #2b2f37">
+      <input type="email" name="email" placeholder="Your email" required 
+             style="padding:10px;border-radius:8px;border:1px solid #2b2f37">
+      <textarea name="message" placeholder="Write your message..." rows="4" required 
+                style="padding:10px;border-radius:8px;border:1px solid #2b2f37"></textarea>
       <button class="btn-get-started" type="submit">Send</button>
     </form>
   </div>
 </section>
 
-    <!-- joinfree -->
-  <section id="joinfree" class="joinfree-section">
-    <div class="container" style="text-align:center">
-      <h2>Join Free</h2>
-      <p>Join our platform for free and explore our workflows.</p>
-      <a class="btn-get-started" href="http://tally.so/r/nr7zeN" target="_blank">Join with Tally</a>
-      <a class="btn-contact" href="demo.html"_blank">View Demo</a>
-    </div>
-  </section>
+<!-- Join Free -->
+<section id="joinfree" class="joinfree-section">
+  <div class="container" style="text-align:center">
+    <h2>Join Free</h2>
+    <p>Sign up now to explore <strong>automation workflows</strong> and <strong>business growth frameworks</strong>.</p>
+    <a class="btn-get-started" href="https://tally.so/r/nr7zeN" target="_blank" rel="noopener noreferrer">Join with Tally</a>
+    <a class="btn-contact" href="demo.html" target="_blank">View Demo</a>
+  </div>
+</section>
 
   <!-- Footer -->
   <footer class="section">
