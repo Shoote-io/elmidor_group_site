@@ -91,6 +91,19 @@
       src="https://www.facebook.com/tr?id=786654690436263&ev=PageView&noscript=1"/>
   </noscript>
 
+  <!-- Facebook SDK -->
+  <script>
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId            : '1243975833743807',
+        autoLogAppEvents : true,
+        xfbml            : true,
+        version          : 'v23.0'
+      });
+    };
+  </script>
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+  
 <!-- Styles -->
   <style>
     :root{
@@ -225,146 +238,74 @@ footer{border-top:1px solid rgba(255,255,255,.05); background:#0a0b0e}
   </div>
 </header>
   
-   <!-- Main -->
-  <main>
-    <!-- Leadership & Vision Section -->
-    <section class="hero container">
-      <h1>Leadership & Vision</h1>
-      <p>
-        At Elmidor Group, leadership is more than a title — it’s a commitment to shaping the future 
-        of <strong>workflow automation</strong> and <strong>digital transformation</strong>.  
-        Our vision is to make automation accessible, scalable, and human-centered, so every business 
-        can focus on growth instead of repetitive work.
-      </p>
-
-      <!-- Client Forms Slider -->
-      <div class="card" aria-label="Special Client Forms" data-animate class="animate-zoomIn" style="min-height:220px; display:grid; place-items:center">
-        <div class="swiper myForms" style="width:100%;">
-          <div class="swiper-wrapper">
-
-            <!-- Client Form 1 -->
-            <div class="swiper-slide">
-              <div class="card form-card">
-                <h3>
-                  <a href="https://tally.so/r/3Ep4qB" target="_blank" rel="noopener noreferrer" class="form-link">
-                    Solaĩ Beyond — Join Beyond (USA)
-                  </a>
-                </h3>
-                <iframe loading="lazy"
-                  src="https://tally.so/embed/3Ep4qB?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" 
-                  width="100%" height="420" frameborder="0">
-                </iframe>
-              </div>
-            </div>
-
-            <!-- Client Form 2 -->
-            <div class="swiper-slide">
-              <div class="card form-card">
-                <h3>
-                  <a href="https://tally.so/r/nr7zeN" target="_blank" rel="noopener noreferrer" class="form-link">
-                    Join Elmidor Group — Evolve Together
-                  </a>
-                </h3>
-                <iframe loading="lazy"
-                  src="https://tally.so/embed/nr7zeN?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
-                  width="100%" height="420" frameborder="0"
-                  style="border-radius: 8px;"
-                  title="Join Elmidor Group Form">
-                </iframe>
-              </div>
-            </div>
-
-            <!-- Client Form 3 -->
-            <div class="swiper-slide">
-              <div class="card form-card">
-                <h3>
-                  <a href="https://tally.so/r/3ERNZA" target="_blank" rel="noopener noreferrer" class="form-link">
-                    Lakay Fritay — Reservation Form (Turks & Caicos Islands)
-                  </a>
-                </h3>
-                <iframe loading="lazy"
-                  src="https://tally.so/embed/3ERNZA?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1&formEventsForwarding=1" 
-                  width="100%" height="420" frameborder="0">
-                </iframe>
-              </div>
-            </div>
-
-            <!-- CTA Slide -->
-            <div class="swiper-slide">
-              <div class="card cta-card" data-link="https://www.elmidorgroup.com/demo.html" style="cursor:pointer; text-align:center;">
-                <h3 class="form-link-c">Place Free – Make Reservation</h3>
-                <img src="assets/images/demo-preview.png" alt="Free reservation demo workflow" style="width:100%; border-radius:12px;">
-                <p style="margin-top:10px;">Click here to book your demo session today!</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Navigation -->
-          <div class="swiper-pagination"></div>
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
-        </div>
+  <!-- Main -->
+  <main id="main">
+    <section class="hero section">
+      <div class="container">
+        <h1>Contact & Connect with Elmidor Group</h1>
+        <p>We’re here to answer questions, discuss collaborations, or help you get started. Reach out to our team using the options below.</p>
       </div>
-      <p class="muted">Meet the founder who drives Elmidor Group’s mission forward.</p>
     </section>
 
-    <!-- Team / Leadership Card -->
-    <section class="container">
-      <div class="team-card">
-        <img src="assets/images/ceo.png" alt="Elmidor Rodriguez, CEO of Elmidor Group, automation and digital transformation leader">
-        <h2>Elmidor Rodriguez</h2>
-        <p><em>Founder & CEO — Elmidor Group</em></p>
-        <p>
-          Elmidor Rodriguez is the visionary behind Elmidor Group.  
-          With a mission to connect people and businesses through smart <strong>automation tools</strong>, 
-          he leads with clarity, empathy, and innovation.  
-          His leadership ensures that automation is not just for large enterprises — but also 
-          <strong>scalable workflow automation for small businesses</strong>, startups, and organizations worldwide.  
-        </p>
-        <p>
-          Under his leadership, Elmidor Group has launched solutions across industries — from food & hospitality 
-          (see <a href="/blog">case studies</a>) to digital startups — all with a focus on simplicity and efficiency.
-        </p>
-        <div class="links">
-          <a class="btn-violet" href="https://www.credly.com/users/shoote.io" target="_blank" rel="noopener noreferrer">Certifications</a>
-          <a class="btn-violet" href="/affiliate">Affiliate Program</a>
-          <a class="btn-violet" href="https://www.fiverr.com/s/zWG8K5K" target="_blank" rel="noopener noreferrer">Hire on Fiverr</a>
-          <a class="btn-get-started" href="/demo.html">View Demo</a>
+    <section class="section" id="contact-options">
+      <div class="container">
+        <h2>Contact Options</h2>
+        <div class="grid">
+          <div class="support card" style="grid-column:span 6">
+            <div class="title">Email Support</div>
+            <p class="desc">For general inquiries or direct support, email us and our team will respond within 24–48 hours.</p>
+            <a class="btn btn-primary" href="mailto:support@elmidorgroup.com">support@elmidorgroup.com</a>
+          </div>
+          <div class="support card" style="grid-column:span 6">
+            <div class="title">Phone / WhatsApp</div>
+            <p class="desc">Prefer to talk? Call or message us on WhatsApp for quick assistance.</p>
+            <a class="btn btn-primary" href="tel:+18296289130">+1 (829) 628-9130</a>
+          </div>
+          <div class="support card" style="grid-column:span 6">
+            <div class="title">Community Group</div>
+            <p class="desc">Join our community group to ask quick questions, get updates, or collaborate with others.</p>
+            <a class="btn btn-primary" href="#community">Join Community</a>
+          </div>
+          <div class="support card" style="grid-column:span 6">
+            <div class="title">Social Media</div>
+            <p class="desc">Stay connected with our latest news and updates on social platforms.</p>
+            <div style="display:flex; gap:10px; flex-wrap:wrap">
+              <a class="btn btn-outline" href="#">LinkedIn</a>
+              <a class="btn btn-outline" href="#">X (Twitter)</a>
+              <a class="btn btn-outline" href="#">YouTube</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact-form">
+      <div class="container">
+        <h2>Send Us a Message</h2>
+        <div class="card">
+          <form action="#" method="post" onsubmit="event.preventDefault(); alert('Message sent!');">
+            <label for="name">Full Name</label>
+            <input id="name" name="name" required placeholder="Your name">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required placeholder="you@example.com">
+            <label for="subject">Subject</label>
+            <input id="subject" name="subject" required placeholder="Subject">
+            <label for="msg">Message</label>
+            <textarea id="msg" name="message" rows="6" placeholder="Your message"></textarea>
+            <button class="btn btn-primary" type="submit">Submit</button>
+          </form>
         </div>
       </div>
     </section>
   </main>
-
-  <!-- Contact Section -->
-  <section id="contact" class="contact-section">
-    <div class="container">
-      <h2>Contact</h2>
-      <p>Have questions? Reach out — our team is ready to help you with automation, demos, and partnerships.</p>
-
-      <!-- ⚠️ Note: mailto forms are not secure or user-friendly. Replace with Formspree, Netlify, or Airtable Form for production. -->
-      <form action="mailto:support.elmidorgroup" method="post" enctype="text/plain" 
-        style="display:flex;flex-direction:column;gap:8px;max-width:600px;margin:auto">
-        <input type="text" name="name" placeholder="Your name" required style="padding:10px;border-radius:8px;border:1px solid #2b2f37">
-        <input type="email" name="email" placeholder="Your email" required style="padding:10px;border-radius:8px;border:1px solid #2b2f37">
-        <textarea name="message" placeholder="Write your message..." rows="4" required style="padding:10px;border-radius:8px;border:1px solid #2b2f37"></textarea>
-        <button class="btn-get-started" type="submit">Send</button>
-      </form>
-    </div>
-  </section>
-
-  <!-- Join Free CTA -->
-  <section id="joinfree" class="joinfree-section">
+  
+<!-- Join Free -->
+ <section id="joinfree" class="joinfree-section">
     <div class="container" style="text-align:center">
       <h2>Join Free</h2>
-      <p>
-        Join our platform for free and explore <strong>automation workflows</strong> designed for business growth.  
-        Get access to live demos, real use-cases, and hands-on examples powered by Airtable, Tally, and Zapier.  
-      </p>
-      <p>
-        Whether you’re a startup or enterprise, Elmidor Group gives you the tools to scale smarter.  
-      </p>
-      <a class="btn-get-started" href="https://tally.so/r/nr7zeN" target="_blank" rel="noopener noreferrer">Join with Tally</a>
-      <a class="btn-contact" href="/demo.html" target="_blank" rel="noopener noreferrer">View Demo</a>
+      <p>Join our platform for free and explore our workflows.</p>
+      <a class="btn-get-started" href="https://tally.so/r/wdVB5d" target="_blank">Join with Tally</a>
+      <a class="btn-contact" href="demo.html" target="_blank">View Demo</a>
     </div>
   </section>
 
@@ -451,5 +392,3 @@ footer{border-top:1px solid rgba(255,255,255,.05); background:#0a0b0e}
 
 </body>
 </html> 
-
-
