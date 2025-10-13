@@ -461,10 +461,10 @@
     });
 
     /* 🌀 Swiper Init */
-    new Swiper('.myForms', {
+    const swiper = new Swiper('.myForms', {
       loop: true,
-      speed: 900,
-      spaceBetween: 40,
+      speed: 700,
+      spaceBetween: 24,
       grabCursor: true,
       centeredSlides: true,
       effect: "coverflow",
@@ -481,6 +481,8 @@
         if(link) window.open(link, '_blank');
       });
     });
+     const slides = document.querySelectorAll('.swiper-slide');
+  if(slides.length > 1) preloadIframeInSlide(slides[1]); 
   });
 </script>
   
@@ -617,6 +619,18 @@
       href: 'https://www.elmidorgroup.com/index.html' // URL paj ou vle moun pataje
     }, function(response){});
   }
+    // Menu bouton toggle
+  const btn = document.getElementById('menuBtn');
+  const links = document.getElementById('navLinks');
+
+  btn.addEventListener('click', () => {
+    const isOpen = links.getAttribute('data-open') === 'true';
+    links.setAttribute('data-open', String(!isOpen));
+    btn.setAttribute('aria-expanded', String(!isOpen));
+  });
+  
+  // Mete ane aktyèl nan footer
+  document.getElementById('year').textContent=new Date().getFullYear();
 </script>
   
 <!-- Like & Share Custom Buttons -->
