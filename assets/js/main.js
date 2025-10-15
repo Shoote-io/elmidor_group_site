@@ -12,6 +12,21 @@ document.addEventListener("DOMContentLoaded", () => {
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 });
 
+// Mobile menu toggle (ARIA-friendly)
+document.addEventListener("DOMContentLoaded", () => {
+  const menuBtn = $("#menuBtn");
+  const navLinks = $("#navLinks");
+
+  if (!menuBtn || !navLinks) return;
+
+  const toggleMenu = (open) => {
+    const next = typeof open === "boolean" ? open : navLinks.dataset.open !== "true";
+    navLinks.dataset.open = String(next);
+    menuBtn.setAttribute("aria-expanded", String(next));
+  };
+
+  menuBtn.addEventListener("click", () => toggleMenu());
+
   // Close when clicking outside
   document.addEventListener("click", (e) => {
     if (!navLinks.contains(e.target) && e.target !== menuBtn && navLinks.dataset.open === "true") {
