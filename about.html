@@ -135,6 +135,7 @@
     <img height="1" width="1" style="display:none"
       src="https://www.facebook.com/tr?id=786654690436263&ev=PageView&noscript=1"/>
   </noscript>
+  </head>
   
  <!-- Critical styles for fast first paint -->
   <style>
@@ -347,7 +348,7 @@
       </div>
       <div style="margin-top:14px" data-animate>
         <a class="btn btn-primary" href="services.html">Explore services</a>
-        <a class="btn btn-outline" href="support.html#join">Start free</a>
+        <a class="btn btn-outline" href="demo.html">Start free</a>
       </div>
     </div>
   </section>
@@ -391,39 +392,93 @@
     </div>
   </section>
 
-  <!-- Team -->
-  <section class="section" id="team">
-    <div class="container">
-      <h2 data-animate>Team & collaborators</h2>
-      <p class="muted" data-animate>
-        We work with a circle of builders, educators, and creators. Want to collaborate? 
-        <a href="support.html#partner">Become a partner</a>.
-      </p>
-      <div class="grid" style="display:grid; gap:16px; grid-template-columns: repeat(12, 1fr)">
-        <div class="card" style="grid-column: span 4" data-animate>
-          <img src="/assets/images/ceo.png" 
-               alt="Elmidor Rodriguez Zagalo Mario - CEO and Developer" 
-               style="border-radius:12px; margin-bottom:10px" loading="lazy"/>
-          <h3>Elmidor Rodriguez Zagalo Mario</h3>
-          <p class="muted">CEO / Developer</p>
-        </div>
-        <div class="card" style="grid-column: span 4" data-animate>
-          <img src="assets/images/co.jpg" 
-               alt="Open AI - Co-developer and assistant" 
-               style="border-radius:12px; margin-bottom:10px" loading="lazy"/>
-          <h3>Open AI</h3>
-          <p class="muted">Co-developer / Assistant</p>
-        </div>
-        <div class="card" style="grid-column: span 4" data-animate>
-          <img src="https://picsum.photos/480/320?random=23" 
-               alt="Team member portrait placeholder" 
-               style="border-radius:12px; margin-bottom:10px" loading="lazy"/>
-          <h3>Firstname Lastname</h3>
-          <p class="muted">Role / Focus</p>
-        </div>
-      </div>
+<!-- Team Section (Optimized, single WebP, lightweight) -->
+<section id="team" class="section" aria-labelledby="team-heading">
+  <div class="container">
+    <h2 id="team-heading" data-animate>Team & collaborators</h2>
+    <p class="muted" data-animate>
+      We work with a circle of builders, educators, and creators. Want to collaborate?
+      <a href="support.html#partner">Become a partner</a>.
+    </p>
+
+    <div class="team-grid">
+      
+      <!-- Member 1 -->
+      <article class="card" data-animate>
+        <img src="/assets/images/ceo.webp"
+             alt="Elmidor Rodriguez Zagalo Mario — CEO and Developer"
+             width="400" height="400"
+             loading="lazy"
+             decoding="async"
+             class="avatar">
+        <h3>Elmidor Rodriguez Zagalo Mario</h3>
+        <p class="muted">CEO / Developer</p>
+      </article>
+
+      <!-- Member 2 -->
+      <article class="card" data-animate>
+  <img src="/assets/images/co.webp"
+       alt="AI Assistant — OpenAI GPT-5"
+       width="400" height="400"
+       loading="lazy"
+       decoding="async"
+       class="avatar">
+  <h3>AI Assistant</h3>
+  <p class="muted">Powered by OpenAI GPT-5</p>
+</article>
+
     </div>
-  </section>
+  </div>
+</section>
+
+<!-- Lightweight CSS -->
+<style>
+  .section {
+    padding: 3rem 1rem;
+  }
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .muted {
+    color: #6b7280;
+    font-size: 0.95rem;
+  }
+  .team-grid {
+    display: grid;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+  .card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  }
+  .avatar {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    margin-bottom: 0.8rem;
+    object-fit: cover;
+  }
+  h3 {
+    font-size: 1.1rem;
+    margin: 0.4rem 0;
+  }
+  [data-animate] {
+    transition: opacity .3s ease, transform .3s ease;
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
   
   <!-- FAQ for SEO -->
   <section class="section faq">
