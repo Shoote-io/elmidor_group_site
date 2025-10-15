@@ -24,7 +24,7 @@
 *,*::before,*::after{ box-sizing:border-box; }
 html{ scroll-behavior:smooth; }
 body{
-  margin:0;
+  margin:0; padding: 0;
   font:16px/1.7 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji";
   color:var(--text);
 }
@@ -44,8 +44,8 @@ a:focus-visible, button:focus-visible{
 ::selection{ background:rgba(124,92,255,.35); }
 
 /* Layout utils */
-.container{ max-width:var(--container); margin-inline:auto; padding:0 20px; }
-.section{ padding:72px 0; }
+.container{ max-width:var(--container); margin-inline:auto; padding:0 14px; }
+.section{ padding:42px 0; }
 .muted{ color:var(--muted); }
 
 /* =========================================================
@@ -188,10 +188,10 @@ a:focus-visible, button:focus-visible{
    Accessibility
    ========================================================= */
 .skip-link{
-  position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden;
+  position:absolute; left:0px; top:-100px; width:1px; height:1px; overflow:hidden;
 }
 .skip-link:focus{
-  left:12px; top:12px; width:auto; height:auto;
+  left:12px; top:0px; width:auto; height:auto;
   padding:10px 14px; background:#fff; color:#000; z-index:1000; border-radius:10px;
 }
 
@@ -199,6 +199,7 @@ a:focus-visible, button:focus-visible{
    Header / Nav
    ========================================================= */
 header{
+  margin-bottom: 0; padding-bottom: 0;
   position:sticky; top:0; z-index:50;
   backdrop-filter:saturate(140%) blur(8px);
   background: rgba(12,13,15,.6);
@@ -246,7 +247,7 @@ header{
 /* =========================================================
    Hero / Team / Contact / Join / Footer
    ========================================================= */
-.hero{ padding:56px 0 24px; }
+.hero{ padding:44px 0 24px; }
 .hero h1{ font-size:38px; line-height:1.15; margin:0 0 8px; }
 .hero p{ color:var(--muted); margin:0; }
 
@@ -263,9 +264,9 @@ header{
   border:1px solid rgba(255,255,255,.08);
   box-shadow:0 6px 20px rgba(0,0,0,.35);
 }
-.team-card h2{ margin:16px 0 6px; font-size:26px; }
+.team-card h2{ margin:14px 0 6px; font-size:26px; }
 .team-card em{ color:var(--muted); }
-.team-card .links{ display:flex; flex-wrap:wrap; gap:12px; margin-top:16px; }
+.team-card .links{ display:flex; flex-wrap:wrap; gap:12px; margin-top:14px; }
 
 .contact-section .container form input,
 .contact-section .container form textarea{
