@@ -1,18 +1,17 @@
 <script>
 /* =========================================================
-   Elmidor Group – Optimized Unified Script
+   Elmidor Group – Clean Unified Script (Safe Build)
    ========================================================= */
-
-const $ = (sel, root = document) => root.querySelector(sel);
-const $$ = (sel, root = document) => Array.from(root.querySelectorAll(sel));
-
 document.addEventListener("DOMContentLoaded", () => {
+  // Shorthand helpers
+  const $ = (sel, root = document) => root.querySelector(sel);
+  const $$ = (sel, root = document) => Array.from(root.querySelectorAll(sel));
 
   // Year in footer
   const yearEl = $("#year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-  // Mobile menu toggle (ARIA-friendly)
+  // Mobile menu toggle
   const menuBtn = $("#menuBtn");
   const navLinks = $("#navLinks");
   if (menuBtn && navLinks) {
@@ -23,14 +22,16 @@ document.addEventListener("DOMContentLoaded", () => {
     };
     menuBtn.addEventListener("click", () => toggleMenu());
     document.addEventListener("click", (e) => {
-      if (!navLinks.contains(e.target) && e.target !== menuBtn && navLinks.dataset.open === "true") toggleMenu(false);
+      if (!navLinks.contains(e.target) && e.target !== menuBtn && navLinks.dataset.open === "true") {
+        toggleMenu(false);
+      }
     });
     document.addEventListener("keydown", (e) => {
       if (e.key === "Escape" && navLinks.dataset.open === "true") toggleMenu(false);
     });
   }
 
-  // Lazy image fade-in
+  // Lazy image load
   $$('img[loading="lazy"]').forEach(img => {
     img.addEventListener('load', () => img.classList.add('loaded'));
   });
@@ -56,28 +57,27 @@ document.addEventListener("DOMContentLoaded", () => {
   if (form) {
     form.addEventListener("submit", (e) => {
       e.preventDefault();
-      const email = $("#newsletterEmail").value.trim();
+      const email = $("#newsletterEmail")?.value.trim();
       if (!email) return alert("Please enter your email.");
       alert(`Thank you! Email ${email} received.`);
       form.reset();
     });
   }
-
 });
 
-// Demo modal
+// Demo modal (must stay global)
 function openDemo() {
-  const modal = $("#demoModal");
-  const video = $("#demoVideo");
+  const modal = document.getElementById('demoModal');
+  const video = document.getElementById('demoVideo');
   if (!modal || !video) return;
-  modal.style.display = "flex";
+  modal.style.display = 'flex';
   try { video.play(); } catch(e){}
 }
 function closeDemo() {
-  const modal = $("#demoModal");
-  const video = $("#demoVideo");
+  const modal = document.getElementById('demoModal');
+  const video = document.getElementById('demoVideo');
   if (!modal || !video) return;
-  modal.style.display = "none";
+  modal.style.display = 'none';
   try { video.pause(); } catch(e){}
 }
 document.addEventListener("keydown", (e) => {
