@@ -106,16 +106,28 @@
 }
 </script>
 
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-24N197CRM9"></script>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-67N2QVBCZV"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-24N197CRM9');
-    gtag('config', 'G-67N2QVBCZV');
-  </script>
+  <!-- 2. Google Analytics (GA4): Tracking Vizitè (Mete nan <head> paj la) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-24N197CRM9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-24N197CRM9');
+</script>
+
+<!-- 3. Google AdSense: Asynchronous Loading (Mete nan <head> paj la) -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-G-67N2QVBCZV"
+     crossorigin="anonymous"></script>
+
+<!-- Bann piblisite AdSense: Mete nan <body> kote ou vle piblisite parèt -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-G-67N2QVBCZV"
+     data-ad-slot="1234567890"
+     data-ad-format="auto"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 
   <!-- Facebook Pixel -->
   <script>
@@ -403,28 +415,37 @@
       </p>
       <div class="grid" style="display:grid; gap:16px; grid-template-columns: repeat(12, 1fr)">
         <div class="card" style="grid-column: span 4" data-animate>
-          <img src="/assets/images/ceo.png" 
-               alt="Elmidor Rodriguez Zagalo Mario - CEO and Developer" 
-               style="border-radius:12px; margin-bottom:10px" loading="lazy"/>
+          <img
+  class="cover"
+  src="/assets/images/ceo.webp" 
+  alt="Elmidor Rodriguez Zagalo Mario - CEO and Developer" 
+  width="1280"
+  height="720"
+  loading="lazy"
+  decoding="async"
+  fetchpriority="low"
+  style="height:auto;border-radius:12px;object-fit:cover;margin-bottom:10px"
+/>
           <h3>Elmidor Rodriguez Zagalo Mario</h3>
           <p class="muted">CEO / Developer</p>
         </div>
         <div class="card" style="grid-column: span 4" data-animate>
-          <img src="assets/images/co.jpg" 
-               alt="Open AI - Co-developer and assistant" 
-               style="border-radius:12px; margin-bottom:10px" loading="lazy"/>
-          <h3>Open AI</h3>
-          <p class="muted">Co-developer / Assistant</p>
-        </div>
+          <img
+  class="cover"
+  src="/assets/images/co.webp" 
+  alt="Open AI - Co-developer and assistant"
+  width="1280"
+  height="720"
+  loading="lazy"
+  decoding="async"
+  fetchpriority="low"         
+  style="height:auto;border-radius:12px;object-fit:cover;margin-bottom:10px"
+/>         
+          <h3>AI Assistant</h3>
+  <p class="muted">Powered by OpenAI GPT-5</p>
         <div class="card" style="grid-column: span 4" data-animate>
-          <img src="https://picsum.photos/480/320?random=23" 
-               alt="Team member portrait placeholder" 
-               style="border-radius:12px; margin-bottom:10px" loading="lazy"/>
-          <h3>Firstname Lastname</h3>
-          <p class="muted">Role / Focus</p>
-        </div>
-      </div>
-    </div>
+       </div>
+     </div>
   </section>
   
   <!-- FAQ for SEO -->
