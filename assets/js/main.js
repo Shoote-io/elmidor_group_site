@@ -1,25 +1,31 @@
-<script>
 /* =========================================================
-   Elmidor Group – Clean Unified Script (Safe Build)
+   Elmidor Group – Site Script (Clean Stable Build)
    ========================================================= */
-document.addEventListener("DOMContentLoaded", () => {
-  // Shorthand helpers
-  const $ = (sel, root = document) => root.querySelector(sel);
-  const $$ = (sel, root = document) => Array.from(root.querySelectorAll(sel));
 
-  // Year in footer
+// Safe query helpers
+const $ = (sel, root = document) => root.querySelector(sel);
+const $$ = (sel, root = document) => Array.from(root.querySelectorAll(sel));
+
+document.addEventListener("DOMContentLoaded", () => {
+  /* ---------------------------
+     Footer year
+  ---------------------------- */
   const yearEl = $("#year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-  // Mobile menu toggle
+  /* ---------------------------
+     Mobile menu toggle (ARIA)
+  ---------------------------- */
   const menuBtn = $("#menuBtn");
   const navLinks = $("#navLinks");
+
   if (menuBtn && navLinks) {
     const toggleMenu = (open) => {
       const next = typeof open === "boolean" ? open : navLinks.dataset.open !== "true";
       navLinks.dataset.open = String(next);
       menuBtn.setAttribute("aria-expanded", String(next));
     };
+
     menuBtn.addEventListener("click", () => toggleMenu());
     document.addEventListener("click", (e) => {
       if (!navLinks.contains(e.target) && e.target !== menuBtn && navLinks.dataset.open === "true") {
@@ -31,12 +37,9 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Lazy image load
-  $$('img[loading="lazy"]').forEach(img => {
-    img.addEventListener('load', () => img.classList.add('loaded'));
-  });
-
-  // Intersection Observer for animations
+  /* ---------------------------
+     Intersection Observer ([data-animate])
+  ---------------------------- */
   const animated = $$("[data-animate]");
   if (animated.length && "IntersectionObserver" in window) {
     const io = new IntersectionObserver((entries) => {
@@ -52,7 +55,23 @@ document.addEventListener("DOMContentLoaded", () => {
     animated.forEach(el => el.classList.add("in"));
   }
 
-  // Newsletter form
+  /* ---------------------------
+     Lazy image loader (adds .loaded)
+  ---------------------------- */
+  $$('img[loading="lazy"]').forEach(img => {
+    img.addEventListener('load', () => img.classList.add('loaded'));
+  });
+
+  /* ---------------------------
+     Inline mailto form fix
+  ---------------------------- */
+  $$('form[action^="mailto:support.elmidorgroup"]').forEach(form => {
+    form.setAttribute("action", "mailto:support@elmidorgroup.com");
+  });
+
+  /* ---------------------------
+     Newsletter form
+  ---------------------------- */
   const form = $("#newsletterForm");
   if (form) {
     form.addEventListener("submit", (e) => {
@@ -65,26 +84,32 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-// Demo modal (must stay global)
+/* ---------------------------
+   Demo modal (global)
+---------------------------- */
 function openDemo() {
-  const modal = document.getElementById('demoModal');
-  const video = document.getElementById('demoVideo');
+  const modal = document.getElementById("demoModal");
+  const video = document.getElementById("demoVideo");
   if (!modal || !video) return;
-  modal.style.display = 'flex';
-  try { video.play(); } catch(e){}
+  modal.style.display = "flex";
+  try { video.play(); } catch (e) {}
 }
+
 function closeDemo() {
-  const modal = document.getElementById('demoModal');
-  const video = document.getElementById('demoVideo');
+  const modal = document.getElementById("demoModal");
+  const video = document.getElementById("demoVideo");
   if (!modal || !video) return;
-  modal.style.display = 'none';
-  try { video.pause(); } catch(e){}
+  modal.style.display = "none";
+  try { video.pause(); } catch (e) {}
 }
+
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape") closeDemo();
 });
 
-// Share helper
+/* ---------------------------
+   Share helper (global)
+---------------------------- */
 function share(which) {
   const url = encodeURIComponent(window.location.href);
   const title = encodeURIComponent(document.title);
@@ -96,4 +121,3 @@ function share(which) {
   };
   if (map[which]) window.open(map[which], "_blank", "noopener");
 }
-</script>
