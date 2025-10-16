@@ -194,6 +194,14 @@ a:focus-visible, button:focus-visible{
   left:12px; top:0px; width:auto; height:auto;
   padding:10px 14px; background:#fff; color:#000; z-index:1000; border-radius:10px;
 }
+.adsbygoogle {
+  display: none !important;
+  height: 0 !important;
+}
+.adsbygoogle[data-adsbygoogle-status="done"] {
+  display: block !important;
+  height: auto !important;
+}
 
 /* =========================================================
    Header / Nav
@@ -302,6 +310,25 @@ footer{ border-top:1px solid rgba(255,255,255,.05); background:#0a0b0e; }
   box-shadow:0 12px 36px rgba(0,0,0,.55);
 }
 
+/* 🔹 Universal image optimization class */
+.img-optimized {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px;
+  background-color: #f3f3f3; /* ti background loading pi bèl */
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+/* 🔹 Ka opsyonèl: style pou cover vs contain */
+.img-optimized.cover {
+  object-fit: cover;
+}
+.img-optimized.contain {
+  object-fit: contain;
+}
+
 /* =========================================================
    Animations
    ========================================================= */
@@ -310,6 +337,13 @@ footer{ border-top:1px solid rgba(255,255,255,.05); background:#0a0b0e; }
   transition: opacity .6s ease, transform .6s ease;
 }
 [data-animate].in{ opacity:1; transform:none; }
+
+/* 🔹 Ti animasyon lè imaj la parèt */
+.img-optimized[loading="lazy"] {
+  opacity: 0;
+  filter: blur(6px);
+  transform: scale(1.02);
+}
 
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce){
