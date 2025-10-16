@@ -3,16 +3,25 @@
    ========================================================= */
 
 // Safe query helpers
+<script>
 const $ = (sel, root = document) => root.querySelector(sel);
 const $$ = (sel, root = document) => Array.from(root.querySelectorAll(sel));
+});
+});
+</script>
 
 // Year in footer
+<script>
 document.addEventListener("DOMContentLoaded", () => {
   const yearEl = $("#year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 });
+});
+});
+</script>
 
 // Mobile menu toggle (ARIA-friendly)
+<script>
 document.addEventListener("DOMContentLoaded", () => {
   const menuBtn = $("#menuBtn");
   const navLinks = $("#navLinks");
@@ -24,7 +33,6 @@ document.addEventListener("DOMContentLoaded", () => {
     navLinks.dataset.open = String(next);
     menuBtn.setAttribute("aria-expanded", String(next));
   };
-
   menuBtn.addEventListener("click", () => toggleMenu());
 
   // Close when clicking outside
@@ -39,8 +47,10 @@ document.addEventListener("DOMContentLoaded", () => {
     if (e.key === "Escape" && navLinks.dataset.open === "true") toggleMenu(false);
   });
 });
+</script>
 
 // Demo modal controls (open/close + ESC/outside)
+<script>
 function openDemo(){
   const modal = document.getElementById('demoModal');
   const video = document.getElementById('demoVideo');
@@ -48,7 +58,6 @@ function openDemo(){
   modal.style.display = 'flex';
   try { video.play(); } catch(e){}
 }
-
 function closeDemo(){
   const modal = document.getElementById('demoModal');
   const video = document.getElementById('demoVideo');
@@ -56,12 +65,14 @@ function closeDemo(){
   modal.style.display = 'none';
   try { video.pause(); } catch(e){}
 }
-
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape") closeDemo();
 });
+});
+</script>
 
 // Intersection Observer for [data-animate]
+<script>
 document.addEventListener("DOMContentLoaded", () => {
   const animated = $$("[data-animate]");
   if (!animated.length || !("IntersectionObserver" in window)) {
@@ -81,14 +92,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
   animated.forEach(el => io.observe(el));
 });
+});
+</script>
 
-// Helper: convert inline mailto form action if needed
-// (Replace incomplete "mailto:support.elmidorgroup" with valid address)
+<script>
 document.addEventListener("DOMContentLoaded", () => {
-  $$('form[action^="mailto:support.elmidorgroup"]').forEach(form => {
-    form.setAttribute("action", "mailto:support@elmidorgroup.com");
+  const imgs = document.querySelectorAll('img[loading="lazy"]');
+  imgs.forEach(img => {
+    img.addEventListener('load', () => img.classList.add('loaded'));
   });
+});
+</script>
+
    // Mobile nav toggle
+<script>
 const menuBtn = document.getElementById('menuBtn');
 const navLinks = document.getElementById('navLinks');
 menuBtn?.addEventListener('click', () => {
@@ -96,8 +113,11 @@ menuBtn?.addEventListener('click', () => {
   navLinks.setAttribute('data-open', String(!isOpen));
   menuBtn.setAttribute('aria-expanded', String(!isOpen));
 });
+});
+</script>
 
 // Scroll reveal
+<script>
 const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 if (!prefersReduced && 'IntersectionObserver' in window) {
   const els = document.querySelectorAll('[data-animate]');
@@ -113,8 +133,12 @@ if (!prefersReduced && 'IntersectionObserver' in window) {
 } else {
   document.querySelectorAll('[data-animate]').forEach(el => el.classList.add('in'));
 }
+});
+});
+</script>
 
 // Newsletter
+<script>
 function subscribe(e) {
   e && e.preventDefault();
   const email = document.getElementById('newsletterEmail').value.trim();
@@ -123,8 +147,12 @@ function subscribe(e) {
   document.getElementById('newsletterForm').reset();
   return false;
 }
+});
+});
+</script>
 
 // Share helper
+<script>
 function share(which) {
   const url = encodeURIComponent(window.location.href);
   const title = encodeURIComponent(document.title);
@@ -135,5 +163,6 @@ function share(which) {
   if (which === 'linkedin') shareUrl = 'https://www.linkedin.com/sharing/share-offsite/?url=' + url;
   if (shareUrl) window.open(shareUrl, '_blank', 'noopener');
 }
-
 });
+});
+</script>
