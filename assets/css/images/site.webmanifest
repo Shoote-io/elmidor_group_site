@@ -1,0 +1,19 @@
+{
+  "name": "Elmidor Group",
+  "short_name": "Elmidor",
+  "icons": [
+    {
+      "src": "assets/images/favicon-192x192.webp",
+      "type": "image/webp",
+      "sizes": "192x192"
+    },
+    {
+      "src": "assets/images/favicon-512x512.webp",
+      "type": "image/webp",
+      "sizes": "512x512"
+    }
+  ],
+  "theme_color": "#000000",
+  "background_color": "#111111",
+  "display": "standalone"
+}
