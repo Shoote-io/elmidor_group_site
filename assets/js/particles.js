@@ -1,13 +1,1 @@
-﻿document.addEventListener("DOMContentLoaded", () => {
-  const particles = document.querySelector(".particles");
-  for (let i = 0; i < 20; i++) {
-    const p = document.createElement("div");
-    p.classList.add("particle");
-    p.style.width = `${Math.random()*6+4}px`;
-    p.style.height = p.style.width;
-    p.style.left = `${Math.random()*100}%`;
-    p.style.animationDuration = `${10 + Math.random()*20}s`;
-    p.style.animationDelay = `${Math.random()*10}s`;
-    particles.appendChild(p);
-  }
-});
+document.addEventListener("DOMContentLoaded",()=>{const t=document.querySelector(".particles");for(let e=0;e<20;e++){const e=document.createElement("div");e.classList.add("particle"),e.style.width=6*Math.random()+4+"px",e.style.height=e.style.width,e.style.left=100*Math.random()+"%",e.style.animationDuration=10+20*Math.random()+"s",e.style.animationDelay=10*Math.random()+"s",t.appendChild(e)}});
